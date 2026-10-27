@@ -2484,6 +2484,536 @@
       "added": true,
       "source": "source/tools/view-location.png",
       "vector_source": "source/svgs/view-location.svg"
+    },
+    {
+      "category": "tools",
+      "name": "call",
+      "label": "语音通话",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-call.png",
+      "vector_source": "source/svgs/user-call.svg"
+    },
+    {
+      "category": "tools",
+      "name": "video-call",
+      "label": "视频通话",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-video-call.png",
+      "vector_source": "source/svgs/user-video-call.svg"
+    },
+    {
+      "category": "tools",
+      "name": "message",
+      "label": "消息",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-message.png",
+      "vector_source": "source/svgs/user-message.svg"
+    },
+    {
+      "category": "tools",
+      "name": "group-chat",
+      "label": "群聊",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-group-chat.png",
+      "vector_source": "source/svgs/user-group-chat.svg"
+    },
+    {
+      "category": "tools",
+      "name": "print",
+      "label": "打印",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-print.png",
+      "vector_source": "source/svgs/file-print.svg"
+    },
+    {
+      "category": "tools",
+      "name": "print-preview",
+      "label": "打印预览",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-print-preview.png",
+      "vector_source": "source/svgs/file-print-preview.svg"
+    },
+    {
+      "category": "tools",
+      "name": "format-painter",
+      "label": "格式刷",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-format-painter.png",
+      "vector_source": "source/svgs/edit-format-painter.svg"
+    },
+    {
+      "category": "tools",
+      "name": "paste",
+      "label": "粘贴",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-paste.png",
+      "vector_source": "source/svgs/edit-paste.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chat",
+      "label": "会话",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-chat.png",
+      "vector_source": "source/svgs/user-chat.svg"
+    },
+    {
+      "category": "tools",
+      "name": "camera",
+      "label": "摄像头",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-camera.png",
+      "vector_source": "source/svgs/play-camera.svg"
+    },
+    {
+      "category": "tools",
+      "name": "message-plain",
+      "label": "简洁消息",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-message-plain.png",
+      "vector_source": "source/svgs/user-message-plain.svg"
+    },
+    {
+      "category": "tools",
+      "name": "thumbs-up",
+      "label": "点赞",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-thumbs-up.png",
+      "vector_source": "source/svgs/user-thumbs-up.svg"
+    },
+    {
+      "category": "tools",
+      "name": "thumbs-down",
+      "label": "点踩",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-thumbs-down.png",
+      "vector_source": "source/svgs/user-thumbs-down.svg"
+    },
+    {
+      "category": "tools",
+      "name": "feedback",
+      "label": "反馈",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-feedback.png",
+      "vector_source": "source/svgs/user-feedback.svg"
+    },
+    {
+      "category": "tools",
+      "name": "headphones",
+      "label": "耳机",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-headphones.png",
+      "vector_source": "source/svgs/play-headphones.svg"
+    },
+    {
+      "category": "tools",
+      "name": "light-mode",
+      "label": "浅色模式",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-light-mode.png",
+      "vector_source": "source/svgs/view-light-mode.svg"
+    },
+    {
+      "category": "tools",
+      "name": "dark-mode",
+      "label": "深色模式",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-dark-mode.png",
+      "vector_source": "source/svgs/view-dark-mode.svg"
+    },
+    {
+      "category": "tools",
+      "name": "compress",
+      "label": "压缩",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-compress.png",
+      "vector_source": "source/svgs/file-compress.svg"
+    },
+    {
+      "category": "tools",
+      "name": "fold",
+      "label": "折叠",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-fold.png",
+      "vector_source": "source/svgs/view-fold.svg"
+    },
+    {
+      "category": "tools",
+      "name": "send",
+      "label": "发送",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-send.png",
+      "vector_source": "source/svgs/user-send.svg"
+    },
+    {
+      "category": "tools",
+      "name": "rocket",
+      "label": "火箭",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-rocket.png",
+      "vector_source": "source/svgs/sys-rocket.svg"
+    },
+    {
+      "category": "tools",
+      "name": "click",
+      "label": "点击工具",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-click.png",
+      "vector_source": "source/svgs/view-click.svg"
+    },
+    {
+      "category": "tools",
+      "name": "review",
+      "label": "测评",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-review.png",
+      "vector_source": "source/svgs/file-review.svg"
+    },
+    {
+      "category": "tools",
+      "name": "brain",
+      "label": "大脑",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-brain.png",
+      "vector_source": "source/svgs/sys-brain.svg"
+    },
+    {
+      "category": "tools",
+      "name": "grid-plus",
+      "label": "添加快捷方式",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-grid-plus.png",
+      "vector_source": "source/svgs/view-grid-plus.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shield",
+      "label": "盾牌",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-shield.png",
+      "vector_source": "source/svgs/lock-shield.svg"
+    },
+    {
+      "category": "tools",
+      "name": "map",
+      "label": "地图",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-map.png",
+      "vector_source": "source/svgs/view-map.svg"
+    },
+    {
+      "category": "tools",
+      "name": "route",
+      "label": "路线",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-route.png",
+      "vector_source": "source/svgs/net-route.svg"
+    },
+    {
+      "category": "tools",
+      "name": "network",
+      "label": "网络拓扑",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-network.png",
+      "vector_source": "source/svgs/net-network.svg"
+    },
+    {
+      "category": "tools",
+      "name": "tag",
+      "label": "标签",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-tag.png",
+      "vector_source": "source/svgs/file-tag.svg"
+    },
+    {
+      "category": "tools",
+      "name": "music",
+      "label": "音乐",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-music.png",
+      "vector_source": "source/svgs/play-music.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shuffle",
+      "label": "随机打乱",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-shuffle.png",
+      "vector_source": "source/svgs/edit-shuffle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "hash",
+      "label": "哈希",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-hash.png",
+      "vector_source": "source/svgs/sys-hash.svg"
+    },
+    {
+      "category": "tools",
+      "name": "case",
+      "label": "大小写",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-case.png",
+      "vector_source": "source/svgs/edit-case.svg"
+    },
+    {
+      "category": "tools",
+      "name": "translate",
+      "label": "翻译",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-translate.png",
+      "vector_source": "source/svgs/edit-translate.svg"
+    },
+    {
+      "category": "tools",
+      "name": "quote",
+      "label": "引用",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-quote.png",
+      "vector_source": "source/svgs/edit-quote.svg"
+    },
+    {
+      "category": "tools",
+      "name": "align-left",
+      "label": "左对齐",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-align-left.png",
+      "vector_source": "source/svgs/edit-align-left.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-ordered",
+      "label": "有序列表",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-list-ordered.png",
+      "vector_source": "source/svgs/edit-list-ordered.svg"
+    },
+    {
+      "category": "tools",
+      "name": "id-card",
+      "label": "身份卡",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-id-card.png",
+      "vector_source": "source/svgs/user-id-card.svg"
+    },
+    {
+      "category": "tools",
+      "name": "align-right",
+      "label": "右对齐",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-align-right.png",
+      "vector_source": "source/svgs/edit-align-right.svg"
+    },
+    {
+      "category": "tools",
+      "name": "align-center",
+      "label": "居中对齐",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-align-center.png",
+      "vector_source": "source/svgs/edit-align-center.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shield-a",
+      "label": "A 盾牌",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-shield-a.png",
+      "vector_source": "source/svgs/lock-shield-a.svg"
+    },
+    {
+      "category": "tools",
+      "name": "cloud-search",
+      "label": "云端检查",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-cloud-search.png",
+      "vector_source": "source/svgs/net-cloud-search.svg"
+    },
+    {
+      "category": "tools",
+      "name": "globe-search",
+      "label": "网络查询",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-globe-search.png",
+      "vector_source": "source/svgs/net-globe-search.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shield-search",
+      "label": "安全检查",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-shield-search.png",
+      "vector_source": "source/svgs/lock-shield-search.svg"
+    },
+    {
+      "category": "tools",
+      "name": "password",
+      "label": "密码",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-password.png",
+      "vector_source": "source/svgs/lock-password.svg"
+    },
+    {
+      "category": "tools",
+      "name": "format-clear",
+      "label": "清除格式",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-format-clear.png",
+      "vector_source": "source/svgs/edit-format-clear.svg"
+    },
+    {
+      "category": "tools",
+      "name": "line-wrap",
+      "label": "换行",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-line-wrap.png",
+      "vector_source": "source/svgs/edit-line-wrap.svg"
+    },
+    {
+      "category": "tools",
+      "name": "crop",
+      "label": "裁剪",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-crop.png",
+      "vector_source": "source/svgs/edit-crop.svg"
+    },
+    {
+      "category": "tools",
+      "name": "calculate",
+      "label": "计算求和",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-calculate.png",
+      "vector_source": "source/svgs/sys-calculate.svg"
+    },
+    {
+      "category": "tools",
+      "name": "birthday",
+      "label": "生日",
+      "group": "date",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/date-birthday.png",
+      "vector_source": "source/svgs/date-birthday.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-vertical",
+      "label": "竖排文字",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-vertical.png",
+      "vector_source": "source/svgs/edit-text-vertical.svg"
+    },
+    {
+      "category": "tools",
+      "name": "scan",
+      "label": "扫码",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-scan.png",
+      "vector_source": "source/svgs/file-scan.svg"
     }
   ],
   "file_frame": {

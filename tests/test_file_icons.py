@@ -71,6 +71,8 @@ class FileIconTests(unittest.TestCase):
                     with Image.open(path) as image:
                         self.assertEqual(image.size, (size, size))
                         self.assertEqual(image.mode, 'RGBA')
+                        self.assertIsNotNone(image.getchannel('A').getbbox(),
+                                             f'{path} is fully transparent')
 
     def test_library_excludes_consumer_app_assets(self):
         root = Path(__file__).resolve().parents[1]
