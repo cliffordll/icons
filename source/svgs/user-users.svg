@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g transform="translate(-0.25 0.09375)">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <g id="avatar-back">
+        <circle cx="15.5" cy="5.475" r="3" />
+        <path d="M15.5 10.475c3.525 0 6.325 2.525 6.325 5.725v.325q0 .6-.6.6H16.7" />
+      </g>
+      <g id="avatar-front" transform="translate(0 2)">
+        <circle cx="9" cy="7.675" r="3" />
+        <path d="M2.675 18.4c0-3.2 2.8-5.725 6.325-5.725s6.325 2.525 6.325 5.725v.325q0 .6-.6.6H3.275q-.6 0-.6-.6Z" />
+      </g>
+    </g>
+  </g>
+</svg>
