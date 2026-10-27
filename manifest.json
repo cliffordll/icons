@@ -1442,7 +1442,8 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/sys-refresh.png",
-      "group": "sys"
+      "group": "sys",
+      "vector_source": "source/svgs/sys-refresh.svg"
     },
     {
       "category": "tools",
@@ -2253,6 +2254,166 @@
       "source": "source/tools/net-globe.png",
       "vector_source": "source/svgs/net-globe.svg",
       "group": "net"
+    },
+    {
+      "category": "tools",
+      "name": "undo",
+      "label": "撤销",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-undo.png",
+      "vector_source": "source/svgs/edit-undo.svg"
+    },
+    {
+      "category": "tools",
+      "name": "redo",
+      "label": "重做",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-redo.png",
+      "vector_source": "source/svgs/edit-redo.svg"
+    },
+    {
+      "category": "tools",
+      "name": "back",
+      "label": "返回",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-back.png",
+      "vector_source": "source/svgs/view-back.svg"
+    },
+    {
+      "category": "tools",
+      "name": "next",
+      "label": "前进",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-next.png",
+      "vector_source": "source/svgs/view-next.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chevron-down",
+      "label": "下拉",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-chevron-down.png",
+      "vector_source": "source/svgs/view-chevron-down.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chevron-up",
+      "label": "收起",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-chevron-up.png",
+      "vector_source": "source/svgs/view-chevron-up.svg"
+    },
+    {
+      "category": "tools",
+      "name": "menu",
+      "label": "菜单",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-menu.png",
+      "vector_source": "source/svgs/view-menu.svg"
+    },
+    {
+      "category": "tools",
+      "name": "history",
+      "label": "历史记录",
+      "group": "info",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/info-history.png",
+      "vector_source": "source/svgs/info-history.svg"
+    },
+    {
+      "category": "tools",
+      "name": "login",
+      "label": "登录",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-login.png",
+      "vector_source": "source/svgs/user-login.svg"
+    },
+    {
+      "category": "tools",
+      "name": "logout",
+      "label": "退出登录",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-logout.png",
+      "vector_source": "source/svgs/user-logout.svg"
+    },
+    {
+      "category": "tools",
+      "name": "image",
+      "label": "图片",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-image.png",
+      "vector_source": "source/svgs/file-image.svg"
+    },
+    {
+      "category": "tools",
+      "name": "attach",
+      "label": "附件",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-attach.png",
+      "vector_source": "source/svgs/file-attach.svg"
+    },
+    {
+      "category": "tools",
+      "name": "clear",
+      "label": "清空",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-clear.png",
+      "vector_source": "source/svgs/edit-clear.svg"
+    },
+    {
+      "category": "tools",
+      "name": "copy-check",
+      "label": "复制成功",
+      "group": "info",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/info-copy-check.png",
+      "vector_source": "source/svgs/info-copy-check.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chevron-left",
+      "label": "向左展开",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-chevron-left.png",
+      "vector_source": "source/svgs/view-chevron-left.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chevron-right",
+      "label": "向右展开",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-chevron-right.png",
+      "vector_source": "source/svgs/view-chevron-right.svg"
     }
   ],
   "file_frame": {

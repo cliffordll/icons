@@ -2,7 +2,7 @@
 
 # 统一 PNG 图标库
 
-共 214 个命名图标：120 个文件类型、94 个工具操作。
+共 230 个命名图标：120 个文件类型、110 个工具操作。
 `tools/sys-extension.png` 使用拼图轮廓表示浏览器扩展，矢量源为 `source/svgs/sys-extension.svg`。
 `extension` 的原有非等比缩放已落实到路径坐标，保留主体轮廓的位置和比例，描边独立使用 1.35px，避免横线与竖线被缩放成不同粗细。
 `tools/net-browser.png` 使用带顶栏的浏览器窗口和地球轮廓表示浏览器，矢量源为 `source/svgs/net-browser.svg`。采用 `#444444`、1.35px 描边、0.6px 矩形圆角，中心为 `(12,12)`，可视范围为 `x=2..22`、`y=3..21`。此图标作为独立素材新增；现有运行时 `browser` 映射仍用于扩展入口并指向 `extension.png`。
@@ -10,7 +10,7 @@
 `tools/play-player.png` 是独立的播放器图标，使用显示器和空心播放三角，与 `player-setting` 的播放器设置造型区分。矢量源为 `source/svgs/play-player.svg`；复用 `player-setting` 的屏幕位置和大小：`x=3`、`y=3.375`、宽 16.95px、高 12.25px、圆角 0.6px，底座共用 `M8.5 20.25h6`，支架位于 x=11.5。采用 `#444444`、1.35px 描边，播放三角围绕屏幕中心 `(11.475,9.5)` 放置；不为单图标重新缩放或居中显示器，以保持与设置版本的主体一致。仅新增素材，不改变现有播放器设置入口。
 `player-setting` 以已确认的原始 PNG 为参照，用闭合三次贝塞尔路径重建圆润齿轮的内外轮廓及中心孔，保持原有齿形、大小和与主体的相对位置；不使用规则多边形齿轮或波浪轮廓替换。源 SVG 为纯矢量，不含嵌入图像；显示器支架使用与参照图一致的圆头。source、24、30、36、48px PNG 全部由该 SVG 通过 wx SVG 渲染器生成。
 `player`、`player-setting` 在保持共同屏幕、底座及内部相对位置的基础上，整图统一下移 0.1875px，使 384px 源图可见边界的垂直中心从 y=11.8125 对齐到 y=12；两图当前纵向边界均为源图 y=46..338，即 24px 画布的 y=2.875..21.125。该平移不改变线宽或比例。
-`tools/task-retry.png` 使用圆弧连接直角箭头，矢量源为 `source/svgs/task-retry.svg`。
+`tools/task-retry.png`、`tools/sys-refresh.png`、`tools/info-history.png` 共用下文的圆环箭头规范，分别以同名 SVG 为绘制源。
 `tools/sys-debug.png` 使用单色昆虫轮廓表示调试，矢量源为 `source/svgs/sys-debug.svg`；按通用工具图标基准居中，已检查并从该 SVG 重新生成各尺寸 PNG。
 `tools/file-folder.png` 采用打开文件夹的后部页签轮廓，并将前方面板改为矩形；`folder-plus.png`、`folder-move.png` 和 `folder-favorite.png` 共用该底图，分别叠加加号、水平向右箭头和实心正五角星，符号中心统一为 24px 画布下 `(12, 13.98125)`。`folder-open.png` 使用独立 SVG 按同一线条和圆角规范重绘。`tools/edit-plus.png`、`minus.png`、`bell.png` 和 `bell-knob.png` 使用通用工具图标的 `#444444`、1.35px 线条规范；`bell.png` 保留原样，`bell-knob.png` 是独立的顶部加钮版本。新增 `lightbulb`、`clock`、`tools`、`knowledge`、`database`、`market`、`observation`、`dataflow`、`mcp`、`glossary` 图标，使用一致的深灰线条风格。`move-left.png`、`move-right.png`、`robot.png` 和 `favorite.png` 使用相同工具图标线条规范，并以 SVG 为绘制源。
 `tools/task-task-download.png`、`task-start.png`、`task-resume.png`、`task-pause.png`、`task-stop.png` 和 `download-all.png` 属于同一组下载操作图标；`task-upload.png` 和 `upload-all.png` 属于对应的上传操作图标。具体尺寸规范见下文，SVG 源登记在 `manifest.json` 的 `vector_source`。
@@ -49,7 +49,7 @@
 - 下载状态图标共用托盘路径：`M2.9 15.3v3.85q0 .6.6.6h17q.6 0 .6-.6V15.3`。托盘的线宽、宽度和圆角不得单独调整；当前整组托盘统一下移了 0.2px。
 - 所有 `task-*` 图标只替换托盘上方的操作符号；托盘固定为同一条路径。操作符号的几何中心统一为 `(12, 8.5)`，使用相同的 `1.35px` 描边和约 `10px` 的最大可视尺寸。各图形可以保留自身造型的自然边界，但必须围绕同一中心定位，不得为了某一个图标移动或缩放固定托盘。
 - `task-download` 使用单个向下箭头，几何范围为 `x=8.184–15.816`、`y=4.048–12.952`。`download-all` 复用相同箭头几何，原样平移到 `x=8` 和 `x=16`，两箭头高度、尺寸相同且关于 `x=12` 对称；不要重新描画、错开高度或压缩箭头。
-- `task-start` 使用右向播放三角；`task-resume` 沿用 `retry` 的环形箭头和直角箭头头部，圆弧与箭头必须共用同一变换，避免接合处出现重叠线头；线宽保持 `1.35px`，右下侧圆环开口约为 `32°`。`task-pause` 使用两条竖线，`task-stop` 使用圆角方框。只替换托盘上方的符号，底部托盘始终保持不变。
+- `task-start` 使用右向播放三角；`task-resume` 保留任务托盘组的环形箭头和直角箭头头部（独立于通用圆环箭头组），圆弧与箭头必须共用同一变换，避免接合处出现重叠线头；线宽保持 `1.35px`，右下侧圆环开口约为 `32°`。`task-pause` 使用两条竖线，`task-stop` 使用圆角方框。只替换托盘上方的符号，底部托盘始终保持不变。
 - 修改后对照六个 SVG 和 24/30/36/48 px PNG，检查符号高度、水平中心、线宽、托盘边界和透明留白。若整体图标需要调整，六种操作一起核对。
 
 ### 上传操作图标规范
@@ -145,3 +145,27 @@ TS 统一保留紫色色块版本，文件名为 `files/video-ts.png`。
 - `tools/file-new.png` 与 `files/other-new.png` 由 `render_file_icons.py --names new` 同步生成；加号保留原有位置、外接尺寸和用于平衡交叉处视觉重量的 19/16px 线宽，仅将四个端点改为圆头。文档边框保持原样，不单独修改某一份 PNG。
 - `tools/edit-edit.png` 的铅笔与边框主体比原稿收小约 4.6%；`tools/info-check.png` 和 `tools/info-close.png` 分别由同名 SVG 生成，统一使用 `#444444`、1.35px 描边、圆头端点及圆角连接，并保留重绘前的图案比例。384px 源图在 alpha≥128 时，`check` 可见边界为 `(50,86)..(334,298)`，`close` 为 `(73,73)..(311,311)`；与旧图边界差异最多为 1 个源像素，即 24px 画布下 0.0625px。`tools/view-more.png` 使用三个等距圆点。`tools/file-save.png` 主体相对调整前缩小 3%；`tools/edit-delete.png` 按上述紧凑比例及统一线宽规范维护。所有改动同步生成 source、24、30、36、48px 版本。
 - `task-download`、`task-start`、`task-resume`、`task-pause`、`task-upload` 以及 `download-all`、`upload-all` 的上方箭头／符号相对原稿统一放大 6%，围绕各自中心保持居中，描边仍为 `1.35px`。全部图标的托盘路径相同并统一下移 `0.2px`；`task-resume` 刷新环和箭头再额外放大 6%，线宽保持不变；`task-stop` 保持已确认的方框尺寸。
+
+## 通用操作图标补充
+
+新增 14 个工具图标：`edit-undo`、`edit-redo`、`view-back`、`view-next`、`view-chevron-down`、`view-chevron-up`、`view-menu`、`info-history`、`user-login`、`user-logout`、`file-image`、`file-attach`、`edit-clear`、`info-copy-check`。
+
+- 除 history 外环按下文圆环箭头组规范外，使用 24×24 坐标画布、`#444444`、1.35px 描边、圆头端点和圆角连接；矩形和门框圆角为 0.6px，不加背景、阴影或彩色色块。
+- 撤销／重做、返回／前进、下拉／收起采用镜像几何。返回／前进的箭头头部高度为 17px，区别于现有 move-left／move-right 的 10px 箭头头部。
+- 菜单复用 list 的横向范围 x=4.175..19.825 及三行中心线 y=4.675、12、19.325；三行均为完整横线。
+- 历史记录采用回转箭头和时钟指针，外环与 retry、refresh 共用圆环箭头规范，指针复用 clock 的相对几何；具体参数见下文。图片及复制成功的主要矩形范围采用 x/y=3..21；登录／退出门框高度由 18px 收窄至 15px（y=4.5..19.5），宽度由 7.5px 收窄至 6px，分别位于 x=14..20、x=4..10，箭头尺寸和 0.6px 圆角保持不变；复制成功采用两张错位纸张与内部勾号，清空采用橡皮擦与基线，附件采用连续回形针轮廓。
+- 下拉／收起因语义为浅折线，轮廓高度较小：含描边约 x=3.325..20.675、y=7.325..16.675，仍围绕 (12,12) 对称。菜单沿用 list 的紧凑范围；登录／退出保留箭头位置，收窄后门框使整体边界中心分别位于 x=11.5、x=12.5，两者作为一对保持对称。其余图标围绕共同画布中心构图；history 使用下文圆环箭头组的构造，不按包含箭头的包围盒单独重新居中。不通过拉伸或缩放改变线宽。
+- 所有 SVG 位于 `source/svgs/`，由统一脚本生成 source、24、30、36、48px PNG；文件名前缀与 manifest 的 group 保持一致。
+
+## 圆环箭头统一规范
+
+适用于 `task-retry`、`sys-refresh`、`info-history`，以原 task-retry 的圆弧与直角箭头为造型基准。此前圆头箭头直接接在圆弧端点上的版本已替换，避免竖边与圆弧叠出突兀的分叉。
+
+- 三图使用 384×384 矢量坐标、135px 圆弧半径、22px 描边（折合 24px 画布为 8.4375px 半径、1.375px 线宽），颜色 #444444。此组保留原 retry 的尺寸及笔触，是通用 1.35px 线宽的明确例外。
+- 圆弧使用圆头；箭头采用平头、直角连接，横纵两边分别为 59px、60px，折合约 3.7px。箭头拐点 (339,169)，圆弧末端 (324.949,168.057) 终止于箭头横边内部；通过描边接合，避免接在拐点形成分叉。
+- retry 恢复原 SVG；history 复用其水平镜像外环，保留原指针位置；refresh 使用同一上半圆弧与箭头，并旋转 180° 得到下半部分。三图均保留紧凑开口及相同的箭头接合结构。
+- 全部以 source/svgs 中的独立 SVG 为源生成 source、24、30、36、48px PNG。undo／redo 保留原回弯轮廓和通用圆头笔触；task-resume 继续按任务托盘组规范维护。
+
+## 四向折线箭头
+
+`view-chevron-down`、`view-chevron-up`、`view-chevron-left`、`view-chevron-right` 构成四向折线箭头组。统一使用 #444444、1.35px 圆头描边和圆角连接，折线跨度 16px、深度 8px，围绕 (12,12) 镜像或旋转对称；上下方向路径边界为 x=4..20、y=8..16，左右方向为 x=8..16、y=4..20。上下两项保持原样，左右两项按相同几何补充；SVG 与 source、24、30、36、48px PNG 同步维护。
