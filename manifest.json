@@ -2414,6 +2414,76 @@
       "added": true,
       "source": "source/tools/view-chevron-right.png",
       "vector_source": "source/svgs/view-chevron-right.svg"
+    },
+    {
+      "category": "tools",
+      "name": "qrcode",
+      "label": "二维码",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-qrcode.png",
+      "vector_source": "source/svgs/file-qrcode.svg"
+    },
+    {
+      "category": "tools",
+      "name": "share",
+      "label": "分享",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-share.png",
+      "vector_source": "source/svgs/user-share.svg"
+    },
+    {
+      "category": "tools",
+      "name": "terminal",
+      "label": "终端",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-terminal.png",
+      "vector_source": "source/svgs/sys-terminal.svg"
+    },
+    {
+      "category": "tools",
+      "name": "code",
+      "label": "代码",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-code.png",
+      "vector_source": "source/svgs/sys-code.svg"
+    },
+    {
+      "category": "tools",
+      "name": "fullscreen",
+      "label": "全屏",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-fullscreen.png",
+      "vector_source": "source/svgs/view-fullscreen.svg"
+    },
+    {
+      "category": "tools",
+      "name": "exit-fullscreen",
+      "label": "退出全屏",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-exit-fullscreen.png",
+      "vector_source": "source/svgs/view-exit-fullscreen.svg"
+    },
+    {
+      "category": "tools",
+      "name": "location",
+      "label": "定位",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-location.png",
+      "vector_source": "source/svgs/view-location.svg"
     }
   ],
   "file_frame": {
