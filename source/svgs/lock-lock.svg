@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <circle cx="12" cy="14.484" r="1" fill="none" stroke="#444444" stroke-width="1.35" />
-  <g transform="translate(-1.2 -0.96) scale(1.1 1.08)" fill="none" stroke="#444444" stroke-width="1.23" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="4.5" y="10" width="15" height="10" rx="0.5455" />
-    <path d="M8 10V7.5a4 4 0 0 1 8 0V10" />
-    <path d="M12 15.2v2" />
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" data-role="centered-lock">
+    <rect data-role="lock-body" x="3.75" y="10.11" width="16.5" height="10.8" rx="0.6" />
+    <path data-role="shackle" d="M7.6000000000000005 10.110000000000001V7.410000000000002C7.6000000000000005 5.024129880730973 9.56994710074451 3.0900000000000007 12.000000000000002 3.0900000000000003C14.430052899255493 3.0900000000000003 16.400000000000002 5.024129880730971 16.400000000000002 7.41V10.110000000000001" />
+    <path data-role="key-stem" d="M12.000000000000002 15.726V17.886" />
+    <circle data-role="key-hole" cx="12" cy="14.754" r="1" />
   </g>
 </svg>

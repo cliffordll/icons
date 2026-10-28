@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
   <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="3" y="3" width="7" height="7" rx="0.6"/><rect x="14" y="3" width="7" height="7" rx="0.6"/><rect x="3" y="14" width="7" height="7" rx="0.6"/><path d="M14 14h3v3h4m-7 0v4h3m4-7v1m0 5v1m-4-1v1"/><g fill="#444444" stroke="none"><rect x="5.6" y="5.6" width="1.8" height="1.8"/><rect x="16.6" y="5.6" width="1.8" height="1.8"/><rect x="5.6" y="16.6" width="1.8" height="1.8"/></g>
+    <rect x="3.675" y="3.675" width="6.475" height="6.475" rx="0.6" />
+    <rect x="13.85" y="3.675" width="6.475" height="6.475" rx="0.6" />
+    <rect x="3.675" y="13.85" width="6.475" height="6.475" rx="0.6" />
+    <path d="M13.850000000000001 13.850000000000001H16.625V16.625H20.325M13.850000000000001 16.625V20.325H16.625M20.325 13.850000000000001V14.774999999999999M20.325 19.4V20.325M16.625 19.4V20.325" />
+    <g fill="#444444" stroke="none">
+      <rect x="6.08" y="6.08" width="1.665" height="1.665" />
+      <rect x="16.255" y="6.08" width="1.665" height="1.665" />
+      <rect x="6.08" y="16.255" width="1.665" height="1.665" />
+    </g>
   </g>
 </svg>

@@ -273,6 +273,37 @@ def prune_short_islands(d, cuts, minimum):
     return ''.join(output), cuts
 
 
+def omit_clipboard_bottom_island(d, cuts, complete_outline):
+    """Match paste: stop the bottom edge at the badge, without a corner remnant.
+
+    This is the approved file-review exception, not a global length threshold.
+    Only a detached run wholly inside the bottom 0.6px corner band is removed.
+    """
+    bounds = BoundsPen(None)
+    parse_path(complete_outline, bounds)
+    bottom = bounds.bounds[3]
+    groups = []
+    for segment in segments(d):
+        if not groups or math.dist(groups[-1][-1][-1], segment[0]) > 1e-5:
+            groups.append([])
+        groups[-1].append(segment)
+    kept = []
+    for group in groups:
+        detached = all(any(math.dist(end, cut) < 1e-5 for cut in cuts)
+                       for end in (group[0][0], group[-1][-1]))
+        if detached and all(p[1] >= bottom-0.6-1e-5 for segment in group for p in segment):
+            continue
+        kept.extend(group)
+    ends = [p for segment in kept for p in (segment[0], segment[-1])]
+    cuts = [p for p in cuts if any(math.dist(p, end) < 1e-5 for end in ends)]
+    output = []
+    for segment in kept:
+        fmt = lambda p: f'{p[0]:.7f} {p[1]:.7f}'
+        output.append('M'+fmt(segment[0])+{2: 'L', 3: 'Q', 4: 'C'}[len(segment)]
+                      +' '.join(fmt(p) for p in segment[1:]))
+    return ''.join(output), cuts
+
+
 def specs():
     monitor = transform(rectangle(3, 3.375, 16.95, 12.25)
                         + 'M11.5 15.625V20.25M8.5 20.25h6', dy=0.1875)
@@ -314,7 +345,7 @@ def specs():
 
 
 def centering_offset(background, extra):
-    """Center the complete background before clipping; the badge follows it."""
+    """Center only the complete background; the badge stays in canvas space."""
     outlines = [(background, STROKE)]
     for path in ET.fromstring('<g>'+extra+'</g>'):
         outlines.append((path.attrib['d'], 0))
@@ -343,19 +374,31 @@ def build(names=None):
     for stem, (background, badge, extra) in selected.items():
         complete_background = full_geometry('user-send') if stem.startswith('user-send-') else background
         dx, dy = centering_offset(complete_background, extra)
+        # Move the uncut subject first, then recalculate its cuts against the
+        # fixed canvas-space badge. Translating a clipped composite moves the
+        # badge off its anchor; moving only the old cuts changes their gaps.
+        complete_background = transform(complete_background, dx, dy)
+        background = transform(background, dx, dy) if background else ''
+        if extra:
+            detail_group = ET.fromstring('<g>'+extra+'</g>')
+            for detail in detail_group:
+                detail.attrib['d'] = transform(detail.attrib['d'], dx, dy)
+            extra = ''.join(ET.tostring(detail, encoding='unicode') for detail in detail_group)
         if stem.startswith('user-send-'):
             # Each exposed wing stops at its first intersection with the badge's
             # clearance band. Never restore the hidden tail as detached fragments.
-            left, left_points = clip('M10.2 13.8l3.6 7.2', badge, prefix=True)
-            right, right_points = clip('M21 3 13.8 21', badge, prefix=True)
+            left, left_points = clip(transform('M10.2 13.8l3.6 7.2', dx, dy), badge, prefix=True)
+            right, right_points = clip(transform('M21 3 13.8 21', dx, dy), badge, prefix=True)
             if len(left_points) != 1 or len(right_points) != 1:
                 raise ValueError(f'{stem}: both wings must meet the badge clearance band')
-            background = 'M21 3 3 10.2 10.2 13.8 21 3' + left + right
+            background = transform('M21 3 3 10.2 10.2 13.8 21 3', dx, dy) + left + right
             cuts = left_points + right_points
         else:
             background, cuts = clip(background, badge)
             if stem == 'net-server-bolt':
                 background, cuts = prune_short_islands(background, cuts, minimum=1.6)
+            elif stem == 'file-review':
+                background, cuts = omit_clipboard_bottom_island(background, cuts, complete_background)
         for p in cuts:
             clearance = badge.distance(p)-STROKE/2-badge.half_width
             if abs(clearance-GAP) > 0.00001:
@@ -365,9 +408,10 @@ def build(names=None):
         fill = (f' fill="#444444" stroke="#444444" stroke-width="{badge.edge:.9f}"'
                 ' fill-rule="evenodd"') if badge.filled else ''
         svg = ('<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">\n'
-               f'  <g transform="translate({dx:.9f} {dy:.9f})" data-role="centered-composite"'
+               '  <g data-role="centered-composite" data-layout="subject-centered-fixed-badge"'
                ' fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">\n'
-               f'    <g data-role="background" data-cutpoints="{cut_attribute}"><path d="{background}"/>{extra}</g>\n'
+               f'    <g data-role="background" data-center-shift="{dx:.9f},{dy:.9f}"'
+               f' data-complete-outline="{complete_background}" data-cutpoints="{cut_attribute}"><path d="{background}"/>{extra}</g>\n'
                f'    <g data-role="badge" data-profile="{badge.profile}"{fill}>{foreground}</g>\n'
                '  </g>\n</svg>\n')
         results[stem] = svg

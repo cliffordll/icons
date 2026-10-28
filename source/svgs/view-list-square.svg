@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g data-role="list-layout" data-marker="square" data-rows="5.85 12 18.15" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <rect data-role="marker" x="4.175" y="3.7499999999999996" width="4.8" height="4.2" rx="0.6" />
+    <path data-role="row" d="M11.675000000 5.85H19.825" />
+    <rect data-role="marker" x="4.175" y="9.9" width="4.8" height="4.2" rx="0.6" />
+    <path data-role="row" d="M11.675000000 12H19.825" />
+    <rect data-role="marker" x="4.175" y="16.049999999999997" width="4.8" height="4.2" rx="0.6" />
+    <path data-role="row" d="M11.675000000 18.15H19.825" />
+  </g>
+</svg>

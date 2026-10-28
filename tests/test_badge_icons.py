@@ -56,15 +56,18 @@ def distance(p, line):
 
 
 class BadgeIconTests(unittest.TestCase):
-    def test_background_centering_moves_subject_and_badge_together(self):
-        # Expected translations come from complete subjects, before badge cutouts.
-        offsets = {
-            'net-cloud-search': (0.194821512, 1.661127871),
-            'lock-shield-search': (0.9375, 0.25),
-            'file-print-preview': (0.25, 0.5),
-            'file-review': (1, 0.25), 'edit-paste': (1, 0.25),
-            'play-player-setting': (0.525, 0), 'sys-remote': (0.525, 0),
-        }
+    def test_review_bottom_stops_at_badge_without_a_detached_corner(self):
+        back, _ = read('file-review')
+        lines = [line for path in back for line in flatten(path.attrib['d'])]
+        bottom = [line for line in lines if min(line[0][1], line[1][1]) >= 20.65-1e-5]
+        self.assertTrue(bottom)
+        cuts = [tuple(map(float, p.split(','))) for p in back.attrib['data-cutpoints'].split()]
+        self.assertEqual(len(cuts), 2)
+        bottom_cut = next(p for p in cuts if abs(p[1]-21.25) < 1e-5)
+        self.assertTrue(all(max(a[0], b[0]) <= bottom_cut[0]+1e-5 for a, b in bottom))
+        self.assertLess(min(distance((10, 21.25), line) for line in lines), 0.00001)
+
+    def test_subject_centering_keeps_badges_at_canvas_anchor(self):
         stems = ['net-cloud-search', 'net-globe-search', 'lock-shield-search',
                  'file-print-preview', 'file-review', 'view-location-search',
                  'view-location-settings', 'play-player-setting', 'sys-remote',
@@ -74,12 +77,45 @@ class BadgeIconTests(unittest.TestCase):
             with self.subTest(stem=stem):
                 root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
                 group = root.find(NS+'g[@data-role="centered-composite"]')
-                dx, dy = map(float, group.attrib['transform'][10:-1].split())
-                for actual, expected in zip((dx, dy), offsets.get(stem, (0, 0))):
-                    self.assertAlmostEqual(actual, expected, delta=0.000001)
-                self.assertIsNotNone(group.find(NS+'g[@data-role="background"]'))
-                self.assertIsNotNone(group.find(NS+'g[@data-role="badge"]'))
-                self.assertTrue(all('transform' not in child.attrib for child in group))
+                back, badge = read(stem)
+                dx = dy = 0
+                if group.attrib.get('data-layout') == 'subject-centered-fixed-badge':
+                    self.assertNotIn('transform', group.attrib)
+                    self.assertNotIn('transform', back.attrib)
+                    outline = BoundsPen(None)
+                    parse_path(back.attrib['data-complete-outline'], outline)
+                    x0, y0, x1, y1 = outline.bounds
+                    self.assertAlmostEqual((x0+x1)/2, 12, delta=0.000001)
+                    self.assertAlmostEqual((y0+y1)/2, 12, delta=0.000001)
+                else:
+                    # Unchanged subjects already at the canvas center may keep
+                    # their old wrapper, but it must not displace the badge.
+                    dx, dy = map(float, group.attrib['transform'][10:-1].split())
+                    self.assertAlmostEqual(dx, 0, delta=0.000001)
+                    self.assertAlmostEqual(dy, 0, delta=0.000001)
+                self.assertNotIn('transform', badge.attrib)
+                foreground = BoundsPen(None)
+                for path in badge:
+                    self.assertNotIn('transform', path.attrib)
+                    parse_path(path.attrib['d'], foreground)
+                x0, y0, x1, y1 = foreground.bounds
+                self.assertAlmostEqual((x0+x1)/2+dx, 17.5, delta=0.001)
+                self.assertAlmostEqual((y0+y1)/2+dy, 16.75, delta=0.001)
+
+    def test_plain_player_shares_centered_monitor_bounds(self):
+        from fontTools.svgLib.path import SVGPath
+        pen = BoundsPen(None)
+        SVGPath(str(ROOT / 'source/svgs/play-player.svg')).draw(pen)
+        x0, y0, x1, y1 = pen.bounds
+        # fontTools' SVG primitive adapter rounds rect coordinates to 0.001px.
+        self.assertAlmostEqual((x0+x1)/2, 12, delta=0.001)
+        self.assertAlmostEqual((y0+y1)/2, 12, delta=0.001)
+        for stem in ['play-player-setting', 'sys-remote']:
+            back, _ = read(stem)
+            pen = BoundsPen(None)
+            parse_path(back.attrib['data-complete-outline'], pen)
+            for actual, expected in zip(pen.bounds, (x0, y0, x1, y1)):
+                self.assertAlmostEqual(actual, expected, delta=0.001)
 
     def test_location_holes_share_enlarged_radius_and_allow_badge_cutouts(self):
         root = ET.parse(ROOT / 'source/svgs/view-location.svg').getroot()

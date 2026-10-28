@@ -3665,6 +3665,86 @@
       "added": true,
       "source": "source/tools/file-tags.png",
       "vector_source": "source/svgs/file-tags.svg"
+    },
+    {
+      "category": "tools",
+      "name": "plus-square",
+      "label": "方框加号／添加",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-plus-square.png",
+      "vector_source": "source/svgs/edit-plus-square.svg"
+    },
+    {
+      "category": "tools",
+      "name": "minus-square",
+      "label": "方框减号／移除",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-minus-square.png",
+      "vector_source": "source/svgs/edit-minus-square.svg"
+    },
+    {
+      "category": "tools",
+      "name": "change",
+      "label": "变更（方框加减号）",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-change.png",
+      "vector_source": "source/svgs/edit-change.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-bullet",
+      "label": "圆点列表／摘要",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-list-bullet.png",
+      "vector_source": "source/svgs/view-list-bullet.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-circle",
+      "label": "三行空心圆圈列表／内容",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-list-circle.png",
+      "vector_source": "source/svgs/view-list-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-circle-two",
+      "label": "两行空心圆圈列表／平铺",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-list-circle-two.png",
+      "vector_source": "source/svgs/view-list-circle-two.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-square-two",
+      "label": "两行空心方块列表／平铺",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-list-square-two.png",
+      "vector_source": "source/svgs/view-list-square-two.svg"
+    },
+    {
+      "category": "tools",
+      "name": "list-square",
+      "label": "三行空心方块列表／内容",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-list-square.png",
+      "vector_source": "source/svgs/view-list-square.svg"
     }
   ],
   "file_frame": {

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g data-role="list-layout" data-marker="circle" data-rows="7 17" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle data-role="marker" cx="6.275" cy="7" r="2.1" />
+    <path data-role="row" d="M11.075000000 7H19.825" />
+    <circle data-role="marker" cx="6.275" cy="17" r="2.1" />
+    <path data-role="row" d="M11.075000000 17H19.825" />
+  </g>
+</svg>

@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-  <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Rear hand: hidden edges are omitted to preserve a transparent overlap. -->
-    <path d="M9.74 15.3l-.164.632a1.495 1.495 0 0 0 1.469 1.768h2.73v2.015a1.17 1.17 0 0 0 2.21.585L18 16.075M15.8 10.03H18"/>
-    <rect x="18" y="10.03" width="3.25" height="6.045" rx="0.6"/>
-    <g transform="translate(0.8 0.3) scale(0.65)" stroke-width="2.076923">
-      <path d="M8 10.5 11.1 4a1.8 1.8 0 0 1 3.4.9V8h4.2a2.3 2.3 0 0 1 2.26 2.72l-1.35 7.2A2.3 2.3 0 0 1 17.35 19.8H8"/>
-      <rect x="3" y="10.5" width="5" height="9.3" rx="0.923077"/>
+  <g data-role="centered-subject" data-center-shift="0.0,0.40625" transform="translate(0.0 0.40625)">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.74 15.3l-.164.632a1.495 1.495 0 0 0 1.469 1.768h2.73v2.015a1.17 1.17 0 0 0 2.21.585L18 16.075M15.8 10.03H18" />
+      <rect x="18" y="10.03" width="3.25" height="6.045" rx="0.6" />
+      <g transform="translate(0.8 0.3) scale(0.65)" stroke-width="2.076923">
+        <path d="M8 10.5 11.1 4a1.8 1.8 0 0 1 3.4.9V8h4.2a2.3 2.3 0 0 1 2.26 2.72l-1.35 7.2A2.3 2.3 0 0 1 17.35 19.8H8" />
+        <rect x="3" y="10.5" width="5" height="9.3" rx="0.923077" />
+      </g>
     </g>
   </g>
 </svg>
