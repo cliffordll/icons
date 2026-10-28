@@ -3014,6 +3014,156 @@
       "added": true,
       "source": "source/tools/file-scan.png",
       "vector_source": "source/svgs/file-scan.svg"
+    },
+    {
+      "category": "tools",
+      "name": "sidebar-left",
+      "label": "左侧栏",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-sidebar-left.png",
+      "vector_source": "source/svgs/view-sidebar-left.svg"
+    },
+    {
+      "category": "tools",
+      "name": "sidebar-stack",
+      "label": "侧栏与上下分区",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-sidebar-stack.png",
+      "vector_source": "source/svgs/view-sidebar-stack.svg"
+    },
+    {
+      "category": "tools",
+      "name": "panel-bottom",
+      "label": "底部面板",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-panel-bottom.png",
+      "vector_source": "source/svgs/view-panel-bottom.svg"
+    },
+    {
+      "category": "tools",
+      "name": "split",
+      "label": "左右分栏",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-split.png",
+      "vector_source": "source/svgs/view-split.svg"
+    },
+    {
+      "category": "tools",
+      "name": "disk",
+      "label": "磁盘／硬盘",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-disk.png",
+      "vector_source": "source/svgs/sys-disk.svg"
+    },
+    {
+      "category": "tools",
+      "name": "keyboard",
+      "label": "键盘",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-keyboard.png",
+      "vector_source": "source/svgs/sys-keyboard.svg"
+    },
+    {
+      "category": "tools",
+      "name": "mouse",
+      "label": "鼠标",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-mouse.png",
+      "vector_source": "source/svgs/sys-mouse.svg"
+    },
+    {
+      "category": "tools",
+      "name": "extensions",
+      "label": "扩展管理",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-extensions.png",
+      "vector_source": "source/svgs/sys-extensions.svg"
+    },
+    {
+      "category": "tools",
+      "name": "remote",
+      "label": "远程资源管理",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-remote.png",
+      "vector_source": "source/svgs/sys-remote.svg"
+    },
+    {
+      "category": "tools",
+      "name": "run-debug",
+      "label": "运行和调试",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-run-debug.png",
+      "vector_source": "source/svgs/sys-run-debug.svg"
+    },
+    {
+      "category": "tools",
+      "name": "barcode",
+      "label": "条码",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-barcode.png",
+      "vector_source": "source/svgs/file-barcode.svg"
+    },
+    {
+      "category": "tools",
+      "name": "pencil",
+      "label": "铅笔",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-pencil.png",
+      "vector_source": "source/svgs/edit-pencil.svg"
+    },
+    {
+      "category": "tools",
+      "name": "bell-off",
+      "label": "关闭通知／勿扰",
+      "group": "info",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/info-bell-off.png",
+      "vector_source": "source/svgs/info-bell-off.svg"
+    },
+    {
+      "category": "tools",
+      "name": "volume-off",
+      "label": "静音",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-volume-off.png",
+      "vector_source": "source/svgs/play-volume-off.svg"
+    },
+    {
+      "category": "tools",
+      "name": "power",
+      "label": "电源／开机／关机",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-power.png",
+      "vector_source": "source/svgs/sys-power.svg"
     }
   ],
   "file_frame": {
