@@ -14,6 +14,17 @@ from fontTools.svgLib.path import SVGPath, parse_path
 ROOT = Path(__file__).resolve().parents[1]
 NS = '{http://www.w3.org/2000/svg}'
 CENTERED = [
+    'view-move-left', 'view-move-right', 'view-move-up', 'view-move-down',
+    'sys-debug',
+    'file-folder', 'file-folder-plus', 'file-folder-move', 'file-folder-favorite',
+    'view-external',
+    'file-attach', 'net-wifi', 'sys-knowledge', 'user-users',
+    'edit-clear', 'sys-brain', 'edit-pin', 'edit-hand',
+    'edit-pencil', 'lock-key', 'sys-extension', 'sys-dataflow',
+    'view-dark-mode', 'sys-tools', 'edit-scissors',
+    'play-volume-off', 'edit-char-count', 'edit-numbers-clear', 'edit-sort-alpha',
+    'info-about', 'info-help',
+    'sys-bomb', 'sys-skill', 'user-call', 'user-video-call',
     'edit-text-add', 'edit-line-break-remove', 'edit-case-check',
     'edit-handwriting', 'net-websocket', 'view-locations', 'file-tags',
     'sys-run-debug', 'user-feedback', 'lock-lock', 'user-user', 'user-contact',
@@ -30,6 +41,38 @@ def visible_bounds(path):
 
 
 class ToolAlignmentTests(unittest.TestCase):
+    def test_folder_family_keeps_shared_vertical_alignment_and_closed_body(self):
+        names = ['file-folder', 'file-folder-plus', 'file-folder-move',
+                 'file-folder-favorite', 'file-folder-open']
+        groups = [ET.parse(ROOT / 'source/svgs' / (name+'.svg')).getroot().find(NS+'g')
+                  for name in names]
+        self.assertTrue(all(group.attrib['transform'] == groups[0].attrib['transform']
+                            for group in groups))
+        bodies = [[path.attrib['d'] for path in group.find(NS+'g').findall(NS+'path')]
+                  for group in groups[:4]]
+        self.assertTrue(all(body == bodies[0] for body in bodies))
+
+    def test_edit_pair_keeps_shared_frame_centered(self):
+        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                 for stem in ['edit-edit', 'edit-edit-square']]
+        frames = [root.find('.//'+NS+'path') for root in roots]
+        self.assertEqual(frames[0].attrib['d'], frames[1].attrib['d'])
+        pen = BoundsPen(None)
+        parse_path(frames[0].attrib['d'], pen)
+        x0, y0, x1, y1 = pen.bounds
+        self.assertAlmostEqual((x0+x1)/2, 12, delta=0.000001)
+        self.assertAlmostEqual((y0+y1)/2, 12, delta=0.000001)
+
+    def test_volume_pair_shares_speaker_and_mute_cross_vertical_axis(self):
+        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                 for stem in ['play-volume', 'play-volume-off']]
+        paths = [root.findall('.//'+NS+'path') for root in roots]
+        self.assertEqual(paths[0][0].attrib['d'], paths[1][0].attrib['d'])
+        for path in paths[1]:
+            pen = BoundsPen(None)
+            parse_path(path.attrib['d'], pen)
+            self.assertAlmostEqual((pen.bounds[1]+pen.bounds[3])/2, 12, delta=0.000001)
+
     def test_boxed_plus_minus_and_change_share_symbol_geometry(self):
         groups = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot().find(NS+'g')
                   for stem in ['edit-plus-square', 'edit-minus-square', 'edit-change']]

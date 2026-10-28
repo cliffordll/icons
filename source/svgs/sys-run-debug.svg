@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g data-role="center-calibration" data-center-mode="complete-composition" transform="translate(0.00625000 -0.00625000)">
   <g data-role="centered-subject" data-center-shift="0.34375,0.40625" transform="translate(0.34375 0.40625)">
     <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
       <path d="M7 6.5v-3L21 11.5l-7 4" />
@@ -6,5 +7,6 @@
       <ellipse cx="7.3" cy="16" rx="2.7" ry="3.5" />
       <path d="M4.9 14.3 3.4 13.3 2.5 12.3M4.6 16H2.3M4.9 17.7l-1.5 1-.9 1M9.7 14.3l1.5-1 .9-1M10 16h2.3M9.7 17.7l1.5 1 .9 1" />
     </g>
+  </g>
   </g>
 </svg>

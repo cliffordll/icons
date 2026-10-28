@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g data-role="center-calibration" data-center-mode="complete-composition" transform="translate(0.00000000 0.00625000)">
   <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
     <path d="m3.2 13.1 9.9-9.9q.425-.425.85 0l6.85 6.85q.425.425 0 .85L10.6 21H7.75L3.2 16.45q-.425-.425 0-.85ZM6.1 10.2l7.7 7.7M10.6 21H21"/>
+  </g>
   </g>
 </svg>

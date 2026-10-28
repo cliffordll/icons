@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-  <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20.5 16.8v2.7q0 1.35-1.35 1.35C10.1 20.85 3.15 13.9 3.15 4.85q0-1.35 1.35-1.35h2.7l2.2 4.5-2.2 2.2a14 14 0 0 0 6.6 6.6l2.2-2.2Z"/><rect x="13" y="3.5" width="5.5" height="4.5" rx="0.6"/><path d="m18.5 4.75 2.5-1v4l-2.5-1"/>
+  <g data-center-mode="complete-composition" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" data-camera-scale="1.2" data-center-shift="-0.475,0.05">
+    <path data-role="handset" d="M20.025 16.85V19.55Q20.025 20.9 18.675 20.9C9.625 20.9 2.675 13.95 2.675 4.9Q2.675 3.55 4.025 3.55H6.725L8.925 8.05L6.725 10.25C8.10527 13.140193 10.434807 15.46973 13.325 16.85L15.525 14.65L20.025 16.85Z" />
+    <g data-role="camera">
+      <rect x="11.725" y="3.1" width="6.6" height="5.4" rx="0.6" />
+      <path d="M18.325 4.6 21.325 3.4V8.2L18.325 7.0" />
+    </g>
   </g>
 </svg>
