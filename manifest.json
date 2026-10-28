@@ -1536,7 +1536,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/net-link.png",
-      "group": "net"
+      "group": "net",
+      "vector_source": "source/svgs/net-link.svg"
     },
     {
       "category": "tools",
@@ -3164,6 +3165,506 @@
       "added": true,
       "source": "source/tools/sys-power.png",
       "vector_source": "source/svgs/sys-power.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-join",
+      "label": "字符串拼接",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-join.png",
+      "vector_source": "source/svgs/edit-text-join.svg"
+    },
+    {
+      "category": "tools",
+      "name": "columns",
+      "label": "文本分栏",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-columns.png",
+      "vector_source": "source/svgs/edit-columns.svg"
+    },
+    {
+      "category": "tools",
+      "name": "char-count",
+      "label": "字符计数",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-char-count.png",
+      "vector_source": "source/svgs/edit-char-count.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-add",
+      "label": "文本加号",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-add.png",
+      "vector_source": "source/svgs/edit-text-add.svg"
+    },
+    {
+      "category": "tools",
+      "name": "line-break-remove",
+      "label": "删除回车换行",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-line-break-remove.png",
+      "vector_source": "source/svgs/edit-line-break-remove.svg"
+    },
+    {
+      "category": "tools",
+      "name": "blank-remove",
+      "label": "去除空行",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-blank-remove.png",
+      "vector_source": "source/svgs/edit-blank-remove.svg"
+    },
+    {
+      "category": "tools",
+      "name": "case-check",
+      "label": "大小写检查",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-case-check.png",
+      "vector_source": "source/svgs/edit-case-check.svg"
+    },
+    {
+      "category": "tools",
+      "name": "quote-text",
+      "label": "引用文本",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-quote-text.png",
+      "vector_source": "source/svgs/edit-quote-text.svg"
+    },
+    {
+      "category": "tools",
+      "name": "sort-alpha",
+      "label": "字母排序",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-sort-alpha.png",
+      "vector_source": "source/svgs/edit-sort-alpha.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-off",
+      "label": "斜线文本",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-off.png",
+      "vector_source": "source/svgs/edit-text-off.svg"
+    },
+    {
+      "category": "tools",
+      "name": "align-right-frame",
+      "label": "带框右对齐",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-align-right-frame.png",
+      "vector_source": "source/svgs/edit-align-right-frame.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-vertical-frame",
+      "label": "带框竖排文字",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-vertical-frame.png",
+      "vector_source": "source/svgs/edit-text-vertical-frame.svg"
+    },
+    {
+      "category": "tools",
+      "name": "api",
+      "label": "API 接口",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-api.png",
+      "vector_source": "source/svgs/net-api.svg"
+    },
+    {
+      "category": "tools",
+      "name": "post",
+      "label": "POST 请求",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-post.png",
+      "vector_source": "source/svgs/net-post.svg"
+    },
+    {
+      "category": "tools",
+      "name": "pinyin",
+      "label": "拼音 ab",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-pinyin.png",
+      "vector_source": "source/svgs/edit-pinyin.svg"
+    },
+    {
+      "category": "tools",
+      "name": "html-round",
+      "label": "圆角框 H",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-html-round.png",
+      "vector_source": "source/svgs/sys-html-round.svg"
+    },
+    {
+      "category": "tools",
+      "name": "html-hex",
+      "label": "六边形 H",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-html-hex.png",
+      "vector_source": "source/svgs/sys-html-hex.svg"
+    },
+    {
+      "category": "tools",
+      "name": "swatches",
+      "label": "扇形色卡",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-swatches.png",
+      "vector_source": "source/svgs/edit-swatches.svg"
+    },
+    {
+      "category": "tools",
+      "name": "stripes",
+      "label": "斜向条纹",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-stripes.png",
+      "vector_source": "source/svgs/edit-stripes.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-length",
+      "label": "文本长度过滤",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-length.png",
+      "vector_source": "source/svgs/edit-text-length.svg"
+    },
+    {
+      "category": "tools",
+      "name": "numbers-clear",
+      "label": "数字清除",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-numbers-clear.png",
+      "vector_source": "source/svgs/edit-numbers-clear.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-dedup",
+      "label": "文本去重",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-dedup.png",
+      "vector_source": "source/svgs/edit-text-dedup.svg"
+    },
+    {
+      "category": "tools",
+      "name": "bomb",
+      "label": "炸弹",
+      "group": "sys",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-bomb.png",
+      "vector_source": "source/svgs/sys-bomb.svg"
+    },
+    {
+      "category": "tools",
+      "name": "calendar-smile",
+      "label": "表情日历",
+      "group": "date",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/date-calendar-smile.png",
+      "vector_source": "source/svgs/date-calendar-smile.svg"
+    },
+    {
+      "category": "tools",
+      "name": "extract",
+      "label": "解压缩",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-extract.png",
+      "vector_source": "source/svgs/file-extract.svg"
+    },
+    {
+      "category": "tools",
+      "name": "websocket",
+      "label": "WebSocket 连接",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-websocket.png",
+      "vector_source": "source/svgs/net-websocket.svg"
+    },
+    {
+      "category": "tools",
+      "name": "strokes",
+      "label": "汉字笔划",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-strokes.png",
+      "vector_source": "source/svgs/edit-strokes.svg"
+    },
+    {
+      "category": "tools",
+      "name": "handwriting",
+      "label": "手写笔画",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-handwriting.png",
+      "vector_source": "source/svgs/edit-handwriting.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shield-location",
+      "label": "盾牌与定位",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-shield-location.png",
+      "vector_source": "source/svgs/lock-shield-location.svg"
+    },
+    {
+      "category": "tools",
+      "name": "shield-code",
+      "label": "盾牌与代码",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-shield-code.png",
+      "vector_source": "source/svgs/lock-shield-code.svg"
+    },
+    {
+      "category": "tools",
+      "name": "node-link",
+      "label": "端点连线",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-node-link.png",
+      "vector_source": "source/svgs/net-node-link.svg"
+    },
+    {
+      "category": "tools",
+      "name": "text-crop",
+      "label": "文字截取",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-text-crop.png",
+      "vector_source": "source/svgs/edit-text-crop.svg"
+    },
+    {
+      "category": "tools",
+      "name": "lock-frame",
+      "label": "带框锁",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-lock-frame.png",
+      "vector_source": "source/svgs/lock-lock-frame.svg"
+    },
+    {
+      "category": "tools",
+      "name": "password-frame",
+      "label": "带框密码",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-password-frame.png",
+      "vector_source": "source/svgs/lock-password-frame.svg"
+    },
+    {
+      "category": "tools",
+      "name": "key-frame",
+      "label": "带框钥匙",
+      "group": "lock",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/lock-key-frame.png",
+      "vector_source": "source/svgs/lock-key-frame.svg"
+    },
+    {
+      "category": "tools",
+      "name": "random",
+      "label": "多方向随机箭头",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-random.png",
+      "vector_source": "source/svgs/edit-random.svg"
+    },
+    {
+      "category": "tools",
+      "name": "chat-switch",
+      "label": "切换会话",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-chat-switch.png",
+      "vector_source": "source/svgs/user-chat-switch.svg"
+    },
+    {
+      "category": "tools",
+      "name": "lightbulb-on",
+      "label": "灯泡发光／启用提示",
+      "group": "info",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/info-lightbulb-on.png",
+      "vector_source": "source/svgs/info-lightbulb-on.svg"
+    },
+    {
+      "category": "tools",
+      "name": "location-search",
+      "label": "定位查询",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-location-search.png",
+      "vector_source": "source/svgs/view-location-search.svg"
+    },
+    {
+      "category": "tools",
+      "name": "location-settings",
+      "label": "定位设置",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-location-settings.png",
+      "vector_source": "source/svgs/view-location-settings.svg"
+    },
+    {
+      "category": "tools",
+      "name": "globe-network",
+      "label": "地球与网络节点",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-globe-network.png",
+      "vector_source": "source/svgs/net-globe-network.svg"
+    },
+    {
+      "category": "tools",
+      "name": "locations",
+      "label": "双定位标记",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-locations.png",
+      "vector_source": "source/svgs/view-locations.svg"
+    },
+    {
+      "category": "tools",
+      "name": "send-code",
+      "label": "纸飞机与代码",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-send-code.png",
+      "vector_source": "source/svgs/user-send-code.svg"
+    },
+    {
+      "category": "tools",
+      "name": "send-percent",
+      "label": "纸飞机与百分号",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-send-percent.png",
+      "vector_source": "source/svgs/user-send-percent.svg"
+    },
+    {
+      "category": "tools",
+      "name": "send-download",
+      "label": "纸飞机与下载",
+      "group": "user",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/user-send-download.png",
+      "vector_source": "source/svgs/user-send-download.svg"
+    },
+    {
+      "category": "tools",
+      "name": "map-code",
+      "label": "地图与代码",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-map-code.png",
+      "vector_source": "source/svgs/view-map-code.svg"
+    },
+    {
+      "category": "tools",
+      "name": "globe-www",
+      "label": "WWW 网络",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-globe-www.png",
+      "vector_source": "source/svgs/net-globe-www.svg"
+    },
+    {
+      "category": "tools",
+      "name": "server-bolt",
+      "label": "服务器与闪电",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-server-bolt.png",
+      "vector_source": "source/svgs/net-server-bolt.svg"
+    },
+    {
+      "category": "tools",
+      "name": "link-spark",
+      "label": "链接与装饰短线",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-link-spark.png",
+      "vector_source": "source/svgs/net-link-spark.svg"
+    },
+    {
+      "category": "tools",
+      "name": "tags",
+      "label": "双层标签",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-tags.png",
+      "vector_source": "source/svgs/file-tags.svg"
     }
   ],
   "file_frame": {

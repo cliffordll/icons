@@ -31,6 +31,7 @@
 
 ```powershell
 python -m pip install -r requirements-dev.txt
+python scripts/build_badge_icons.py
 python scripts/render_tool_icons.py --all
 python scripts/render_tool_icons.py --names bell save glossary
 python scripts/render_file_icons.py --all
@@ -39,6 +40,8 @@ python scripts/update_gallery.py
 ```
 
 建议 Python 3.10 或更高版本。文件图标默认使用 Windows 的 Segoe UI Semibold，其他环境通过 `--font` 指定字体文件。生成依赖不属于消费项目的运行时依赖。
+
+右下附加标记的尺寸与断口由 `scripts/build_badge_icons.py` 维护。调整主体或标记后先运行该脚本，再渲染 PNG；可用 `--names user-send-code view-map-code` 仅重建指定 SVG。完整范围和尺寸见 [BADGE-AUDIT.md](BADGE-AUDIT.md)。
 
 ## 使用
 
