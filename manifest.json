@@ -1988,6 +1988,26 @@
     },
     {
       "category": "tools",
+      "name": "move-up",
+      "label": "上移",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/view-move-up.png",
+      "vector_source": "source/svgs/view-move-up.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "move-down",
+      "label": "下移",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/view-move-down.png",
+      "vector_source": "source/svgs/view-move-down.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
       "name": "robot",
       "label": "机器人",
       "origin": "new-tool-icon",

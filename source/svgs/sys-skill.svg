@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-  <g transform="translate(0.46875 0.1875)">
-    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10.800000 2.500000 L12.886638 7.627990 L18.408452 8.027864 L14.176251 11.597010 L15.502282 16.972136 L10.800000 14.050000 L6.097718 16.972136 L7.423749 11.597010 L3.191548 8.027864 L8.713362 7.627990Z" />
-      <path id="long-stroke" d="M15.502282 16.972136L17.853423 20.208204" />
-      <path id="side-stroke-left" d="M12.215189 18.402397L12.949921 19.413668" />
-      <path id="side-stroke-right" d="M17.878308 14.287900L18.613040 15.299171" />
-    </g>
+  <g data-center-mode="complete-composition" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" data-center-shift="0.628956,0.458398">
+    <path d="M11.897706 3.145898 13.984344 8.273888 19.506158 8.673762 15.273957 12.242908 16.599988 17.618034 11.897706 14.695898 7.195424 17.618034 8.521455 12.242908 4.289254 8.673762 9.811068 8.273888 11.897706 3.145898Z" />
+    <path d="M16.599988 17.618034 18.951129 20.854102" id="long-stroke" />
+    <path d="M13.312895 19.048295 14.047627 20.059566" id="side-stroke-left" />
+    <path d="M18.976014 14.933798 19.710746 15.945069" id="side-stroke-right" />
   </g>
 </svg>
