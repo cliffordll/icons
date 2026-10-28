@@ -16,7 +16,7 @@ NS = '{http://www.w3.org/2000/svg}'
 CENTERED = [
     'edit-text-add', 'edit-line-break-remove', 'edit-case-check',
     'edit-handwriting', 'net-websocket', 'view-locations', 'file-tags',
-    'sys-run-debug', 'user-feedback', 'lock-lock',
+    'sys-run-debug', 'user-feedback', 'lock-lock', 'user-user', 'user-contact',
     'edit-align-left', 'edit-align-center', 'edit-align-right', 'edit-columns',
     'edit-stripes', 'edit-text-off', 'file-barcode', 'file-image', 'file-qrcode', 'file-save',
     'edit-plus-square', 'edit-minus-square', 'edit-change', 'view-list-bullet', 'view-list-circle',

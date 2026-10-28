@@ -316,5 +316,48 @@
       "row_length_increase": 1.5,
       "preserved": "行位置、标记形状大小、1.35px标记间距、1px勾选；view-list-bullet全部5张PNG不变"
     }
+  },
+  "single_user_adjustment": {
+    "status": "awaiting_review",
+    "icon": "user-user",
+    "before_visible_size": [
+      14,
+      16
+    ],
+    "after_visible_size": [
+      15.75,
+      18
+    ],
+    "geometry_scale": 1.1365187713310578,
+    "stroke": 1.35,
+    "bottom_corner_radius": 0.6,
+    "center": [
+      12,
+      12
+    ],
+    "scope": "仅单人版视觉放大；联系人、用户组和其他人物组合不变。",
+    "result": "已同步SVG与5张PNG，并排预览和28项测试通过，等待用户查看。"
+  },
+  "contact_adjustment": {
+    "status": "awaiting_review",
+    "icon": "user-contact",
+    "before_visible_size": [
+      18.75,
+      16
+    ],
+    "after_visible_size": [
+      21.125,
+      18
+    ],
+    "geometry_scale": 1.1365187713310578,
+    "stroke": 1.35,
+    "bottom_corner_radius": 0.6,
+    "center": [
+      12,
+      12
+    ],
+    "reference": "复用已放大的user-user人物轮廓，按联系人布局水平平移；资料线以同一比例调整。",
+    "scope": "仅联系人；user-user维持上轮放大结果，user-users及其他人物组合不变。",
+    "result": "已同步SVG与5张PNG；同组并排预览、原生尺寸及当前32项测试通过，等待用户查看。"
   }
 }
