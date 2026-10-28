@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
   <g data-role="list-layout" data-marker="square" data-rows="7 17" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <rect data-role="marker" x="4.175" y="4.9" width="4.8" height="4.2" rx="0.6" />
-    <path data-role="row" d="M11.675000000 7H19.825" />
-    <rect data-role="marker" x="4.175" y="14.9" width="4.8" height="4.2" rx="0.6" />
-    <path data-role="row" d="M11.675000000 17H19.825" />
+    <rect data-role="marker" x="3.425" y="4.9" width="4.8" height="4.2" rx="0.6" />
+    <path data-role="row" d="M10.925000000 7H20.575" />
+    <rect data-role="marker" x="3.425" y="14.9" width="4.8" height="4.2" rx="0.6" />
+    <path data-role="row" d="M10.925000000 17H20.575" />
   </g>
 </svg>

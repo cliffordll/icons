@@ -7,8 +7,8 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 STROKE = 1.35
 CHECK_STROKE = 1.0
-LEFT = 4.175
-RIGHT = 19.825
+LEFT = 3.425
+RIGHT = 20.575
 MARKER_GAP = 1.35
 ROWS = {2: (7, 17), 3: (5.85, 12, 18.15)}
 BOX_WIDTH = 4.8
@@ -59,7 +59,7 @@ def build(stem, kind, count, checked=False):
         # Keep the original task-batch meaning; the tick fits inside its box.
         ET.SubElement(group, NS+'path', {
             'data-role': 'check', 'stroke-width': str(CHECK_STROKE),
-            'd': 'M5.7 12 6.35 12.65 7.55 11.4',
+            'd': f'M{LEFT+1.525} 12 {LEFT+2.175} 12.65 {LEFT+3.375} 11.4',
         })
     ET.indent(svg, space='  ')
     (ROOT / 'source/svgs' / (stem+'.svg')).write_text(

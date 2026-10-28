@@ -247,7 +247,7 @@
     "matching_png": 1140,
     "unclassified_center_offset_over_0p25": 0,
     "tests_passed": 28,
-    "notes": "task-batch内部勾选按用户确认改为1px并同步全部5张PNG；主体、列表布局与资源完整性检查通过。"
+    "notes": "本次列表族6图调宽，统一渲染器同步30张PNG；行位置、内容间距、框内勾选与主体居中检查通过，view-list-bullet逐字节确认未变。"
   },
   "additions": {
     "status": "awaiting_review",
@@ -264,7 +264,7 @@
     "result": "新增8个SVG、40张PNG；方块、圆圈、数字和任务列表采用统一布局，view-list-bullet按用户反馈保留原版布局。"
   },
   "list_family": {
-    "status": "awaiting_review",
+    "status": "reviewed",
     "icons": [
       "view-list-square-two",
       "view-list-square",
@@ -284,8 +284,8 @@
         12,
         18.15
       ],
-      "row_right": 19.825,
-      "marker_visible_left": 3.5,
+      "row_right": 20.575,
+      "marker_visible_left": 2.75,
       "marker_to_line_visible_gap": 1.35,
       "stroke": 1.35,
       "square_size": [
@@ -294,9 +294,10 @@
       ],
       "square_radius": 0.6,
       "circle_radius": 2.1,
-      "bullet_radius": 0.675
+      "bullet_radius": 0.675,
+      "visual_width": 18.5
     },
-    "result": "6个列表图标维持统一，view-list-bullet已恢复前版并从共享生成器中排除，其他图标不变。",
+    "result": "六图成组调宽至18.5px，右横线加长1.5px；6个SVG、30张PNG已同步，28项测试通过，用户已确认工具栏效果并要求提交。",
     "preserved": {
       "icon": "view-list-bullet",
       "reason": "用户要求撤销本次统一调整，恢复行位置4.675/12/19.325与横线8.225..19.825，独立维护。"
@@ -306,6 +307,14 @@
       "status": "applied",
       "stroke": 1.0,
       "reason": "用户确认只将内部勾选改为1px，外框及横线继续1.35px；大小、路径、位置和间距不变。"
+    },
+    "width_adjustment": {
+      "before": 17,
+      "after": 18.5,
+      "marker_shift_x": -0.75,
+      "row_right_shift_x": 0.75,
+      "row_length_increase": 1.5,
+      "preserved": "行位置、标记形状大小、1.35px标记间距、1px勾选；view-list-bullet全部5张PNG不变"
     }
   }
 }

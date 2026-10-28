@@ -73,8 +73,8 @@ class ToolAlignmentTests(unittest.TestCase):
                     start, end = row_pen.value[0][1][0], row_pen.value[1][1][0]
                     self.assertAlmostEqual(start[1], end[1], delta=0.000001)
                     self.assertAlmostEqual((y0+y1)/2, start[1], delta=0.001)
-                    self.assertAlmostEqual(end[0], 19.825, delta=0.000001)
-                    self.assertAlmostEqual(x0-half, 3.5, delta=0.001)
+                    self.assertAlmostEqual(end[0], 20.575, delta=0.000001)
+                    self.assertAlmostEqual(x0-half, 2.75, delta=0.001)
                     self.assertAlmostEqual(start[0]-0.675-(x1+half), 1.35, delta=0.001)
                     positions.append(start[1])
                 if count not in shared_rows:

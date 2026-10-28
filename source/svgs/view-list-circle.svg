@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
   <g data-role="list-layout" data-marker="circle" data-rows="5.85 12 18.15" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <circle data-role="marker" cx="6.275" cy="5.85" r="2.1" />
-    <path data-role="row" d="M11.075000000 5.85H19.825" />
-    <circle data-role="marker" cx="6.275" cy="12" r="2.1" />
-    <path data-role="row" d="M11.075000000 12H19.825" />
-    <circle data-role="marker" cx="6.275" cy="18.15" r="2.1" />
-    <path data-role="row" d="M11.075000000 18.15H19.825" />
+    <circle data-role="marker" cx="5.525" cy="5.85" r="2.1" />
+    <path data-role="row" d="M10.325000000 5.85H20.575" />
+    <circle data-role="marker" cx="5.525" cy="12" r="2.1" />
+    <path data-role="row" d="M10.325000000 12H20.575" />
+    <circle data-role="marker" cx="5.525" cy="18.15" r="2.1" />
+    <path data-role="row" d="M10.325000000 18.15H20.575" />
   </g>
 </svg>
