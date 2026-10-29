@@ -16,7 +16,7 @@ def build():
         if symbol:
             ET.SubElement(group, NS+'path', {'data-role': 'symbol', 'd': symbol})
         ET.indent(svg, space='  ')
-        (ROOT / 'source/svgs' / (stem+'.svg')).write_text(
+        (ROOT / 'source/svgs/tools' / (stem+'.svg')).write_text(
             ET.tostring(svg, encoding='unicode')+'\n', encoding='utf-8')
 
 

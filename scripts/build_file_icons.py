@@ -10,7 +10,7 @@ ET.register_namespace('', NS)
 
 
 def build_file_new():
-    base = ET.parse(ROOT / 'source/svgs/file-file.svg').getroot()
+    base = ET.parse(ROOT / 'source/svgs/tools/file-file.svg').getroot()
     document = base.find(f'.//{{{NS}}}path[@id="document"]')
     if document is None:
         raise ValueError('file-file.svg is missing its document base path')
@@ -25,7 +25,7 @@ def build_file_new():
     ET.SubElement(group, f'{{{NS}}}path', {
         'data-role': 'plus', 'd': 'M9.5 14.4875h5M12 11.9875v5'})
 
-    target = ROOT / 'source/svgs/file-new.svg'
+    target = ROOT / 'source/svgs/tools/file-new.svg'
     target.write_text(ET.tostring(svg, encoding='unicode') + '\n', encoding='utf-8')
     print(f'Generated {target.relative_to(ROOT)} from file-file.svg')
 

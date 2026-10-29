@@ -8,12 +8,10 @@ from scripts.render_file_icons import character_gap_units, MASTER_SCALE
 
 
 class FileIconTests(unittest.TestCase):
-    def test_every_tool_has_a_registered_pure_vector_source(self):
+    def test_every_icon_has_a_registered_pure_vector_source(self):
         root = Path(__file__).resolve().parents[1]
         manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
         for entry in manifest['icons']:
-            if entry['category'] != 'tools':
-                continue
             with self.subTest(icon=entry['source']):
                 self.assertTrue(entry.get('vector_source'))
                 source = root / entry['vector_source']
@@ -22,19 +20,23 @@ class FileIconTests(unittest.TestCase):
                 self.assertIn(svg.attrib.get('viewBox'), ('0 0 24 24', '0 0 384 384'))
                 self.assertFalse(any(node.tag.rsplit('}', 1)[-1] in ('image', 'foreignObject')
                                      for node in svg.iter()))
+                if entry['category'] == 'files':
+                    self.assertFalse(any(node.tag.rsplit('}', 1)[-1] in ('text', 'use')
+                                         for node in svg.iter()))
+                    self.assertFalse(any('href' in key for node in svg.iter() for key in node.attrib))
 
     def test_document_tool_variants_share_the_file_file_svg_base(self):
         root = Path(__file__).resolve().parents[1]
         ns = '{http://www.w3.org/2000/svg}'
-        base = ET.parse(root / 'source/svgs/file-file.svg').getroot()
-        new = ET.parse(root / 'source/svgs/file-new.svg').getroot()
+        base = ET.parse(root / 'source/svgs/tools/file-file.svg').getroot()
+        new = ET.parse(root / 'source/svgs/tools/file-new.svg').getroot()
         self.assertEqual(base.find('.//'+ns+'path[@id="document"]').attrib['d'],
                          new.find('.//'+ns+'path[@id="document"]').attrib['d'])
         manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
         vector_sources = {entry['name']: entry.get('vector_source')
                           for entry in manifest['icons'] if entry['category'] == 'tools'}
-        self.assertEqual(vector_sources['file'], 'source/svgs/file-file.svg')
-        self.assertEqual(vector_sources['new'], 'source/svgs/file-new.svg')
+        self.assertEqual(vector_sources['file'], 'source/svgs/tools/file-file.svg')
+        self.assertEqual(vector_sources['new'], 'source/svgs/tools/file-new.svg')
 
     def test_file_icons_inherit_shared_style_defaults(self):
         manifest_path = Path(__file__).resolve().parents[1] / 'manifest.json'
@@ -123,6 +125,8 @@ class FileIconTests(unittest.TestCase):
         for category in ('tools', 'files'):
             entries = [e for e in manifest['icons'] if e['category'] == category]
             expected = {Path(e['source']).name for e in entries}
+            self.assertEqual({p.name for p in (root / 'source/svgs' / category).glob('*.svg')},
+                             {Path(e['vector_source']).name for e in entries})
             for directory in ('source', *(str(s) for s in manifest['sizes'])):
                 actual = {p.name for p in (root / directory / category).glob('*.png')}
                 self.assertEqual(actual, expected)
@@ -132,8 +136,9 @@ class FileIconTests(unittest.TestCase):
                 if entry.get('vector_source'):
                     self.assertEqual(Path(entry['vector_source']).stem, Path(entry['source']).stem)
                     self.assertEqual(Path(entry['vector_source']).parent,
-                                     Path('source/svgs'))
+                                     Path('source/svgs') / category)
             self.assertFalse(list((root / 'source' / category).glob('*.svg')))
+        self.assertFalse(list((root / 'source/svgs').glob('*.svg')))
 
 
 if __name__ == '__main__':

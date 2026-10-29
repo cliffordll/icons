@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <circle data-role="format-circle" cx="12.0" cy="13.5" r="7.5" fill="#C7F0B2" />
+  <g data-role="frame">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <path id="document" data-role="document" d="M4.7 9.5625V3.4Q4.7 2.8 5.3 2.8H14.5L19.3 7.6V9.5625M19.3 19.5V20.6Q19.3 21.2 18.7 21.2H5.3Q4.7 21.2 4.7 20.6V19.5" stroke-linecap="butt" />
+      <path data-role="fold" d="M14.5 2.8V7.6H19.3" />
+    </g>
+  </g>
+  <g fill="#3B3B3B" data-role="label">
+    <path d="M1355 0H1094L965 365H401L277 0H17L554 1434H822ZM902 559 703 1131Q694 1159 684 1221H680Q671 1164 660 1131L463 559Z" transform="translate(3.054443359 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M1355 0H1094L965 365H401L277 0H17L554 1434H822ZM902 559 703 1131Q694 1159 684 1221H680Q671 1164 660 1131L463 559Z" transform="translate(9.616943359 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M1177 60Q1015 -24 774 -24Q462 -24 274.0 173.0Q86 370 86 690Q86 1034 297.5 1246.0Q509 1458 832 1458Q1040 1458 1177 1399V1163Q1032 1249 857 1249Q624 1249 479.5 1100.0Q335 951 335 702Q335 465 470.0 324.5Q605 184 825 184Q1028 184 1177 280Z" transform="translate(15.893066406 17.488769531) scale(0.004150391 -0.004150391)" />
+  </g>
+</svg>

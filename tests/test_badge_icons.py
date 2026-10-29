@@ -14,7 +14,7 @@ NS = '{http://www.w3.org/2000/svg}'
 
 
 def read(stem):
-    root = ET.parse(ROOT / 'source/svgs' / (stem + '.svg')).getroot()
+    root = ET.parse(ROOT / 'source/svgs/tools' / (stem + '.svg')).getroot()
     return (root.find('.//'+NS+'g[@data-role="background"]'),
             root.find('.//'+NS+'g[@data-role="badge"]'))
 
@@ -61,7 +61,7 @@ class BadgeIconTests(unittest.TestCase):
         template = ET.parse(ROOT / 'scripts/icon_templates/magnifier.svg').getroot()
         body = template.find(NS+'g')
         for stem in ['view-search', 'view-zoom-in', 'view-zoom-out']:
-            group = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot().find(NS+'g')
+            group = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot().find(NS+'g')
             self.assertEqual([e.attrib for e in list(group)[:2]], [e.attrib for e in body])
             self.assertEqual(group.attrib['stroke-width'], '1.35')
         bounds = BoundsPen(None)
@@ -126,7 +126,7 @@ class BadgeIconTests(unittest.TestCase):
                  'file-search', 'file-download', 'file-folder-settings', 'user-add']
         for stem in stems:
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 group = root.find(NS+'g[@data-role="centered-composite"]')
                 back, badge = read(stem)
                 dx = dy = 0
@@ -156,7 +156,7 @@ class BadgeIconTests(unittest.TestCase):
     def test_plain_player_shares_centered_monitor_bounds(self):
         from fontTools.svgLib.path import SVGPath
         pen = BoundsPen(None)
-        SVGPath(str(ROOT / 'source/svgs/play-player.svg')).draw(pen)
+        SVGPath(str(ROOT / 'source/svgs/tools/play-player.svg')).draw(pen)
         x0, y0, x1, y1 = pen.bounds
         # fontTools' SVG primitive adapter rounds rect coordinates to 0.001px.
         self.assertAlmostEqual((x0+x1)/2, 12, delta=0.001)
@@ -169,7 +169,7 @@ class BadgeIconTests(unittest.TestCase):
                 self.assertAlmostEqual(actual, expected, delta=0.001)
 
     def test_location_holes_share_enlarged_radius_and_allow_badge_cutouts(self):
-        root = ET.parse(ROOT / 'source/svgs/view-location.svg').getroot()
+        root = ET.parse(ROOT / 'source/svgs/tools/view-location.svg').getroot()
         self.assertEqual(float(root.find('.//'+NS+'circle').attrib['r']), 2.75)
         for stem in ['view-location-search', 'view-location-settings']:
             with self.subTest(stem=stem):
@@ -279,7 +279,7 @@ class BadgeIconTests(unittest.TestCase):
     def test_document_pair_shares_body_and_existing_download_badge(self):
         search, _ = read('file-search')
         download, badge = read('file-download')
-        file_base = ET.parse(ROOT / 'source/svgs/file-file.svg').getroot()
+        file_base = ET.parse(ROOT / 'source/svgs/tools/file-file.svg').getroot()
         document_path = file_base.find('.//'+NS+'path[@id="document"]').attrib['d']
         self.assertEqual(search.attrib['data-complete-outline'],
                          download.attrib['data-complete-outline'])

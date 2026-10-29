@@ -34,7 +34,7 @@ def main():
                         help='Prefixed SVG stems; omit to build the full group')
     args = parser.parse_args()
     for stem in args.names or GLYPHS:
-        (ROOT / 'source/svgs' / (stem+'.svg')).write_text(build(stem), encoding='utf-8')
+        (ROOT / 'source/svgs/tools' / (stem+'.svg')).write_text(build(stem), encoding='utf-8')
     print(f'Built {len(args.names or GLYPHS)} circle controls.')
 
 

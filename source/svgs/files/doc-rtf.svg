@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <circle data-role="format-circle" cx="12.0" cy="13.5" r="7.5" fill="#F0D8B2" />
+  <g data-role="frame">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <path id="document" data-role="document" d="M4.7 9.5625V3.4Q4.7 2.8 5.3 2.8H14.5L19.3 7.6V9.5625M19.3 19.5V20.6Q19.3 21.2 18.7 21.2H5.3Q4.7 21.2 4.7 20.6V19.5" stroke-linecap="butt" />
+      <path data-role="fold" d="M14.5 2.8V7.6H19.3" />
+    </g>
+  </g>
+  <g fill="#3B3B3B" data-role="label">
+    <path d="M1285 0H1007L778 384Q747 437 717.5 474.5Q688 512 657.5 536.0Q627 560 591.0 571.0Q555 582 510 582H414V0H177V1434H649Q750 1434 835.0 1410.0Q920 1386 983.0 1337.5Q1046 1289 1081.5 1216.5Q1117 1144 1117 1047Q1117 971 1094.5 907.5Q1072 844 1030.5 794.5Q989 745 930.5 710.0Q872 675 799 656V652Q838 630 867.0 603.5Q896 577 922.0 549.0Q948 521 973.5 485.5Q999 450 1030 403ZM414 1241V775H612Q667 775 713.5 792.0Q760 809 794.0 841.0Q828 873 847.0 919.0Q866 965 866 1022Q866 1125 801.0 1183.0Q736 1241 614 1241Z" transform="translate(4.390380859 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M1097 1232H685V0H447V1232H36V1434H1097Z" transform="translate(9.913085938 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M951 1232H415V801H909V600H415V0H177V1434H951Z" transform="translate(14.765380859 17.514160156) scale(0.004150391 -0.004150391)" />
+  </g>
+</svg>

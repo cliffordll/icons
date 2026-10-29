@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <circle data-role="format-circle" cx="12.0" cy="13.5" r="7.5" fill="#C5F0B2" />
+  <g data-role="frame">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <path id="document" data-role="document" d="M4.7 9.5625V3.4Q4.7 2.8 5.3 2.8H14.5L19.3 7.6V9.5625M19.3 19.5V20.6Q19.3 21.2 18.7 21.2H5.3Q4.7 21.2 4.7 20.6V19.5" stroke-linecap="butt" />
+      <path data-role="fold" d="M14.5 2.8V7.6H19.3" />
+    </g>
+  </g>
+  <g fill="#3B3B3B" data-role="label">
+    <path d="M1097 1232H685V0H447V1232H36V1434H1097Z" transform="translate(1.038085938 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M768 -24Q458 -24 271.5 177.0Q85 378 85 700Q85 1046 275.0 1252.0Q465 1458 791 1458Q1093 1458 1277.5 1258.0Q1462 1058 1462 735Q1462 384 1273.0 180.0Q1084 -24 768 -24ZM779 1249Q582 1249 458.5 1102.0Q335 955 335 715Q335 476 455.0 330.0Q575 184 769 184Q975 184 1094.0 323.0Q1213 462 1213 712Q1213 969 1097.5 1109.0Q982 1249 779 1249Z" transform="translate(5.522216797 17.488769531) scale(0.004150391 -0.004150391)" />
+    <path d="M1717 0H1481V928Q1481 1042 1495 1207H1491Q1469 1113 1452 1072L1024 0H860L431 1064Q413 1111 393 1207H389Q397 1121 397 926V0H177V1434H512L889 479Q932 369 945 315H950Q987 428 1010 483L1394 1434H1717Z" transform="translate(11.577880859 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M971 0H177V1434H415V201H971Z" transform="translate(18.702880859 17.514160156) scale(0.004150391 -0.004150391)" />
+  </g>
+</svg>

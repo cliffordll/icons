@@ -46,11 +46,11 @@ class ToolAlignmentTests(unittest.TestCase):
         stems = ['play-wave-circle', 'view-arrow-up-circle', 'view-arrow-down-circle',
                  'play-stop-circle',
                  'play-start-circle', 'play-pause-circle', 'task-retry-circle']
-        reference = ET.parse(ROOT / 'source/svgs/edit-plus-circle.svg').getroot()
+        reference = ET.parse(ROOT / 'source/svgs/tools/edit-plus-circle.svg').getroot()
         expected_frame = reference.find('.//'+NS+'circle').attrib
         for stem in stems:
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 frame = root.find('.//'+NS+'circle[@data-role="frame"]')
                 self.assertIsNotNone(frame)
                 self.assertEqual({k: v for k, v in frame.attrib.items() if k != 'data-role'},
@@ -63,7 +63,7 @@ class ToolAlignmentTests(unittest.TestCase):
                     self.assertEqual(visible_bounds(actual), visible_bounds(base))
 
     def test_full_circle_family_shares_outer_frame(self):
-        reference = ET.parse(ROOT / 'source/svgs/edit-plus-circle.svg').getroot()
+        reference = ET.parse(ROOT / 'source/svgs/tools/edit-plus-circle.svg').getroot()
         expected = reference.find('.//'+NS+'circle').attrib
         stems = ['edit-minus-circle', 'info-about', 'info-help', 'info-clock',
                  'net-globe', 'play-voice', 'play-wave-circle', 'play-start-circle',
@@ -72,7 +72,7 @@ class ToolAlignmentTests(unittest.TestCase):
                  'view-compass']
         for stem in stems:
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 circles = [node for node in root.iter(NS+'circle')
                            if float(node.attrib.get('r', 0)) >= 9]
                 self.assertEqual(len(circles), 1)
@@ -84,8 +84,8 @@ class ToolAlignmentTests(unittest.TestCase):
                                      visible_bounds(folder / 'edit-plus-circle.png'))
 
     def test_history_hands_match_clock_geometry_and_stroke(self):
-        clock = ET.parse(ROOT / 'source/svgs/info-clock.svg').getroot()
-        history = ET.parse(ROOT / 'source/svgs/info-history.svg').getroot()
+        clock = ET.parse(ROOT / 'source/svgs/tools/info-clock.svg').getroot()
+        history = ET.parse(ROOT / 'source/svgs/tools/info-history.svg').getroot()
         clock_hand = clock.findall('.//'+NS+'path')[-1]
         history_hand = history.findall('.//'+NS+'path')[-1]
         clock_pen, history_pen = RecordingPen(), RecordingPen()
@@ -98,7 +98,7 @@ class ToolAlignmentTests(unittest.TestCase):
         self.assertEqual(float(history_hand.attrib['stroke-width'])/16, 1.35)
 
     def test_zoom_pair_shares_lens_and_handle_at_search_scale(self):
-        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        roots = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                  for stem in ['view-zoom-in', 'view-zoom-out']]
         self.assertEqual(roots[0].find('.//'+NS+'circle').attrib,
                          roots[1].find('.//'+NS+'circle').attrib)
@@ -117,7 +117,7 @@ class ToolAlignmentTests(unittest.TestCase):
     def test_folder_family_keeps_shared_vertical_alignment_and_closed_body(self):
         names = ['file-folder', 'file-folder-plus', 'file-folder-move',
                  'file-folder-favorite', 'file-folder-open']
-        groups = [ET.parse(ROOT / 'source/svgs' / (name+'.svg')).getroot().find(NS+'g')
+        groups = [ET.parse(ROOT / 'source/svgs/tools' / (name+'.svg')).getroot().find(NS+'g')
                   for name in names]
         self.assertTrue(all(group.attrib['transform'] == groups[0].attrib['transform']
                             for group in groups))
@@ -126,7 +126,7 @@ class ToolAlignmentTests(unittest.TestCase):
         self.assertTrue(all(body == bodies[0] for body in bodies))
 
     def test_edit_pair_keeps_shared_frame_centered(self):
-        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        roots = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                  for stem in ['edit-edit', 'edit-edit-square']]
         frames = [root.find('.//'+NS+'path') for root in roots]
         self.assertEqual(frames[0].attrib['d'], frames[1].attrib['d'])
@@ -137,7 +137,7 @@ class ToolAlignmentTests(unittest.TestCase):
         self.assertAlmostEqual((y0+y1)/2, 12, delta=0.000001)
 
     def test_volume_pair_shares_speaker_and_mute_cross_vertical_axis(self):
-        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        roots = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                  for stem in ['play-volume', 'play-volume-off']]
         paths = [root.findall('.//'+NS+'path') for root in roots]
         self.assertEqual(paths[0][0].attrib['d'], paths[1][0].attrib['d'])
@@ -147,7 +147,7 @@ class ToolAlignmentTests(unittest.TestCase):
             self.assertAlmostEqual((pen.bounds[1]+pen.bounds[3])/2, 12, delta=0.000001)
 
     def test_boxed_plus_minus_and_change_share_symbol_geometry(self):
-        groups = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot().find(NS+'g')
+        groups = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot().find(NS+'g')
                   for stem in ['edit-plus-square', 'edit-minus-square', 'edit-change']]
         plus, minus, change = [group.findall(NS+'path') for group in groups]
         self.assertEqual(plus[0].attrib['d'], minus[0].attrib['d'])
@@ -168,7 +168,7 @@ class ToolAlignmentTests(unittest.TestCase):
         shared_rows = {}
         for stem, count in counts.items():
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 group = root.find(NS+'g')
                 self.assertEqual(group.attrib['stroke-width'], '1.35')
                 self.assertTrue(all('transform' not in node.attrib for node in root.iter()))
@@ -198,7 +198,7 @@ class ToolAlignmentTests(unittest.TestCase):
                 self.assertEqual(positions, shared_rows[count])
 
     def test_task_batch_reuses_empty_square_layout_and_keeps_check_inside(self):
-        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        roots = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                  for stem in ['task-batch', 'view-list-square']]
         for role in ['marker', 'row']:
             self.assertEqual([e.attrib for e in roots[0].findall('.//*[@data-role="'+role+'"]')],
@@ -225,7 +225,7 @@ class ToolAlignmentTests(unittest.TestCase):
             with self.subTest(stem=stem):
                 actual = visible_bounds(ROOT / 'source/tools' / (stem+'.png'))
                 self.assertEqual(actual, reference)
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 pen = RecordingPen()
                 parse_path(root.find('.//'+NS+'path').attrib['d'], pen)
                 ys = sorted({p[1] for _, points in pen.value for p in points})
@@ -235,7 +235,7 @@ class ToolAlignmentTests(unittest.TestCase):
                 self.assertEqual(ys, rows)
 
     def test_text_off_retains_visible_gap_after_compacting(self):
-        root = ET.parse(ROOT / 'source/svgs/edit-text-off.svg').getroot()
+        root = ET.parse(ROOT / 'source/svgs/tools/edit-text-off.svg').getroot()
         text = root.find('.//*[@data-role="text"]')
         cuts = [tuple(map(float, point.split(','))) for point in text.attrib['data-cutpoints'].split()]
         self.assertEqual(len(cuts), 6)
@@ -250,7 +250,7 @@ class ToolAlignmentTests(unittest.TestCase):
     def test_image_and_qrcode_share_grid_size_without_scaled_strokes(self):
         for stem in ['file-image', 'file-qrcode']:
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 pen = BoundsPen(None)
                 SVGPath.fromstring(ET.tostring(root)).draw(pen)
                 for actual, expected in zip(pen.bounds, (3.675, 3.675, 20.325, 20.325)):
@@ -268,7 +268,7 @@ class ToolAlignmentTests(unittest.TestCase):
         outer = {'x': '3.675', 'y': '3.675', 'width': '16.65', 'height': '16.65', 'rx': '0.6'}
         for stem in stems:
             with self.subTest(stem=stem):
-                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                 group = root.find(NS+'g')
                 self.assertEqual(group[0].attrib, outer)
                 self.assertEqual(group.attrib['stroke-width'], '1.35')
@@ -286,8 +286,8 @@ class ToolAlignmentTests(unittest.TestCase):
                     self.assertGreaterEqual(padding, 1.2)
 
     def test_text_crop_keeps_fullscreen_corners(self):
-        crop = ET.parse(ROOT / 'source/svgs/edit-text-crop.svg').getroot()
-        fullscreen = ET.parse(ROOT / 'source/svgs/view-fullscreen.svg').getroot()
+        crop = ET.parse(ROOT / 'source/svgs/tools/edit-text-crop.svg').getroot()
+        fullscreen = ET.parse(ROOT / 'source/svgs/tools/view-fullscreen.svg').getroot()
         self.assertEqual(crop.find('.//'+NS+'path').attrib['d'],
                          fullscreen.find('.//'+NS+'path').attrib['d'])
 
@@ -301,7 +301,7 @@ class ToolAlignmentTests(unittest.TestCase):
                     self.assertAlmostEqual((y0+y1)/2, size/2, delta=tolerance)
 
     def test_lock_pair_shares_body_keyhole_and_stem(self):
-        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        roots = [ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
                  for stem in ['lock-lock', 'lock-unlock']]
         for role in ['lock-body', 'key-hole', 'key-stem']:
             elements = [root.find('.//*[@data-role="'+role+'"]') for root in roots]

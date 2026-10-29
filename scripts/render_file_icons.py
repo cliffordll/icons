@@ -1,4 +1,4 @@
-"""Regenerate file icons with centered circles and separated characters.
+"""Build pure vector file icons, then rasterize each registered SVG at all sizes.
 
 Requires Pillow, fontTools and wxPython; --font can select a font file on another OS.
 """
@@ -6,6 +6,7 @@ Requires Pillow, fontTools and wxPython; --font can select a font file on anothe
 import argparse
 import json
 import tempfile
+from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
 from xml.etree import ElementTree
@@ -83,7 +84,7 @@ def glyph_outline(font_path, font_axes, character):
     return path.getCommands(), bounds.bounds, units
 
 
-def render_vector_label(size, label, masks, font_path, font_axes, font_size,
+def build_vector_label(label, masks, font_path, font_axes, font_size,
                         cap_height, baseline, width_units, gaps_units, text_colour):
     """Keep bitmap-measured layout, but draw the actual font outlines as vectors."""
     svg = svg_root()
@@ -118,7 +119,8 @@ def render_vector_label(size, label, masks, font_path, font_axes, font_size,
                 'transform': f'translate({tx:.9f} {ty:.9f}) scale({scale:.9f} {-scale:.9f})',
             })
         cursor += mask.width + (gaps_units[index] if index < len(gaps_units) else 0)
-    return rasterize_svg(svg, size)
+    group.set('data-role', 'label')
+    return group
 
 
 def save_png(image, path):
@@ -145,17 +147,128 @@ def character_gap_units(label, base_gap_units, pair_spacing):
             for index in range(max(0, len(label) - 1))]
 
 
-def render_frame(size):
-    """Rasterize the shared file-file vector base at the requested size."""
-    base = ElementTree.parse(ROOT / 'source/svgs/file-file.svg').getroot()
-    return rasterize_svg(base, size)
+def vector_frame(frame_template, band=None):
+    """Cut the existing outline at horizontal label gaps without bitmap masks.
+
+    The standard document's straight sides cross the gap; its rounded corners
+    and fold remain outside it. Flat cut ends match the previous PNG erasure.
+    """
+    from fontTools.pens.recordingPen import RecordingPen
+    from fontTools.pens.svgPathPen import SVGPathPen
+    from fontTools.svgLib.path import parse_path
+
+    template = Path(frame_template) if frame_template else ROOT / 'source/svgs/tools/file-file.svg'
+    if template.resolve() == (TEMPLATES / 'file-square.png').resolve():
+        template = ROOT / 'source/svgs/tools/file-file.svg'
+    if template.suffix.lower() != '.svg':
+        raise ValueError('File icon frames must be SVG; embedded raster templates are not supported')
+    base = ElementTree.parse(template).getroot()
+    if base.get('viewBox') != '0 0 24 24':
+        raise ValueError('File frame must use viewBox="0 0 24 24"')
+    if any(node.tag.rsplit('}', 1)[-1] in ('image', 'foreignObject', 'text') for node in base.iter()):
+        raise ValueError('File frame must contain pure vector geometry')
+    group = ElementTree.Element(f'{{{SVG_NS}}}g', {'data-role': 'frame'})
+    group.extend(deepcopy(list(base)))
+    if band is None:
+        return group
+    top, bottom = band
+    # Only the document outline intersects the horizontal band. Preserve the
+    # separate fold subpath, including its round endpoints.
+    document = group.find(f'.//{{{SVG_NS}}}path[@id="document"]')
+    if document is None:
+        raise ValueError('A frame with label gaps needs a document path with id="document"')
+    pen = RecordingPen()
+    parse_path(document.attrib['d'], pen)
+    output = RecordingPen()
+    current = start = last = None
+
+    def emit_line(a, b):
+        nonlocal last
+        if last != a:
+            output.moveTo(a)
+        output.lineTo(b)
+        last = b
+
+    def line(a, b):
+        nonlocal last
+        if a == b:
+            return
+        cuts = [0., 1.]
+        if a[1] != b[1]:
+            cuts += [(edge-a[1])/(b[1]-a[1]) for edge in band
+                     if 0 < (edge-a[1])/(b[1]-a[1]) < 1]
+        cuts.sort()
+        for t0, t1 in zip(cuts, cuts[1:]):
+            mid_y = a[1]+(b[1]-a[1])*(t0+t1)/2
+            if top < mid_y < bottom:
+                last = None
+                continue
+            def point(t):
+                return a if t == 0 else b if t == 1 else tuple(a[i]+(b[i]-a[i])*t for i in (0, 1))
+            emit_line(point(t0), point(t1))
+
+    # Open contours (the fold) have no cut ends. Keep their original caps.
+    contours, contour = [], []
+    for command, values in pen.value:
+        if command == 'moveTo' and contour:
+            contours.append(contour)
+            contour = []
+        contour.append((command, values))
+    if contour:
+        contours.append(contour)
+    fold = SVGPathPen(None)
+    for contour in contours:
+        if not any(command == 'closePath' for command, _ in contour):
+            for command, values in contour:
+                getattr(fold, command)(*values)
+            continue
+        for command, values in contour:
+            if command == 'moveTo':
+                current = start = values[0]
+                last = None
+            elif command in ('lineTo', 'closePath'):
+                target = values[0] if command == 'lineTo' else start
+                line(current, target)
+                current = target
+            elif command in ('qCurveTo', 'curveTo'):
+                ys = [current[1]]+[p[1] for p in values]
+                if max(ys) > top and min(ys) < bottom:
+                    raise ValueError('Label gap intersects a curved frame corner')
+                if last != current:
+                    output.moveTo(current)
+                getattr(output, command)(*values)
+                current = last = values[-1]
+            elif command != 'endPath':
+                raise ValueError(f'Unsupported frame command: {command}')
+    # Clipping a closed contour can leave its original start as two touching
+    # open subpaths. Join those runs across the start so the renderer strokes
+    # the corner continuously instead of antialiasing two flat caps there.
+    runs, run = [], []
+    for command, values in output.value:
+        if command == 'moveTo' and run:
+            runs.append(run)
+            run = []
+        run.append((command, values))
+    if run:
+        runs.append(run)
+    if len(runs) > 1 and runs[-1][-1][1][-1] == runs[0][0][1][0]:
+        runs = [runs[-1]+runs[0][1:], *runs[1:-1]]
+    joined = SVGPathPen(None)
+    for run in runs:
+        for command, values in run:
+            getattr(joined, command)(*values)
+    document.set('d', joined.getCommands())
+    document.set('stroke-linecap', 'butt')
+    if fold.getCommands():
+        parent = next(node for node in group.iter() if document in list(node))
+        ElementTree.SubElement(parent, f'{{{SVG_NS}}}path', {
+            'data-role': 'fold', 'd': fold.getCommands()})
+    return group
 
 
-def render(original, label, colour, font_path, text_colour=TEXT_COLOUR, frame_template=None,
+def build_file_svg(label, colour, font_path, text_colour=TEXT_COLOUR, frame_template=None,
            text_offset_y=1.5, font_axes=None, spacing=SPACING, font_size=FONT_SIZE,
            circle_bounds=(4.5, 6.0, 19.5, 21.0), pair_spacing=None):
-    size = original.height
-    scale = size / 24
     text_center = (circle_bounds[0] + circle_bounds[2]) / 2
     requested_spacing = spacing
     # 画布两侧各留 1 DIP；先缩字距，再按整行缩字号，绝不横向拉伸字符。
@@ -200,36 +313,26 @@ def render(original, label, colour, font_path, text_colour=TEXT_COLOUR, frame_te
     band_top = baseline - cap_height / MASTER_SCALE - GAP_PADDING
     band_bottom = baseline + GAP_PADDING if gaps else baseline + 1
 
-    background = Image.new('RGBA', (size, size))
+    svg = svg_root()
     if colour is not None:
-        svg = svg_root()
         ElementTree.SubElement(svg, f'{{{SVG_NS}}}circle', {
+            'data-role': 'format-circle',
             'cx': str((circle_bounds[0] + circle_bounds[2]) / 2),
             'cy': str((circle_bounds[1] + circle_bounds[3]) / 2),
             'r': str((circle_bounds[2] - circle_bounds[0]) / 2),
             'fill': colour,
         })
-        background = rasterize_svg(svg, size)
-    if frame_template is None or Path(frame_template).resolve() == (TEMPLATES / 'file-square.png').resolve():
-        frame = render_frame(size)
-    else:
-        with Image.open(frame_template) as template:
-            frame = template.convert('RGBA').resize((size, size), Image.Resampling.LANCZOS)
-    if gaps:
-        band = (0, round(band_top * scale), size, round(band_bottom * scale))
-        frame.paste((0, 0, 0, 0), band)
-    body = Image.alpha_composite(background, frame)
-    text = render_vector_label(size, label, masks, font_path, font_axes, font_size,
-                               cap_height, baseline, width_units, gaps_units, text_colour)
-    result = Image.alpha_composite(body, text)
-    return result, dict(label_left=left, label_right=right,
+    svg.append(vector_frame(frame_template, (band_top, band_bottom) if gaps else None))
+    svg.append(build_vector_label(label, masks, font_path, font_axes, font_size,
+                                  cap_height, baseline, width_units, gaps_units, text_colour))
+    return svg, dict(label_left=left, label_right=right,
                         frame_gaps=gaps, character_gap=spacing,
                         condensed=False, label_center=text_center,
                         font_size=font_size, cap_height=cap_height / MASTER_SCALE,
                         baseline=baseline, text_offset_y=text_offset_y, display_label=label,
                         font_family=font.getname()[0], font_style=font.getname()[1],
                         font_axes=font_axes,
-                        native_pixel_text=False, rendering='vector-label-and-circle',
+                        native_pixel_text=False, rendering='pure-vector-svg',
                         pixel_aligned_label=False,
                         text_colour=text_colour,
                         canvas_padding=0,
@@ -244,7 +347,8 @@ def main():
     parser.add_argument('--font', type=Path, default=Path('C:/Windows/Fonts/seguisb.ttf'))
     parser.add_argument('--font-axes', type=float, nargs='+', help='Variable-font axes in font order (Bahnschrift: weight width)')
     parser.add_argument('--text-colour', help='Override label colour for the selected icons')
-    parser.add_argument('--frame-template', type=Path, help='Use a transparent frame PNG for selected icons')
+    parser.add_argument('--frame-template', type=Path, help='Use a pure vector SVG frame for selected icons')
+    parser.add_argument('--render-only', action='store_true', help='Render registered SVGs without rebuilding them or requiring a font')
     parser.add_argument('--text-offset-y', type=float, help='Vertical label offset in 24px design units')
     parser.add_argument('--spacing', type=float, help='Visible character gap in 24px design units')
     parser.add_argument('--font-size', type=float, help='Font size in 24px design units')
@@ -253,7 +357,7 @@ def main():
     selection.add_argument('--names', nargs='+', help='Only regenerate the named file icons')
     selection.add_argument('--all', action='store_true', help='Explicitly regenerate all file icons')
     args = parser.parse_args()
-    if not args.font.is_file():
+    if not args.render_only and not args.font.is_file():
         parser.error('Font file missing; supply --font PATH')
     if not args.all and not args.names:
         args.names = ['hls', 'm3u8', 'ts', 'mp4', 'url']
@@ -272,8 +376,20 @@ def main():
         if unknown:
             parser.error(f'Unknown file icons: {sorted(unknown)}')
         entries = [i for i in entries if i['name'] in args.names]
+    if args.all and not args.render_only and args.frame_template is None:
+        defaults['frame_template'] = 'source/svgs/tools/file-file.svg'
     for entry in entries:
         name = entry['name']
+        vector_path = ROOT / 'source/svgs/files' / (Path(entry['source']).stem+'.svg')
+        if args.render_only:
+            if entry.get('vector_source') != vector_path.relative_to(ROOT).as_posix() or not vector_path.is_file():
+                parser.error(f'File icon without a registered SVG: {name}')
+            vector = ElementTree.parse(vector_path).getroot()
+            for directory in ('source', *(str(s) for s in manifest['sizes'])):
+                size = 384 if directory == 'source' else int(directory)
+                save_png(rasterize_svg(vector, size), ROOT / directory / 'files' / Path(entry['source']).name)
+            print(f'Rendered {name} from SVG')
+            continue
         entry['display_label'] = SHORT_LABELS.get(entry['label'], entry['label'])
         overrides = {
             'frame_template': (args.frame_template.resolve().relative_to(PROJECT_ROOT).as_posix()
@@ -301,23 +417,22 @@ def main():
         circle_bounds = (circle['x'], circle['y'] + circle_offset_y,
                          circle['x'] + circle['diameter'],
                          circle['y'] + circle_offset_y + circle['diameter'])
-        new_vector = (ElementTree.parse(ROOT / 'source/svgs/file-new.svg').getroot()
-                      if name == 'new' else None)
+        if name == 'new':
+            vector = ElementTree.parse(ROOT / 'source/svgs/tools/file-new.svg').getroot()
+        else:
+            vector, metrics = build_file_svg(entry['display_label'], entry['circle_color'], args.font,
+                                            entry.get('text_colour', defaults['text_colour']), frame_template,
+                                            entry.get('text_offset_y', defaults['text_offset_y']), args.font_axes,
+                                            character_gap, entry.get('font_size', defaults['font_size']),
+                                            circle_bounds, defaults.get('pair_spacing', {}))
+        ElementTree.indent(vector, space='  ')
+        vector_path.write_text(ElementTree.tostring(vector, encoding='unicode')+'\n', encoding='utf-8')
+        entry['vector_source'] = vector_path.relative_to(ROOT).as_posix()
         for directory in ('source', *(str(s) for s in manifest['sizes'])):
             path = ROOT / directory / 'files' / Path(entry['source']).name
             path.parent.mkdir(parents=True, exist_ok=True)
             size = 384 if directory == 'source' else int(directory)
-            if name == 'new':
-                result = rasterize_svg(new_vector, size)
-            else:
-                with Image.new('RGBA', (size, size)) as original:
-                    result, metrics = render(original, entry['display_label'],
-                                             entry['circle_color'], args.font,
-                                             entry.get('text_colour', defaults['text_colour']), frame_template,
-                                             entry.get('text_offset_y', defaults['text_offset_y']), args.font_axes,
-                                             character_gap,
-                                             entry.get('font_size', defaults['font_size']), circle_bounds,
-                                             defaults.get('pair_spacing', {}))
+            result = rasterize_svg(vector, size)
             save_png(result, path)
             if name == 'new':
                 tool_entry = next((i for i in manifest['icons']
@@ -326,9 +441,8 @@ def main():
                     Path(tool_entry['source']).name if tool_entry else 'file-new.png')
                 tool_path.parent.mkdir(parents=True, exist_ok=True)
                 save_png(result, tool_path)
-            if directory == '24' and name != 'new':
-                base_metrics = metrics
         if name != 'new':
+            base_metrics = metrics
             manifest['file_frame']['text_metrics'].setdefault(name, {}).update(base_metrics)
             print(name, base_metrics)
     if any(entry['name'] == 'new' for entry in entries) and not any(
@@ -336,14 +450,16 @@ def main():
         manifest['icons'].append(dict(category='tools', name='new', label='新建文件',
                                      origin='synced:files/other-new.png', added=True, group='file',
                                      source='source/tools/file-new.png'))
+    if args.render_only:
+        return
     if not args.names:
         manifest['file_frame']['label_rule'] = (
             f'{base_metrics["font_family"]} {base_metrics["font_style"]}, '
             '8.5px font, default 1px character gaps at 24px, reduce gaps only to fit. '
             'Labels and circles share center x=12; baseline y=17.5. '
             'Long file types use short display labels. Fixed square canvas; '
-            'no individual letter is compressed. Plus sign matches cap height. '
-            'Frame gaps add 2px padding.'
+            'no individual letter is compressed. Special new reuses file-new.svg. '
+            'Frame gaps add 2px padding. Complete pure vector SVGs drive all PNG sizes.'
         )
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 

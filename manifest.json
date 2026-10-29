@@ -19,7 +19,8 @@
       "source": "source/files/video-3gp.png",
       "circle_color": "#F0C1B2",
       "display_label": "3GP",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-3gp.svg"
     },
     {
       "category": "files",
@@ -30,7 +31,8 @@
       "source": "source/files/pack-7z.png",
       "circle_color": "#B2B5F0",
       "display_label": "7Z",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-7z.svg"
     },
     {
       "category": "files",
@@ -41,7 +43,8 @@
       "source": "source/files/audio-aac.png",
       "circle_color": "#C7F0B2",
       "display_label": "AAC",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-aac.svg"
     },
     {
       "category": "files",
@@ -52,7 +55,8 @@
       "source": "source/files/image-ai.png",
       "circle_color": "#F0B2DA",
       "display_label": "AI",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-ai.svg"
     },
     {
       "category": "files",
@@ -63,7 +67,8 @@
       "source": "source/files/app-apk.png",
       "circle_color": "#B2ECF0",
       "display_label": "APK",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-apk.svg"
     },
     {
       "category": "files",
@@ -74,7 +79,8 @@
       "source": "source/files/video-avc.png",
       "circle_color": "#F0E3B2",
       "display_label": "AVC",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-avc.svg"
     },
     {
       "category": "files",
@@ -85,7 +91,8 @@
       "source": "source/files/video-avi.png",
       "circle_color": "#D0B2F0",
       "display_label": "AVI",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-avi.svg"
     },
     {
       "category": "files",
@@ -96,7 +103,8 @@
       "source": "source/files/image-avif.png",
       "circle_color": "#B2F0BE",
       "display_label": "AVIF",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-avif.svg"
     },
     {
       "category": "files",
@@ -107,7 +115,8 @@
       "source": "source/files/video-avs.png",
       "circle_color": "#F0B2B8",
       "display_label": "AVS",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-avs.svg"
     },
     {
       "category": "files",
@@ -118,7 +127,8 @@
       "source": "source/files/other-bak.png",
       "circle_color": "#B2CAF0",
       "display_label": "BAK",
-      "group": "other"
+      "group": "other",
+      "vector_source": "source/svgs/files/other-bak.svg"
     },
     {
       "category": "files",
@@ -129,7 +139,8 @@
       "source": "source/files/code-bat.png",
       "circle_color": "#DCF0B2",
       "display_label": "BAT",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-bat.svg"
     },
     {
       "category": "files",
@@ -140,7 +151,8 @@
       "source": "source/files/image-bmp.png",
       "circle_color": "#F0B2EE",
       "display_label": "BMP",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-bmp.svg"
     },
     {
       "category": "files",
@@ -151,7 +163,8 @@
       "source": "source/files/pack-bz2.png",
       "circle_color": "#B2F0E0",
       "display_label": "BZ2",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-bz2.svg"
     },
     {
       "category": "files",
@@ -162,7 +175,8 @@
       "source": "source/files/code-c.png",
       "circle_color": "#F0CEB2",
       "display_label": "C",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-c.svg"
     },
     {
       "category": "files",
@@ -173,7 +187,8 @@
       "source": "source/files/code-cmd.png",
       "circle_color": "#BCB2F0",
       "display_label": "CMD",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-cmd.svg"
     },
     {
       "category": "files",
@@ -184,7 +199,8 @@
       "source": "source/files/code-cpp.png",
       "circle_color": "#BAF0B2",
       "display_label": "CPP",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-cpp.svg"
     },
     {
       "category": "files",
@@ -195,7 +211,8 @@
       "source": "source/files/code-css.png",
       "circle_color": "#F0B2CD",
       "display_label": "CSS",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-css.svg"
     },
     {
       "category": "files",
@@ -206,7 +223,8 @@
       "source": "source/files/sheet-csv.png",
       "circle_color": "#B2DFF0",
       "display_label": "CSV",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-csv.svg"
     },
     {
       "category": "files",
@@ -217,7 +235,8 @@
       "source": "source/files/data-db.png",
       "circle_color": "#F0F0B2",
       "display_label": "DB",
-      "group": "data"
+      "group": "data",
+      "vector_source": "source/svgs/files/data-db.svg"
     },
     {
       "category": "files",
@@ -228,7 +247,8 @@
       "source": "source/files/app-dll.png",
       "circle_color": "#DDB2F0",
       "display_label": "DLL",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-dll.svg"
     },
     {
       "category": "files",
@@ -239,7 +259,8 @@
       "source": "source/files/doc-doc.png",
       "circle_color": "#B2F0CB",
       "display_label": "DOC",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-doc.svg"
     },
     {
       "category": "files",
@@ -250,7 +271,8 @@
       "source": "source/files/doc-docx.png",
       "circle_color": "#F0B9B2",
       "display_label": "DOCX",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-docx.svg"
     },
     {
       "category": "files",
@@ -261,7 +283,8 @@
       "source": "source/files/video-dvd.png",
       "circle_color": "#B2BDF0",
       "display_label": "DVD",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-dvd.svg"
     },
     {
       "category": "files",
@@ -272,7 +295,8 @@
       "source": "source/files/code-env.png",
       "circle_color": "#CFF0B2",
       "display_label": "ENV",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-env.svg"
     },
     {
       "category": "files",
@@ -283,7 +307,8 @@
       "source": "source/files/doc-epub.png",
       "circle_color": "#F0B2E2",
       "display_label": "EPUB",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-epub.svg"
     },
     {
       "category": "files",
@@ -294,7 +319,8 @@
       "source": "source/files/app-exe.png",
       "circle_color": "#B2F0ED",
       "display_label": "EXE",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-exe.svg"
     },
     {
       "category": "files",
@@ -305,7 +331,8 @@
       "source": "source/files/video-f4v.png",
       "circle_color": "#F0DBB2",
       "display_label": "F4V",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-f4v.svg"
     },
     {
       "category": "files",
@@ -316,7 +343,8 @@
       "source": "source/files/audio-flac.png",
       "circle_color": "#C8B2F0",
       "display_label": "FLAC",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-flac.svg"
     },
     {
       "category": "files",
@@ -327,7 +355,8 @@
       "source": "source/files/video-flc.png",
       "circle_color": "#B2F0B6",
       "display_label": "FLC",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-flc.svg"
     },
     {
       "category": "files",
@@ -338,7 +367,8 @@
       "source": "source/files/video-flv.png",
       "circle_color": "#F0B2C0",
       "display_label": "FLV",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-flv.svg"
     },
     {
       "category": "files",
@@ -349,7 +379,8 @@
       "source": "source/files/image-gif.png",
       "circle_color": "#B2D2F0",
       "display_label": "GIF",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-gif.svg"
     },
     {
       "category": "files",
@@ -360,7 +391,8 @@
       "source": "source/files/pack-gz.png",
       "circle_color": "#E4F0B2",
       "display_label": "GZ",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-gz.svg"
     },
     {
       "category": "files",
@@ -371,7 +403,8 @@
       "source": "source/files/image-heic.png",
       "circle_color": "#EAB2F0",
       "display_label": "HEIC",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-heic.svg"
     },
     {
       "category": "files",
@@ -382,7 +415,8 @@
       "source": "source/files/doc-hlp.png",
       "circle_color": "#B2F0D8",
       "display_label": "HLP",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-hlp.svg"
     },
     {
       "category": "files",
@@ -393,7 +427,8 @@
       "source": "source/files/code-htm.png",
       "circle_color": "#F0C6B2",
       "display_label": "HTM",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-htm.svg"
     },
     {
       "category": "files",
@@ -404,7 +439,8 @@
       "source": "source/files/live-hls.png",
       "circle_color": "#AAD4FF",
       "display_label": "HLS",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-hls.svg"
     },
     {
       "category": "files",
@@ -415,7 +451,8 @@
       "source": "source/files/code-html.png",
       "circle_color": "#B4B2F0",
       "display_label": "HTML",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-html.svg"
     },
     {
       "category": "files",
@@ -426,7 +463,8 @@
       "source": "source/files/code-ini.png",
       "circle_color": "#C2F0B2",
       "display_label": "INI",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-ini.svg"
     },
     {
       "category": "files",
@@ -437,7 +475,8 @@
       "source": "source/files/pack-iso.png",
       "circle_color": "#F0B2D5",
       "display_label": "ISO",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-iso.svg"
     },
     {
       "category": "files",
@@ -448,7 +487,8 @@
       "source": "source/files/image-jpeg.png",
       "circle_color": "#B2E7F0",
       "display_label": "JPEG",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-jpeg.svg"
     },
     {
       "category": "files",
@@ -459,7 +499,8 @@
       "source": "source/files/image-jpg.png",
       "circle_color": "#F0E8B2",
       "display_label": "JPG",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-jpg.svg"
     },
     {
       "category": "files",
@@ -470,7 +511,8 @@
       "source": "source/files/code-js.png",
       "circle_color": "#D5B2F0",
       "display_label": "JS",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-js.svg"
     },
     {
       "category": "files",
@@ -481,7 +523,8 @@
       "source": "source/files/code-json.png",
       "circle_color": "#B2F0C3",
       "display_label": "JSON",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-json.svg"
     },
     {
       "category": "files",
@@ -492,7 +535,8 @@
       "source": "source/files/app-lib.png",
       "circle_color": "#F0B2B3",
       "display_label": "LIB",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-lib.svg"
     },
     {
       "category": "files",
@@ -503,7 +547,8 @@
       "source": "source/files/other-log.png",
       "circle_color": "#B2C5F0",
       "display_label": "LOG",
-      "group": "other"
+      "group": "other",
+      "vector_source": "source/svgs/files/other-log.svg"
     },
     {
       "category": "files",
@@ -514,7 +559,8 @@
       "source": "source/files/code-lua.png",
       "circle_color": "#D7F0B2",
       "display_label": "LUA",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-lua.svg"
     },
     {
       "category": "files",
@@ -525,7 +571,8 @@
       "source": "source/files/live-m3u.png",
       "circle_color": "#F0B2E9",
       "display_label": "M3U",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-m3u.svg"
     },
     {
       "category": "files",
@@ -536,7 +583,8 @@
       "source": "source/files/live-m3u8.png",
       "circle_color": "#AAD4FF",
       "display_label": "M3U8",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-m3u8.svg"
     },
     {
       "category": "files",
@@ -547,7 +595,8 @@
       "source": "source/files/audio-m4a.png",
       "circle_color": "#F0D3B2",
       "display_label": "M4A",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-m4a.svg"
     },
     {
       "category": "files",
@@ -558,7 +607,8 @@
       "source": "source/files/video-m4v.png",
       "circle_color": "#C0B2F0",
       "display_label": "M4V",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-m4v.svg"
     },
     {
       "category": "files",
@@ -569,7 +619,8 @@
       "source": "source/files/audio-mac.png",
       "circle_color": "#B6F0B2",
       "display_label": "MAC",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-mac.svg"
     },
     {
       "category": "files",
@@ -580,7 +631,8 @@
       "source": "source/files/doc-md.png",
       "circle_color": "#F0B2C8",
       "display_label": "MD",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-md.svg"
     },
     {
       "category": "files",
@@ -591,7 +643,8 @@
       "source": "source/files/video-mkv.png",
       "circle_color": "#B2DAF0",
       "display_label": "MKV",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mkv.svg"
     },
     {
       "category": "files",
@@ -602,7 +655,8 @@
       "source": "source/files/video-mod.png",
       "circle_color": "#ECF0B2",
       "display_label": "MOD",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mod.svg"
     },
     {
       "category": "files",
@@ -613,7 +667,8 @@
       "source": "source/files/video-mov.png",
       "circle_color": "#E2B2F0",
       "display_label": "MOV",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mov.svg"
     },
     {
       "category": "files",
@@ -624,7 +679,8 @@
       "source": "source/files/audio-mp3.png",
       "circle_color": "#B2F0D0",
       "display_label": "MP3",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-mp3.svg"
     },
     {
       "category": "files",
@@ -635,7 +691,8 @@
       "source": "source/files/video-mp4.png",
       "circle_color": "#F0BEB2",
       "display_label": "MP4",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mp4.svg"
     },
     {
       "category": "files",
@@ -646,7 +703,8 @@
       "source": "source/files/live-mpd.png",
       "circle_color": "#B2B8F0",
       "display_label": "MPD",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-mpd.svg"
     },
     {
       "category": "files",
@@ -657,7 +715,8 @@
       "source": "source/files/video-mpeg.png",
       "circle_color": "#CAF0B2",
       "display_label": "MPEG",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg.svg"
     },
     {
       "category": "files",
@@ -668,7 +727,8 @@
       "source": "source/files/video-mpeg-1.png",
       "circle_color": "#F0B2DD",
       "display_label": "MPG1",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg-1.svg"
     },
     {
       "category": "files",
@@ -679,7 +739,8 @@
       "source": "source/files/video-mpeg-2.png",
       "circle_color": "#B2EFF0",
       "display_label": "MPG2",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg-2.svg"
     },
     {
       "category": "files",
@@ -690,7 +751,8 @@
       "source": "source/files/video-mpeg-4.png",
       "circle_color": "#F0E0B2",
       "display_label": "MPG4",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg-4.svg"
     },
     {
       "category": "files",
@@ -701,7 +763,8 @@
       "source": "source/files/video-mpeg1.png",
       "circle_color": "#CDB2F0",
       "display_label": "MPG1",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg1.svg"
     },
     {
       "category": "files",
@@ -712,7 +775,8 @@
       "source": "source/files/video-mpeg2.png",
       "circle_color": "#B2F0BB",
       "display_label": "MPG2",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg2.svg"
     },
     {
       "category": "files",
@@ -723,7 +787,8 @@
       "source": "source/files/video-mpeg4.png",
       "circle_color": "#F0B2BB",
       "display_label": "MPG4",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpeg4.svg"
     },
     {
       "category": "files",
@@ -734,7 +799,8 @@
       "source": "source/files/video-mpg.png",
       "circle_color": "#B2CDF0",
       "display_label": "MPG",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mpg.svg"
     },
     {
       "category": "files",
@@ -745,7 +811,8 @@
       "source": "source/files/video-mts.png",
       "circle_color": "#DFF0B2",
       "display_label": "MTS",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mts.svg"
     },
     {
       "category": "files",
@@ -756,7 +823,8 @@
       "source": "source/files/video-mux.png",
       "circle_color": "#EFB2F0",
       "display_label": "MUX",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-mux.svg"
     },
     {
       "category": "files",
@@ -767,7 +835,8 @@
       "source": "source/files/other-none.png",
       "circle_color": "#B2F0DD",
       "display_label": "NONE",
-      "group": "other"
+      "group": "other",
+      "vector_source": "source/svgs/files/other-none.svg"
     },
     {
       "category": "files",
@@ -778,7 +847,8 @@
       "source": "source/files/audio-ogg.png",
       "circle_color": "#F0CBB2",
       "display_label": "OGG",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-ogg.svg"
     },
     {
       "category": "files",
@@ -789,7 +859,8 @@
       "source": "source/files/audio-opus.png",
       "circle_color": "#B9B2F0",
       "display_label": "OPUS",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-opus.svg"
     },
     {
       "category": "files",
@@ -800,7 +871,8 @@
       "source": "source/files/doc-pdf.png",
       "circle_color": "#BDF0B2",
       "display_label": "PDF",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-pdf.svg"
     },
     {
       "category": "files",
@@ -811,7 +883,8 @@
       "source": "source/files/image-pic.png",
       "circle_color": "#F0B2D0",
       "display_label": "PIC",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-pic.svg"
     },
     {
       "category": "files",
@@ -822,7 +895,8 @@
       "source": "source/files/image-png.png",
       "circle_color": "#B2E2F0",
       "display_label": "PNG",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-png.svg"
     },
     {
       "category": "files",
@@ -833,7 +907,8 @@
       "source": "source/files/slide-ppt.png",
       "circle_color": "#F0ECB2",
       "display_label": "PPT",
-      "group": "slide"
+      "group": "slide",
+      "vector_source": "source/svgs/files/slide-ppt.svg"
     },
     {
       "category": "files",
@@ -844,7 +919,8 @@
       "source": "source/files/slide-pptx.png",
       "circle_color": "#DAB2F0",
       "display_label": "PPTX",
-      "group": "slide"
+      "group": "slide",
+      "vector_source": "source/svgs/files/slide-pptx.svg"
     },
     {
       "category": "files",
@@ -855,7 +931,8 @@
       "source": "source/files/image-psd.png",
       "circle_color": "#B2F0C8",
       "display_label": "PSD",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-psd.svg"
     },
     {
       "category": "files",
@@ -866,7 +943,8 @@
       "source": "source/files/code-py.png",
       "circle_color": "#F0B6B2",
       "display_label": "PY",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-py.svg"
     },
     {
       "category": "files",
@@ -877,7 +955,8 @@
       "source": "source/files/pack-rar.png",
       "circle_color": "#B2C0F0",
       "display_label": "RAR",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-rar.svg"
     },
     {
       "category": "files",
@@ -888,7 +967,8 @@
       "source": "source/files/image-raw.png",
       "circle_color": "#D2F0B2",
       "display_label": "RAW",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-raw.svg"
     },
     {
       "category": "files",
@@ -899,7 +979,8 @@
       "source": "source/files/video-rm.png",
       "circle_color": "#F0B2E5",
       "display_label": "RM",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-rm.svg"
     },
     {
       "category": "files",
@@ -910,7 +991,8 @@
       "source": "source/files/video-rmvb.png",
       "circle_color": "#B2F0EA",
       "display_label": "RMVB",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-rmvb.svg"
     },
     {
       "category": "files",
@@ -921,7 +1003,8 @@
       "source": "source/files/doc-rtf.png",
       "circle_color": "#F0D8B2",
       "display_label": "RTF",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-rtf.svg"
     },
     {
       "category": "files",
@@ -932,7 +1015,8 @@
       "source": "source/files/live-rtmp.png",
       "circle_color": "#F0B2AB",
       "display_label": "RTMP",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-rtmp.svg"
     },
     {
       "category": "files",
@@ -943,7 +1027,8 @@
       "source": "source/files/live-seed.png",
       "circle_color": "#C5B2F0",
       "display_label": "SEED",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-seed.svg"
     },
     {
       "category": "files",
@@ -954,7 +1039,8 @@
       "source": "source/files/code-sh.png",
       "circle_color": "#B2F0B3",
       "display_label": "SH",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-sh.svg"
     },
     {
       "category": "files",
@@ -965,7 +1051,8 @@
       "source": "source/files/data-sql.png",
       "circle_color": "#F0B2C3",
       "display_label": "SQL",
-      "group": "data"
+      "group": "data",
+      "vector_source": "source/svgs/files/data-sql.svg"
     },
     {
       "category": "files",
@@ -976,7 +1063,8 @@
       "source": "source/files/data-sqlite.png",
       "circle_color": "#B2D5F0",
       "display_label": "SQL",
-      "group": "data"
+      "group": "data",
+      "vector_source": "source/svgs/files/data-sqlite.svg"
     },
     {
       "category": "files",
@@ -987,7 +1075,8 @@
       "source": "source/files/image-svg.png",
       "circle_color": "#E7F0B2",
       "display_label": "SVG",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-svg.svg"
     },
     {
       "category": "files",
@@ -998,7 +1087,8 @@
       "source": "source/files/pack-tar.png",
       "circle_color": "#E7B2F0",
       "display_label": "TAR",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-tar.svg"
     },
     {
       "category": "files",
@@ -1009,7 +1099,8 @@
       "source": "source/files/pack-tgz.png",
       "circle_color": "#B2F0D5",
       "display_label": "TGZ",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-tgz.svg"
     },
     {
       "category": "files",
@@ -1020,7 +1111,8 @@
       "source": "source/files/image-tiff.png",
       "circle_color": "#F0C3B2",
       "display_label": "TIFF",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-tiff.svg"
     },
     {
       "category": "files",
@@ -1031,7 +1123,8 @@
       "source": "source/files/other-tmp.png",
       "circle_color": "#B2B3F0",
       "display_label": "TMP",
-      "group": "other"
+      "group": "other",
+      "vector_source": "source/svgs/files/other-tmp.svg"
     },
     {
       "category": "files",
@@ -1042,7 +1135,8 @@
       "source": "source/files/code-toml.png",
       "circle_color": "#C5F0B2",
       "display_label": "TOML",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-toml.svg"
     },
     {
       "category": "files",
@@ -1053,7 +1147,8 @@
       "source": "source/files/video-ts.png",
       "circle_color": "#D4AAFF",
       "display_label": "TS",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-ts.svg"
     },
     {
       "category": "files",
@@ -1064,7 +1159,8 @@
       "source": "source/files/app-ttc.png",
       "circle_color": "#B2EAF0",
       "display_label": "TTC",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-ttc.svg"
     },
     {
       "category": "files",
@@ -1075,7 +1171,8 @@
       "source": "source/files/app-ttf.png",
       "circle_color": "#F0E5B2",
       "display_label": "TTF",
-      "group": "app"
+      "group": "app",
+      "vector_source": "source/svgs/files/app-ttf.svg"
     },
     {
       "category": "files",
@@ -1086,7 +1183,8 @@
       "source": "source/files/doc-txt.png",
       "circle_color": "#D2B2F0",
       "display_label": "TXT",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-txt.svg"
     },
     {
       "category": "files",
@@ -1097,7 +1195,8 @@
       "source": "source/files/live-url.png",
       "circle_color": "#B8E0D7",
       "display_label": "URL",
-      "group": "live"
+      "group": "live",
+      "vector_source": "source/svgs/files/live-url.svg"
     },
     {
       "category": "files",
@@ -1108,7 +1207,8 @@
       "source": "source/files/video-vcd.png",
       "circle_color": "#B2F0C0",
       "display_label": "VCD",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-vcd.svg"
     },
     {
       "category": "files",
@@ -1119,7 +1219,8 @@
       "source": "source/files/audio-voc.png",
       "circle_color": "#F0B2B6",
       "display_label": "VOC",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-voc.svg"
     },
     {
       "category": "files",
@@ -1130,7 +1231,8 @@
       "source": "source/files/audio-wav.png",
       "circle_color": "#B2C8F0",
       "display_label": "WAV",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-wav.svg"
     },
     {
       "category": "files",
@@ -1141,7 +1243,8 @@
       "source": "source/files/video-webm.png",
       "circle_color": "#DAF0B2",
       "display_label": "WEBM",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-webm.svg"
     },
     {
       "category": "files",
@@ -1152,7 +1255,8 @@
       "source": "source/files/image-webp.png",
       "circle_color": "#F0B2ED",
       "display_label": "WEBP",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-webp.svg"
     },
     {
       "category": "files",
@@ -1163,7 +1267,8 @@
       "source": "source/files/audio-wma.png",
       "circle_color": "#B2F0E2",
       "display_label": "WMA",
-      "group": "audio"
+      "group": "audio",
+      "vector_source": "source/svgs/files/audio-wma.svg"
     },
     {
       "category": "files",
@@ -1174,7 +1279,8 @@
       "source": "source/files/image-wmf.png",
       "circle_color": "#F0D0B2",
       "display_label": "WMF",
-      "group": "image"
+      "group": "image",
+      "vector_source": "source/svgs/files/image-wmf.svg"
     },
     {
       "category": "files",
@@ -1185,7 +1291,8 @@
       "source": "source/files/video-wmv.png",
       "circle_color": "#BDB2F0",
       "display_label": "WMV",
-      "group": "video"
+      "group": "video",
+      "vector_source": "source/svgs/files/video-wmv.svg"
     },
     {
       "category": "files",
@@ -1196,7 +1303,8 @@
       "source": "source/files/doc-wps.png",
       "circle_color": "#B9F0B2",
       "display_label": "WPS",
-      "group": "doc"
+      "group": "doc",
+      "vector_source": "source/svgs/files/doc-wps.svg"
     },
     {
       "category": "files",
@@ -1207,7 +1315,8 @@
       "source": "source/files/sheet-xls.png",
       "circle_color": "#F0B2CB",
       "display_label": "XLS",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-xls.svg"
     },
     {
       "category": "files",
@@ -1218,7 +1327,8 @@
       "source": "source/files/sheet-xlsm.png",
       "circle_color": "#B2DDF0",
       "display_label": "XLSM",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-xlsm.svg"
     },
     {
       "category": "files",
@@ -1229,7 +1339,8 @@
       "source": "source/files/sheet-xlsx.png",
       "circle_color": "#EFF0B2",
       "display_label": "XLSX",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-xlsx.svg"
     },
     {
       "category": "files",
@@ -1240,7 +1351,8 @@
       "source": "source/files/sheet-xltm.png",
       "circle_color": "#DFB2F0",
       "display_label": "XLTM",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-xltm.svg"
     },
     {
       "category": "files",
@@ -1251,7 +1363,8 @@
       "source": "source/files/sheet-xltx.png",
       "circle_color": "#B2F0CD",
       "display_label": "XLTX",
-      "group": "sheet"
+      "group": "sheet",
+      "vector_source": "source/svgs/files/sheet-xltx.svg"
     },
     {
       "category": "files",
@@ -1262,7 +1375,8 @@
       "source": "source/files/code-xml.png",
       "circle_color": "#F0BBB2",
       "display_label": "XML",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-xml.svg"
     },
     {
       "category": "files",
@@ -1273,7 +1387,8 @@
       "source": "source/files/pack-xz.png",
       "circle_color": "#B2BBF0",
       "display_label": "XZ",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-xz.svg"
     },
     {
       "category": "files",
@@ -1284,7 +1399,8 @@
       "source": "source/files/code-yaml.png",
       "circle_color": "#CDF0B2",
       "display_label": "YAML",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-yaml.svg"
     },
     {
       "category": "files",
@@ -1295,7 +1411,8 @@
       "source": "source/files/code-yml.png",
       "circle_color": "#F0B2E0",
       "display_label": "YML",
-      "group": "code"
+      "group": "code",
+      "vector_source": "source/svgs/files/code-yml.svg"
     },
     {
       "category": "files",
@@ -1306,7 +1423,8 @@
       "source": "source/files/pack-z.png",
       "circle_color": "#B2F0EF",
       "display_label": "Z",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-z.svg"
     },
     {
       "category": "files",
@@ -1317,7 +1435,8 @@
       "source": "source/files/pack-zip.png",
       "circle_color": "#F0DDB2",
       "display_label": "ZIP",
-      "group": "pack"
+      "group": "pack",
+      "vector_source": "source/svgs/files/pack-zip.svg"
     },
     {
       "category": "tools",
@@ -1326,7 +1445,7 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/info-about.png",
-      "vector_source": "source/svgs/info-about.svg",
+      "vector_source": "source/svgs/tools/info-about.svg",
       "group": "info"
     },
     {
@@ -1336,7 +1455,7 @@
       "origin": "original:tools/delete.png",
       "added": false,
       "source": "source/tools/edit-delete.png",
-      "vector_source": "source/svgs/edit-delete.svg",
+      "vector_source": "source/svgs/tools/edit-delete.svg",
       "group": "edit"
     },
     {
@@ -1346,7 +1465,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/sys-debug.png",
-      "vector_source": "source/svgs/sys-debug.svg",
+      "vector_source": "source/svgs/tools/sys-debug.svg",
       "group": "sys"
     },
     {
@@ -1356,7 +1475,7 @@
       "origin": "original:tools/edit.png",
       "added": false,
       "source": "source/tools/edit-edit.png",
-      "vector_source": "source/svgs/edit-edit.svg",
+      "vector_source": "source/svgs/tools/edit-edit.svg",
       "group": "edit"
     },
     {
@@ -1366,7 +1485,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/edit-edit-square.png",
-      "vector_source": "source/svgs/edit-edit-square.svg",
+      "vector_source": "source/svgs/tools/edit-edit-square.svg",
       "group": "edit"
     },
     {
@@ -1377,7 +1496,7 @@
       "added": false,
       "source": "source/tools/view-expand.png",
       "group": "view",
-      "vector_source": "source/svgs/view-expand.svg"
+      "vector_source": "source/svgs/tools/view-expand.svg"
     },
     {
       "category": "tools",
@@ -1386,7 +1505,7 @@
       "origin": "original:tools/file.png",
       "added": false,
       "source": "source/tools/file-file.png",
-      "vector_source": "source/svgs/file-file.svg",
+      "vector_source": "source/svgs/tools/file-file.svg",
       "group": "file"
     },
     {
@@ -1396,7 +1515,7 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/info-help.png",
-      "vector_source": "source/svgs/info-help.svg",
+      "vector_source": "source/svgs/tools/info-help.svg",
       "group": "info"
     },
     {
@@ -1406,7 +1525,7 @@
       "origin": "original:tools/load.png",
       "added": false,
       "source": "source/tools/info-load.png",
-      "vector_source": "source/svgs/info-load.svg",
+      "vector_source": "source/svgs/tools/info-load.svg",
       "group": "info"
     },
     {
@@ -1417,7 +1536,7 @@
       "added": false,
       "source": "source/tools/view-more.png",
       "group": "view",
-      "vector_source": "source/svgs/view-more.svg"
+      "vector_source": "source/svgs/tools/view-more.svg"
     },
     {
       "category": "tools",
@@ -1426,7 +1545,7 @@
       "origin": "original:tools/new.png",
       "added": false,
       "source": "source/tools/file-new.png",
-      "vector_source": "source/svgs/file-new.svg",
+      "vector_source": "source/svgs/tools/file-new.svg",
       "group": "file"
     },
     {
@@ -1436,7 +1555,7 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/lock-key.png",
-      "vector_source": "source/svgs/lock-key.svg",
+      "vector_source": "source/svgs/tools/lock-key.svg",
       "group": "lock"
     },
     {
@@ -1447,7 +1566,7 @@
       "added": false,
       "source": "source/tools/sys-refresh.png",
       "group": "sys",
-      "vector_source": "source/svgs/sys-refresh.svg"
+      "vector_source": "source/svgs/tools/sys-refresh.svg"
     },
     {
       "category": "tools",
@@ -1457,7 +1576,7 @@
       "added": false,
       "source": "source/tools/view-collapse.png",
       "group": "view",
-      "vector_source": "source/svgs/view-collapse.svg"
+      "vector_source": "source/svgs/tools/view-collapse.svg"
     },
     {
       "category": "tools",
@@ -1467,7 +1586,7 @@
       "added": true,
       "source": "source/tools/play-start.png",
       "group": "play",
-      "vector_source": "source/svgs/play-start.svg"
+      "vector_source": "source/svgs/tools/play-start.svg"
     },
     {
       "category": "tools",
@@ -1477,7 +1596,7 @@
       "added": true,
       "source": "source/tools/play-pause.png",
       "group": "play",
-      "vector_source": "source/svgs/play-pause.svg"
+      "vector_source": "source/svgs/tools/play-pause.svg"
     },
     {
       "category": "tools",
@@ -1487,7 +1606,7 @@
       "added": true,
       "source": "source/tools/play-stop.png",
       "group": "play",
-      "vector_source": "source/svgs/play-stop.svg"
+      "vector_source": "source/svgs/tools/play-stop.svg"
     },
     {
       "category": "tools",
@@ -1496,7 +1615,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/task-retry.png",
-      "vector_source": "source/svgs/task-retry.svg",
+      "vector_source": "source/svgs/tools/task-retry.svg",
       "group": "task"
     },
     {
@@ -1507,7 +1626,7 @@
       "added": true,
       "source": "source/tools/view-search.png",
       "group": "view",
-      "vector_source": "source/svgs/view-search.svg"
+      "vector_source": "source/svgs/tools/view-search.svg"
     },
     {
       "category": "tools",
@@ -1516,7 +1635,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/file-save.png",
-      "vector_source": "source/svgs/file-save.svg",
+      "vector_source": "source/svgs/tools/file-save.svg",
       "group": "file"
     },
     {
@@ -1527,7 +1646,7 @@
       "added": true,
       "source": "source/tools/edit-copy.png",
       "group": "edit",
-      "vector_source": "source/svgs/edit-copy.svg"
+      "vector_source": "source/svgs/tools/edit-copy.svg"
     },
     {
       "category": "tools",
@@ -1536,7 +1655,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/sys-extension.png",
-      "vector_source": "source/svgs/sys-extension.svg",
+      "vector_source": "source/svgs/tools/sys-extension.svg",
       "group": "sys"
     },
     {
@@ -1547,7 +1666,7 @@
       "added": true,
       "source": "source/tools/net-link.png",
       "group": "net",
-      "vector_source": "source/svgs/net-link.svg"
+      "vector_source": "source/svgs/tools/net-link.svg"
     },
     {
       "category": "tools",
@@ -1556,7 +1675,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/info-check.png",
-      "vector_source": "source/svgs/info-check.svg",
+      "vector_source": "source/svgs/tools/info-check.svg",
       "group": "info"
     },
     {
@@ -1566,7 +1685,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/info-close.png",
-      "vector_source": "source/svgs/info-close.svg",
+      "vector_source": "source/svgs/tools/info-close.svg",
       "group": "info"
     },
     {
@@ -1576,7 +1695,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/info-warning.png",
-      "vector_source": "source/svgs/info-warning.svg",
+      "vector_source": "source/svgs/tools/info-warning.svg",
       "group": "info"
     },
     {
@@ -1586,7 +1705,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/view-external.png",
-      "vector_source": "source/svgs/view-external.svg",
+      "vector_source": "source/svgs/tools/view-external.svg",
       "group": "view"
     },
     {
@@ -1596,7 +1715,7 @@
       "origin": "custom-toolbar",
       "added": true,
       "source": "source/tools/play-player-setting.png",
-      "vector_source": "source/svgs/play-player-setting.svg",
+      "vector_source": "source/svgs/tools/play-player-setting.svg",
       "group": "play"
     },
     {
@@ -1607,7 +1726,7 @@
       "added": true,
       "source": "source/tools/view-sort.png",
       "group": "view",
-      "vector_source": "source/svgs/view-sort.svg"
+      "vector_source": "source/svgs/tools/view-sort.svg"
     },
     {
       "category": "tools",
@@ -1617,7 +1736,7 @@
       "added": true,
       "source": "source/tools/view-filter.png",
       "group": "view",
-      "vector_source": "source/svgs/view-filter.svg"
+      "vector_source": "source/svgs/tools/view-filter.svg"
     },
     {
       "category": "tools",
@@ -1626,7 +1745,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/task-download-all.png",
-      "vector_source": "source/svgs/task-download-all.svg",
+      "vector_source": "source/svgs/tools/task-download-all.svg",
       "group": "task"
     },
     {
@@ -1636,7 +1755,7 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/task-upload-all.png",
-      "vector_source": "source/svgs/task-upload-all.svg",
+      "vector_source": "source/svgs/tools/task-upload-all.svg",
       "group": "task"
     },
     {
@@ -1647,7 +1766,7 @@
       "added": true,
       "source": "source/tools/edit-merge.png",
       "group": "edit",
-      "vector_source": "source/svgs/edit-merge.svg"
+      "vector_source": "source/svgs/tools/edit-merge.svg"
     },
     {
       "category": "tools",
@@ -1656,7 +1775,7 @@
       "origin": "password-entry",
       "added": true,
       "source": "source/tools/lock-eye.png",
-      "vector_source": "source/svgs/lock-eye.svg",
+      "vector_source": "source/svgs/tools/lock-eye.svg",
       "group": "lock"
     },
     {
@@ -1666,7 +1785,7 @@
       "origin": "password-entry",
       "added": true,
       "source": "source/tools/lock-eye-off.png",
-      "vector_source": "source/svgs/lock-eye-off.svg",
+      "vector_source": "source/svgs/tools/lock-eye-off.svg",
       "group": "lock"
     },
     {
@@ -1676,7 +1795,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/task-download.png",
-      "vector_source": "source/svgs/task-download.svg",
+      "vector_source": "source/svgs/tools/task-download.svg",
       "group": "task"
     },
     {
@@ -1687,7 +1806,7 @@
       "added": true,
       "source": "source/tools/view-home.png",
       "group": "view",
-      "vector_source": "source/svgs/view-home.svg"
+      "vector_source": "source/svgs/tools/view-home.svg"
     },
     {
       "category": "tools",
@@ -1696,7 +1815,7 @@
       "origin": "redrawn-tool-icon",
       "added": true,
       "source": "source/tools/view-list.png",
-      "vector_source": "source/svgs/view-list.svg",
+      "vector_source": "source/svgs/tools/view-list.svg",
       "group": "view"
     },
     {
@@ -1707,7 +1826,7 @@
       "added": true,
       "source": "source/tools/sys-settings.png",
       "group": "sys",
-      "vector_source": "source/svgs/sys-settings.svg"
+      "vector_source": "source/svgs/tools/sys-settings.svg"
     },
     {
       "category": "tools",
@@ -1716,7 +1835,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/task-upload.png",
-      "vector_source": "source/svgs/task-upload.svg",
+      "vector_source": "source/svgs/tools/task-upload.svg",
       "group": "task"
     },
     {
@@ -1729,7 +1848,8 @@
       "circle_color": null,
       "display_label": "+",
       "text_colour": "#444444",
-      "group": "other"
+      "group": "other",
+      "vector_source": "source/svgs/files/other-new.svg"
     },
     {
       "category": "tools",
@@ -1738,7 +1858,7 @@
       "origin": "task-start-action",
       "added": true,
       "source": "source/tools/task-task-start.png",
-      "vector_source": "source/svgs/task-task-start.svg",
+      "vector_source": "source/svgs/tools/task-task-start.svg",
       "group": "task"
     },
     {
@@ -1748,7 +1868,7 @@
       "origin": "task-download-action",
       "added": true,
       "source": "source/tools/task-task-download.png",
-      "vector_source": "source/svgs/task-task-download.svg",
+      "vector_source": "source/svgs/tools/task-task-download.svg",
       "group": "task"
     },
     {
@@ -1758,7 +1878,7 @@
       "origin": "task-upload-state",
       "added": true,
       "source": "source/tools/task-task-upload.png",
-      "vector_source": "source/svgs/task-task-upload.svg",
+      "vector_source": "source/svgs/tools/task-task-upload.svg",
       "group": "task"
     },
     {
@@ -1768,7 +1888,7 @@
       "origin": "task-download-state",
       "added": true,
       "source": "source/tools/task-task-pause.png",
-      "vector_source": "source/svgs/task-task-pause.svg",
+      "vector_source": "source/svgs/tools/task-task-pause.svg",
       "group": "task"
     },
     {
@@ -1778,7 +1898,7 @@
       "origin": "task-download-state",
       "added": true,
       "source": "source/tools/task-task-stop.png",
-      "vector_source": "source/svgs/task-task-stop.svg",
+      "vector_source": "source/svgs/tools/task-task-stop.svg",
       "group": "task"
     },
     {
@@ -1788,7 +1908,7 @@
       "origin": "task-resume-action",
       "added": true,
       "source": "source/tools/task-task-resume.png",
-      "vector_source": "source/svgs/task-task-resume.svg",
+      "vector_source": "source/svgs/tools/task-task-resume.svg",
       "group": "task"
     },
     {
@@ -1798,7 +1918,7 @@
       "origin": "batch-task-actions",
       "added": true,
       "source": "source/tools/task-batch.png",
-      "vector_source": "source/svgs/task-batch.svg",
+      "vector_source": "source/svgs/tools/task-batch.svg",
       "group": "task"
     },
     {
@@ -1808,7 +1928,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/file-folder-plus.png",
-      "vector_source": "source/svgs/file-folder-plus.svg",
+      "vector_source": "source/svgs/tools/file-folder-plus.svg",
       "group": "file"
     },
     {
@@ -1818,7 +1938,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/edit-plus.png",
-      "vector_source": "source/svgs/edit-plus.svg",
+      "vector_source": "source/svgs/tools/edit-plus.svg",
       "group": "edit"
     },
     {
@@ -1828,7 +1948,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/edit-minus.png",
-      "vector_source": "source/svgs/edit-minus.svg",
+      "vector_source": "source/svgs/tools/edit-minus.svg",
       "group": "edit"
     },
     {
@@ -1838,7 +1958,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-bell.png",
-      "vector_source": "source/svgs/info-bell.svg",
+      "vector_source": "source/svgs/tools/info-bell.svg",
       "group": "info"
     },
     {
@@ -1848,7 +1968,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-bell-knob.png",
-      "vector_source": "source/svgs/info-bell-knob.svg",
+      "vector_source": "source/svgs/tools/info-bell-knob.svg",
       "group": "info"
     },
     {
@@ -1858,7 +1978,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-lightbulb.png",
-      "vector_source": "source/svgs/info-lightbulb.svg",
+      "vector_source": "source/svgs/tools/info-lightbulb.svg",
       "group": "info"
     },
     {
@@ -1868,7 +1988,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-clock.png",
-      "vector_source": "source/svgs/info-clock.svg",
+      "vector_source": "source/svgs/tools/info-clock.svg",
       "group": "info"
     },
     {
@@ -1878,7 +1998,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-tools.png",
-      "vector_source": "source/svgs/sys-tools.svg",
+      "vector_source": "source/svgs/tools/sys-tools.svg",
       "group": "sys"
     },
     {
@@ -1888,7 +2008,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-knowledge.png",
-      "vector_source": "source/svgs/sys-knowledge.svg",
+      "vector_source": "source/svgs/tools/sys-knowledge.svg",
       "group": "sys"
     },
     {
@@ -1898,7 +2018,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-database.png",
-      "vector_source": "source/svgs/sys-database.svg",
+      "vector_source": "source/svgs/tools/sys-database.svg",
       "group": "sys"
     },
     {
@@ -1908,7 +2028,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-market.png",
-      "vector_source": "source/svgs/sys-market.svg",
+      "vector_source": "source/svgs/tools/sys-market.svg",
       "group": "sys"
     },
     {
@@ -1918,7 +2038,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-observation.png",
-      "vector_source": "source/svgs/sys-observation.svg",
+      "vector_source": "source/svgs/tools/sys-observation.svg",
       "group": "sys"
     },
     {
@@ -1928,7 +2048,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-dataflow.png",
-      "vector_source": "source/svgs/sys-dataflow.svg",
+      "vector_source": "source/svgs/tools/sys-dataflow.svg",
       "group": "sys"
     },
     {
@@ -1938,7 +2058,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-mcp.png",
-      "vector_source": "source/svgs/sys-mcp.svg",
+      "vector_source": "source/svgs/tools/sys-mcp.svg",
       "group": "sys"
     },
     {
@@ -1948,7 +2068,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-glossary.png",
-      "vector_source": "source/svgs/sys-glossary.svg",
+      "vector_source": "source/svgs/tools/sys-glossary.svg",
       "group": "sys"
     },
     {
@@ -1958,7 +2078,7 @@
       "origin": "open-folder-family",
       "added": true,
       "source": "source/tools/file-folder-move.png",
-      "vector_source": "source/svgs/file-folder-move.svg",
+      "vector_source": "source/svgs/tools/file-folder-move.svg",
       "group": "file"
     },
     {
@@ -1968,7 +2088,7 @@
       "origin": "open-folder-family",
       "added": true,
       "source": "source/tools/file-folder-favorite.png",
-      "vector_source": "source/svgs/file-folder-favorite.svg",
+      "vector_source": "source/svgs/tools/file-folder-favorite.svg",
       "group": "file"
     },
     {
@@ -1978,7 +2098,7 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/file-folder-open.png",
-      "vector_source": "source/svgs/file-folder-open.svg",
+      "vector_source": "source/svgs/tools/file-folder-open.svg",
       "group": "file"
     },
     {
@@ -1988,7 +2108,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-move-left.png",
-      "vector_source": "source/svgs/view-move-left.svg",
+      "vector_source": "source/svgs/tools/view-move-left.svg",
       "group": "view"
     },
     {
@@ -1998,7 +2118,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-move-right.png",
-      "vector_source": "source/svgs/view-move-right.svg",
+      "vector_source": "source/svgs/tools/view-move-right.svg",
       "group": "view"
     },
     {
@@ -2008,7 +2128,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-move-up.png",
-      "vector_source": "source/svgs/view-move-up.svg",
+      "vector_source": "source/svgs/tools/view-move-up.svg",
       "group": "view"
     },
     {
@@ -2018,7 +2138,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-move-down.png",
-      "vector_source": "source/svgs/view-move-down.svg",
+      "vector_source": "source/svgs/tools/view-move-down.svg",
       "group": "view"
     },
     {
@@ -2028,7 +2148,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/sys-robot.png",
-      "vector_source": "source/svgs/sys-robot.svg",
+      "vector_source": "source/svgs/tools/sys-robot.svg",
       "group": "sys"
     },
     {
@@ -2038,7 +2158,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/edit-favorite.png",
-      "vector_source": "source/svgs/edit-favorite.svg",
+      "vector_source": "source/svgs/tools/edit-favorite.svg",
       "group": "edit"
     },
     {
@@ -2048,7 +2168,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/file-folder.png",
-      "vector_source": "source/svgs/file-folder.svg",
+      "vector_source": "source/svgs/tools/file-folder.svg",
       "group": "file"
     },
     {
@@ -2058,7 +2178,7 @@
       "origin": "existing-tool-icon",
       "added": true,
       "source": "source/tools/lock-lock.png",
-      "vector_source": "source/svgs/lock-lock.svg",
+      "vector_source": "source/svgs/tools/lock-lock.svg",
       "group": "lock"
     },
     {
@@ -2068,7 +2188,7 @@
       "origin": "existing-tool-icon",
       "added": true,
       "source": "source/tools/lock-unlock.png",
-      "vector_source": "source/svgs/lock-unlock.svg",
+      "vector_source": "source/svgs/tools/lock-unlock.svg",
       "group": "lock"
     },
     {
@@ -2078,7 +2198,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/net-browser.png",
-      "vector_source": "source/svgs/net-browser.svg",
+      "vector_source": "source/svgs/tools/net-browser.svg",
       "group": "net"
     },
     {
@@ -2088,7 +2208,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/play-player.png",
-      "vector_source": "source/svgs/play-player.svg",
+      "vector_source": "source/svgs/tools/play-player.svg",
       "group": "play"
     },
     {
@@ -2098,7 +2218,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-contact.png",
-      "vector_source": "source/svgs/user-contact.svg",
+      "vector_source": "source/svgs/tools/user-contact.svg",
       "group": "user"
     },
     {
@@ -2108,7 +2228,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/sys-cube.png",
-      "vector_source": "source/svgs/sys-cube.svg",
+      "vector_source": "source/svgs/tools/sys-cube.svg",
       "group": "sys"
     },
     {
@@ -2118,7 +2238,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/view-compass.png",
-      "vector_source": "source/svgs/view-compass.svg",
+      "vector_source": "source/svgs/tools/view-compass.svg",
       "group": "view"
     },
     {
@@ -2128,7 +2248,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/edit-scissors.png",
-      "vector_source": "source/svgs/edit-scissors.svg",
+      "vector_source": "source/svgs/tools/edit-scissors.svg",
       "group": "edit"
     },
     {
@@ -2138,7 +2258,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/play-microphone.png",
-      "vector_source": "source/svgs/play-microphone.svg",
+      "vector_source": "source/svgs/tools/play-microphone.svg",
       "group": "play"
     },
     {
@@ -2148,7 +2268,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-smile.png",
-      "vector_source": "source/svgs/user-smile.svg",
+      "vector_source": "source/svgs/tools/user-smile.svg",
       "group": "user"
     },
     {
@@ -2158,7 +2278,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/play-voice.png",
-      "vector_source": "source/svgs/play-voice.svg",
+      "vector_source": "source/svgs/tools/play-voice.svg",
       "group": "play"
     },
     {
@@ -2168,7 +2288,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/edit-hand.png",
-      "vector_source": "source/svgs/edit-hand.svg",
+      "vector_source": "source/svgs/tools/edit-hand.svg",
       "group": "edit"
     },
     {
@@ -2178,7 +2298,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/sys-skill.png",
-      "vector_source": "source/svgs/sys-skill.svg",
+      "vector_source": "source/svgs/tools/sys-skill.svg",
       "group": "sys"
     },
     {
@@ -2188,7 +2308,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/edit-pin.png",
-      "vector_source": "source/svgs/edit-pin.svg",
+      "vector_source": "source/svgs/tools/edit-pin.svg",
       "group": "edit"
     },
     {
@@ -2198,7 +2318,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/view-grid.png",
-      "vector_source": "source/svgs/view-grid.svg",
+      "vector_source": "source/svgs/tools/view-grid.svg",
       "group": "view"
     },
     {
@@ -2208,7 +2328,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-mail.png",
-      "vector_source": "source/svgs/user-mail.svg",
+      "vector_source": "source/svgs/tools/user-mail.svg",
       "group": "user"
     },
     {
@@ -2218,7 +2338,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/date-calendar-check.png",
-      "vector_source": "source/svgs/date-calendar-check.svg",
+      "vector_source": "source/svgs/tools/date-calendar-check.svg",
       "group": "date"
     },
     {
@@ -2228,7 +2348,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/net-wifi.png",
-      "vector_source": "source/svgs/net-wifi.svg",
+      "vector_source": "source/svgs/tools/net-wifi.svg",
       "group": "net"
     },
     {
@@ -2238,7 +2358,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/play-volume.png",
-      "vector_source": "source/svgs/play-volume.svg",
+      "vector_source": "source/svgs/tools/play-volume.svg",
       "group": "play"
     },
     {
@@ -2248,7 +2368,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-phone.png",
-      "vector_source": "source/svgs/user-phone.svg",
+      "vector_source": "source/svgs/tools/user-phone.svg",
       "group": "user"
     },
     {
@@ -2258,7 +2378,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/net-server.png",
-      "vector_source": "source/svgs/net-server.svg",
+      "vector_source": "source/svgs/tools/net-server.svg",
       "group": "net"
     },
     {
@@ -2268,7 +2388,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-user.png",
-      "vector_source": "source/svgs/user-user.svg",
+      "vector_source": "source/svgs/tools/user-user.svg",
       "group": "user"
     },
     {
@@ -2278,7 +2398,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/user-users.png",
-      "vector_source": "source/svgs/user-users.svg",
+      "vector_source": "source/svgs/tools/user-users.svg",
       "group": "user"
     },
     {
@@ -2288,7 +2408,7 @@
       "origin": "reference-tool-icon",
       "added": true,
       "source": "source/tools/net-globe.png",
-      "vector_source": "source/svgs/net-globe.svg",
+      "vector_source": "source/svgs/tools/net-globe.svg",
       "group": "net"
     },
     {
@@ -2299,7 +2419,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-undo.png",
-      "vector_source": "source/svgs/edit-undo.svg"
+      "vector_source": "source/svgs/tools/edit-undo.svg"
     },
     {
       "category": "tools",
@@ -2309,7 +2429,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-redo.png",
-      "vector_source": "source/svgs/edit-redo.svg"
+      "vector_source": "source/svgs/tools/edit-redo.svg"
     },
     {
       "category": "tools",
@@ -2319,7 +2439,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-back.png",
-      "vector_source": "source/svgs/view-back.svg"
+      "vector_source": "source/svgs/tools/view-back.svg"
     },
     {
       "category": "tools",
@@ -2329,7 +2449,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-next.png",
-      "vector_source": "source/svgs/view-next.svg"
+      "vector_source": "source/svgs/tools/view-next.svg"
     },
     {
       "category": "tools",
@@ -2339,7 +2459,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-chevron-down.png",
-      "vector_source": "source/svgs/view-chevron-down.svg"
+      "vector_source": "source/svgs/tools/view-chevron-down.svg"
     },
     {
       "category": "tools",
@@ -2349,7 +2469,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-chevron-up.png",
-      "vector_source": "source/svgs/view-chevron-up.svg"
+      "vector_source": "source/svgs/tools/view-chevron-up.svg"
     },
     {
       "category": "tools",
@@ -2359,7 +2479,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-menu.png",
-      "vector_source": "source/svgs/view-menu.svg"
+      "vector_source": "source/svgs/tools/view-menu.svg"
     },
     {
       "category": "tools",
@@ -2369,7 +2489,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/info-history.png",
-      "vector_source": "source/svgs/info-history.svg"
+      "vector_source": "source/svgs/tools/info-history.svg"
     },
     {
       "category": "tools",
@@ -2379,7 +2499,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-login.png",
-      "vector_source": "source/svgs/user-login.svg"
+      "vector_source": "source/svgs/tools/user-login.svg"
     },
     {
       "category": "tools",
@@ -2389,7 +2509,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-logout.png",
-      "vector_source": "source/svgs/user-logout.svg"
+      "vector_source": "source/svgs/tools/user-logout.svg"
     },
     {
       "category": "tools",
@@ -2399,7 +2519,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-image.png",
-      "vector_source": "source/svgs/file-image.svg"
+      "vector_source": "source/svgs/tools/file-image.svg"
     },
     {
       "category": "tools",
@@ -2409,7 +2529,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-attach.png",
-      "vector_source": "source/svgs/file-attach.svg"
+      "vector_source": "source/svgs/tools/file-attach.svg"
     },
     {
       "category": "tools",
@@ -2419,7 +2539,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-clear.png",
-      "vector_source": "source/svgs/edit-clear.svg"
+      "vector_source": "source/svgs/tools/edit-clear.svg"
     },
     {
       "category": "tools",
@@ -2429,7 +2549,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/info-copy-check.png",
-      "vector_source": "source/svgs/info-copy-check.svg"
+      "vector_source": "source/svgs/tools/info-copy-check.svg"
     },
     {
       "category": "tools",
@@ -2439,7 +2559,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-chevron-left.png",
-      "vector_source": "source/svgs/view-chevron-left.svg"
+      "vector_source": "source/svgs/tools/view-chevron-left.svg"
     },
     {
       "category": "tools",
@@ -2449,7 +2569,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-chevron-right.png",
-      "vector_source": "source/svgs/view-chevron-right.svg"
+      "vector_source": "source/svgs/tools/view-chevron-right.svg"
     },
     {
       "category": "tools",
@@ -2459,7 +2579,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-qrcode.png",
-      "vector_source": "source/svgs/file-qrcode.svg"
+      "vector_source": "source/svgs/tools/file-qrcode.svg"
     },
     {
       "category": "tools",
@@ -2469,7 +2589,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-share.png",
-      "vector_source": "source/svgs/user-share.svg"
+      "vector_source": "source/svgs/tools/user-share.svg"
     },
     {
       "category": "tools",
@@ -2479,7 +2599,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-terminal.png",
-      "vector_source": "source/svgs/sys-terminal.svg"
+      "vector_source": "source/svgs/tools/sys-terminal.svg"
     },
     {
       "category": "tools",
@@ -2489,7 +2609,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-code.png",
-      "vector_source": "source/svgs/sys-code.svg"
+      "vector_source": "source/svgs/tools/sys-code.svg"
     },
     {
       "category": "tools",
@@ -2499,7 +2619,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-fullscreen.png",
-      "vector_source": "source/svgs/view-fullscreen.svg"
+      "vector_source": "source/svgs/tools/view-fullscreen.svg"
     },
     {
       "category": "tools",
@@ -2509,7 +2629,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-exit-fullscreen.png",
-      "vector_source": "source/svgs/view-exit-fullscreen.svg"
+      "vector_source": "source/svgs/tools/view-exit-fullscreen.svg"
     },
     {
       "category": "tools",
@@ -2519,7 +2639,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-location.png",
-      "vector_source": "source/svgs/view-location.svg"
+      "vector_source": "source/svgs/tools/view-location.svg"
     },
     {
       "category": "tools",
@@ -2529,7 +2649,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-call.png",
-      "vector_source": "source/svgs/user-call.svg"
+      "vector_source": "source/svgs/tools/user-call.svg"
     },
     {
       "category": "tools",
@@ -2539,7 +2659,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-video-call.png",
-      "vector_source": "source/svgs/user-video-call.svg"
+      "vector_source": "source/svgs/tools/user-video-call.svg"
     },
     {
       "category": "tools",
@@ -2549,7 +2669,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-message.png",
-      "vector_source": "source/svgs/user-message.svg"
+      "vector_source": "source/svgs/tools/user-message.svg"
     },
     {
       "category": "tools",
@@ -2559,7 +2679,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-group-chat.png",
-      "vector_source": "source/svgs/user-group-chat.svg"
+      "vector_source": "source/svgs/tools/user-group-chat.svg"
     },
     {
       "category": "tools",
@@ -2569,7 +2689,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-print.png",
-      "vector_source": "source/svgs/file-print.svg"
+      "vector_source": "source/svgs/tools/file-print.svg"
     },
     {
       "category": "tools",
@@ -2579,7 +2699,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-print-preview.png",
-      "vector_source": "source/svgs/file-print-preview.svg"
+      "vector_source": "source/svgs/tools/file-print-preview.svg"
     },
     {
       "category": "tools",
@@ -2589,7 +2709,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-format-painter.png",
-      "vector_source": "source/svgs/edit-format-painter.svg"
+      "vector_source": "source/svgs/tools/edit-format-painter.svg"
     },
     {
       "category": "tools",
@@ -2599,7 +2719,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-paste.png",
-      "vector_source": "source/svgs/edit-paste.svg"
+      "vector_source": "source/svgs/tools/edit-paste.svg"
     },
     {
       "category": "tools",
@@ -2609,7 +2729,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-chat.png",
-      "vector_source": "source/svgs/user-chat.svg"
+      "vector_source": "source/svgs/tools/user-chat.svg"
     },
     {
       "category": "tools",
@@ -2619,7 +2739,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-camera.png",
-      "vector_source": "source/svgs/play-camera.svg"
+      "vector_source": "source/svgs/tools/play-camera.svg"
     },
     {
       "category": "tools",
@@ -2629,7 +2749,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-message-plain.png",
-      "vector_source": "source/svgs/user-message-plain.svg"
+      "vector_source": "source/svgs/tools/user-message-plain.svg"
     },
     {
       "category": "tools",
@@ -2639,7 +2759,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-thumbs-up.png",
-      "vector_source": "source/svgs/user-thumbs-up.svg"
+      "vector_source": "source/svgs/tools/user-thumbs-up.svg"
     },
     {
       "category": "tools",
@@ -2649,7 +2769,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-thumbs-down.png",
-      "vector_source": "source/svgs/user-thumbs-down.svg"
+      "vector_source": "source/svgs/tools/user-thumbs-down.svg"
     },
     {
       "category": "tools",
@@ -2659,7 +2779,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-feedback.png",
-      "vector_source": "source/svgs/user-feedback.svg"
+      "vector_source": "source/svgs/tools/user-feedback.svg"
     },
     {
       "category": "tools",
@@ -2669,7 +2789,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-headphones.png",
-      "vector_source": "source/svgs/play-headphones.svg"
+      "vector_source": "source/svgs/tools/play-headphones.svg"
     },
     {
       "category": "tools",
@@ -2679,7 +2799,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-light-mode.png",
-      "vector_source": "source/svgs/view-light-mode.svg"
+      "vector_source": "source/svgs/tools/view-light-mode.svg"
     },
     {
       "category": "tools",
@@ -2689,7 +2809,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-dark-mode.png",
-      "vector_source": "source/svgs/view-dark-mode.svg"
+      "vector_source": "source/svgs/tools/view-dark-mode.svg"
     },
     {
       "category": "tools",
@@ -2699,7 +2819,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-compress.png",
-      "vector_source": "source/svgs/file-compress.svg"
+      "vector_source": "source/svgs/tools/file-compress.svg"
     },
     {
       "category": "tools",
@@ -2709,7 +2829,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-fold.png",
-      "vector_source": "source/svgs/view-fold.svg"
+      "vector_source": "source/svgs/tools/view-fold.svg"
     },
     {
       "category": "tools",
@@ -2719,7 +2839,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-send.png",
-      "vector_source": "source/svgs/user-send.svg"
+      "vector_source": "source/svgs/tools/user-send.svg"
     },
     {
       "category": "tools",
@@ -2729,7 +2849,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-rocket.png",
-      "vector_source": "source/svgs/sys-rocket.svg"
+      "vector_source": "source/svgs/tools/sys-rocket.svg"
     },
     {
       "category": "tools",
@@ -2739,7 +2859,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-click.png",
-      "vector_source": "source/svgs/view-click.svg"
+      "vector_source": "source/svgs/tools/view-click.svg"
     },
     {
       "category": "tools",
@@ -2749,7 +2869,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-review.png",
-      "vector_source": "source/svgs/file-review.svg"
+      "vector_source": "source/svgs/tools/file-review.svg"
     },
     {
       "category": "tools",
@@ -2759,7 +2879,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-brain.png",
-      "vector_source": "source/svgs/sys-brain.svg"
+      "vector_source": "source/svgs/tools/sys-brain.svg"
     },
     {
       "category": "tools",
@@ -2769,7 +2889,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-grid-plus.png",
-      "vector_source": "source/svgs/view-grid-plus.svg"
+      "vector_source": "source/svgs/tools/view-grid-plus.svg"
     },
     {
       "category": "tools",
@@ -2779,7 +2899,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-shield.png",
-      "vector_source": "source/svgs/lock-shield.svg"
+      "vector_source": "source/svgs/tools/lock-shield.svg"
     },
     {
       "category": "tools",
@@ -2789,7 +2909,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-map.png",
-      "vector_source": "source/svgs/view-map.svg"
+      "vector_source": "source/svgs/tools/view-map.svg"
     },
     {
       "category": "tools",
@@ -2799,7 +2919,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-route.png",
-      "vector_source": "source/svgs/net-route.svg"
+      "vector_source": "source/svgs/tools/net-route.svg"
     },
     {
       "category": "tools",
@@ -2809,7 +2929,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-network.png",
-      "vector_source": "source/svgs/net-network.svg"
+      "vector_source": "source/svgs/tools/net-network.svg"
     },
     {
       "category": "tools",
@@ -2819,7 +2939,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-tag.png",
-      "vector_source": "source/svgs/file-tag.svg"
+      "vector_source": "source/svgs/tools/file-tag.svg"
     },
     {
       "category": "tools",
@@ -2829,7 +2949,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-music.png",
-      "vector_source": "source/svgs/play-music.svg"
+      "vector_source": "source/svgs/tools/play-music.svg"
     },
     {
       "category": "tools",
@@ -2839,7 +2959,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-video.png",
-      "vector_source": "source/svgs/play-video.svg"
+      "vector_source": "source/svgs/tools/play-video.svg"
     },
     {
       "category": "tools",
@@ -2849,7 +2969,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-shuffle.png",
-      "vector_source": "source/svgs/edit-shuffle.svg"
+      "vector_source": "source/svgs/tools/edit-shuffle.svg"
     },
     {
       "category": "tools",
@@ -2859,7 +2979,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-hash.png",
-      "vector_source": "source/svgs/sys-hash.svg"
+      "vector_source": "source/svgs/tools/sys-hash.svg"
     },
     {
       "category": "tools",
@@ -2869,7 +2989,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-case.png",
-      "vector_source": "source/svgs/edit-case.svg"
+      "vector_source": "source/svgs/tools/edit-case.svg"
     },
     {
       "category": "tools",
@@ -2879,7 +2999,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-translate.png",
-      "vector_source": "source/svgs/edit-translate.svg"
+      "vector_source": "source/svgs/tools/edit-translate.svg"
     },
     {
       "category": "tools",
@@ -2889,7 +3009,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-quote.png",
-      "vector_source": "source/svgs/edit-quote.svg"
+      "vector_source": "source/svgs/tools/edit-quote.svg"
     },
     {
       "category": "tools",
@@ -2899,7 +3019,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-align-left.png",
-      "vector_source": "source/svgs/edit-align-left.svg"
+      "vector_source": "source/svgs/tools/edit-align-left.svg"
     },
     {
       "category": "tools",
@@ -2909,7 +3029,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-list-ordered.png",
-      "vector_source": "source/svgs/edit-list-ordered.svg"
+      "vector_source": "source/svgs/tools/edit-list-ordered.svg"
     },
     {
       "category": "tools",
@@ -2919,7 +3039,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-id-card.png",
-      "vector_source": "source/svgs/user-id-card.svg"
+      "vector_source": "source/svgs/tools/user-id-card.svg"
     },
     {
       "category": "tools",
@@ -2929,7 +3049,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-align-right.png",
-      "vector_source": "source/svgs/edit-align-right.svg"
+      "vector_source": "source/svgs/tools/edit-align-right.svg"
     },
     {
       "category": "tools",
@@ -2939,7 +3059,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-align-center.png",
-      "vector_source": "source/svgs/edit-align-center.svg"
+      "vector_source": "source/svgs/tools/edit-align-center.svg"
     },
     {
       "category": "tools",
@@ -2949,7 +3069,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-shield-a.png",
-      "vector_source": "source/svgs/lock-shield-a.svg"
+      "vector_source": "source/svgs/tools/lock-shield-a.svg"
     },
     {
       "category": "tools",
@@ -2959,7 +3079,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-cloud-search.png",
-      "vector_source": "source/svgs/net-cloud-search.svg"
+      "vector_source": "source/svgs/tools/net-cloud-search.svg"
     },
     {
       "category": "tools",
@@ -2969,7 +3089,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-globe-search.png",
-      "vector_source": "source/svgs/net-globe-search.svg"
+      "vector_source": "source/svgs/tools/net-globe-search.svg"
     },
     {
       "category": "tools",
@@ -2979,7 +3099,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-shield-search.png",
-      "vector_source": "source/svgs/lock-shield-search.svg"
+      "vector_source": "source/svgs/tools/lock-shield-search.svg"
     },
     {
       "category": "tools",
@@ -2989,7 +3109,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-password.png",
-      "vector_source": "source/svgs/lock-password.svg"
+      "vector_source": "source/svgs/tools/lock-password.svg"
     },
     {
       "category": "tools",
@@ -2999,7 +3119,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-format-clear.png",
-      "vector_source": "source/svgs/edit-format-clear.svg"
+      "vector_source": "source/svgs/tools/edit-format-clear.svg"
     },
     {
       "category": "tools",
@@ -3009,7 +3129,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-line-wrap.png",
-      "vector_source": "source/svgs/edit-line-wrap.svg"
+      "vector_source": "source/svgs/tools/edit-line-wrap.svg"
     },
     {
       "category": "tools",
@@ -3019,7 +3139,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-crop.png",
-      "vector_source": "source/svgs/edit-crop.svg"
+      "vector_source": "source/svgs/tools/edit-crop.svg"
     },
     {
       "category": "tools",
@@ -3029,7 +3149,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-calculate.png",
-      "vector_source": "source/svgs/sys-calculate.svg"
+      "vector_source": "source/svgs/tools/sys-calculate.svg"
     },
     {
       "category": "tools",
@@ -3039,7 +3159,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/date-birthday.png",
-      "vector_source": "source/svgs/date-birthday.svg"
+      "vector_source": "source/svgs/tools/date-birthday.svg"
     },
     {
       "category": "tools",
@@ -3049,7 +3169,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-vertical.png",
-      "vector_source": "source/svgs/edit-text-vertical.svg"
+      "vector_source": "source/svgs/tools/edit-text-vertical.svg"
     },
     {
       "category": "tools",
@@ -3059,7 +3179,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-scan.png",
-      "vector_source": "source/svgs/file-scan.svg"
+      "vector_source": "source/svgs/tools/file-scan.svg"
     },
     {
       "category": "tools",
@@ -3069,7 +3189,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-sidebar-left.png",
-      "vector_source": "source/svgs/view-sidebar-left.svg"
+      "vector_source": "source/svgs/tools/view-sidebar-left.svg"
     },
     {
       "category": "tools",
@@ -3079,7 +3199,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-sidebar-stack.png",
-      "vector_source": "source/svgs/view-sidebar-stack.svg"
+      "vector_source": "source/svgs/tools/view-sidebar-stack.svg"
     },
     {
       "category": "tools",
@@ -3089,7 +3209,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-panel-bottom.png",
-      "vector_source": "source/svgs/view-panel-bottom.svg"
+      "vector_source": "source/svgs/tools/view-panel-bottom.svg"
     },
     {
       "category": "tools",
@@ -3099,7 +3219,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-split.png",
-      "vector_source": "source/svgs/view-split.svg"
+      "vector_source": "source/svgs/tools/view-split.svg"
     },
     {
       "category": "tools",
@@ -3109,7 +3229,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-disk.png",
-      "vector_source": "source/svgs/sys-disk.svg"
+      "vector_source": "source/svgs/tools/sys-disk.svg"
     },
     {
       "category": "tools",
@@ -3119,7 +3239,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-keyboard.png",
-      "vector_source": "source/svgs/sys-keyboard.svg"
+      "vector_source": "source/svgs/tools/sys-keyboard.svg"
     },
     {
       "category": "tools",
@@ -3129,7 +3249,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-mouse.png",
-      "vector_source": "source/svgs/sys-mouse.svg"
+      "vector_source": "source/svgs/tools/sys-mouse.svg"
     },
     {
       "category": "tools",
@@ -3139,7 +3259,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-extensions.png",
-      "vector_source": "source/svgs/sys-extensions.svg"
+      "vector_source": "source/svgs/tools/sys-extensions.svg"
     },
     {
       "category": "tools",
@@ -3149,7 +3269,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-remote.png",
-      "vector_source": "source/svgs/sys-remote.svg"
+      "vector_source": "source/svgs/tools/sys-remote.svg"
     },
     {
       "category": "tools",
@@ -3159,7 +3279,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-run-debug.png",
-      "vector_source": "source/svgs/sys-run-debug.svg"
+      "vector_source": "source/svgs/tools/sys-run-debug.svg"
     },
     {
       "category": "tools",
@@ -3169,7 +3289,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-barcode.png",
-      "vector_source": "source/svgs/file-barcode.svg"
+      "vector_source": "source/svgs/tools/file-barcode.svg"
     },
     {
       "category": "tools",
@@ -3179,7 +3299,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-pencil.png",
-      "vector_source": "source/svgs/edit-pencil.svg"
+      "vector_source": "source/svgs/tools/edit-pencil.svg"
     },
     {
       "category": "tools",
@@ -3189,7 +3309,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/info-bell-off.png",
-      "vector_source": "source/svgs/info-bell-off.svg"
+      "vector_source": "source/svgs/tools/info-bell-off.svg"
     },
     {
       "category": "tools",
@@ -3199,7 +3319,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-volume-off.png",
-      "vector_source": "source/svgs/play-volume-off.svg"
+      "vector_source": "source/svgs/tools/play-volume-off.svg"
     },
     {
       "category": "tools",
@@ -3209,7 +3329,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-power.png",
-      "vector_source": "source/svgs/sys-power.svg"
+      "vector_source": "source/svgs/tools/sys-power.svg"
     },
     {
       "category": "tools",
@@ -3219,7 +3339,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-join.png",
-      "vector_source": "source/svgs/edit-text-join.svg"
+      "vector_source": "source/svgs/tools/edit-text-join.svg"
     },
     {
       "category": "tools",
@@ -3229,7 +3349,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-columns.png",
-      "vector_source": "source/svgs/edit-columns.svg"
+      "vector_source": "source/svgs/tools/edit-columns.svg"
     },
     {
       "category": "tools",
@@ -3239,7 +3359,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-char-count.png",
-      "vector_source": "source/svgs/edit-char-count.svg"
+      "vector_source": "source/svgs/tools/edit-char-count.svg"
     },
     {
       "category": "tools",
@@ -3249,7 +3369,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-add.png",
-      "vector_source": "source/svgs/edit-text-add.svg"
+      "vector_source": "source/svgs/tools/edit-text-add.svg"
     },
     {
       "category": "tools",
@@ -3259,7 +3379,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-line-break-remove.png",
-      "vector_source": "source/svgs/edit-line-break-remove.svg"
+      "vector_source": "source/svgs/tools/edit-line-break-remove.svg"
     },
     {
       "category": "tools",
@@ -3269,7 +3389,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-blank-remove.png",
-      "vector_source": "source/svgs/edit-blank-remove.svg"
+      "vector_source": "source/svgs/tools/edit-blank-remove.svg"
     },
     {
       "category": "tools",
@@ -3279,7 +3399,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-case-check.png",
-      "vector_source": "source/svgs/edit-case-check.svg"
+      "vector_source": "source/svgs/tools/edit-case-check.svg"
     },
     {
       "category": "tools",
@@ -3289,7 +3409,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-quote-text.png",
-      "vector_source": "source/svgs/edit-quote-text.svg"
+      "vector_source": "source/svgs/tools/edit-quote-text.svg"
     },
     {
       "category": "tools",
@@ -3299,7 +3419,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-sort-alpha.png",
-      "vector_source": "source/svgs/edit-sort-alpha.svg"
+      "vector_source": "source/svgs/tools/edit-sort-alpha.svg"
     },
     {
       "category": "tools",
@@ -3309,7 +3429,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-off.png",
-      "vector_source": "source/svgs/edit-text-off.svg"
+      "vector_source": "source/svgs/tools/edit-text-off.svg"
     },
     {
       "category": "tools",
@@ -3319,7 +3439,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-align-right-frame.png",
-      "vector_source": "source/svgs/edit-align-right-frame.svg"
+      "vector_source": "source/svgs/tools/edit-align-right-frame.svg"
     },
     {
       "category": "tools",
@@ -3329,7 +3449,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-vertical-frame.png",
-      "vector_source": "source/svgs/edit-text-vertical-frame.svg"
+      "vector_source": "source/svgs/tools/edit-text-vertical-frame.svg"
     },
     {
       "category": "tools",
@@ -3339,7 +3459,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-api.png",
-      "vector_source": "source/svgs/net-api.svg"
+      "vector_source": "source/svgs/tools/net-api.svg"
     },
     {
       "category": "tools",
@@ -3349,7 +3469,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-post.png",
-      "vector_source": "source/svgs/net-post.svg"
+      "vector_source": "source/svgs/tools/net-post.svg"
     },
     {
       "category": "tools",
@@ -3359,7 +3479,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-pinyin.png",
-      "vector_source": "source/svgs/edit-pinyin.svg"
+      "vector_source": "source/svgs/tools/edit-pinyin.svg"
     },
     {
       "category": "tools",
@@ -3369,7 +3489,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-html-round.png",
-      "vector_source": "source/svgs/sys-html-round.svg"
+      "vector_source": "source/svgs/tools/sys-html-round.svg"
     },
     {
       "category": "tools",
@@ -3379,7 +3499,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-html-hex.png",
-      "vector_source": "source/svgs/sys-html-hex.svg"
+      "vector_source": "source/svgs/tools/sys-html-hex.svg"
     },
     {
       "category": "tools",
@@ -3389,7 +3509,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-swatches.png",
-      "vector_source": "source/svgs/edit-swatches.svg"
+      "vector_source": "source/svgs/tools/edit-swatches.svg"
     },
     {
       "category": "tools",
@@ -3399,7 +3519,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-stripes.png",
-      "vector_source": "source/svgs/edit-stripes.svg"
+      "vector_source": "source/svgs/tools/edit-stripes.svg"
     },
     {
       "category": "tools",
@@ -3409,7 +3529,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-length.png",
-      "vector_source": "source/svgs/edit-text-length.svg"
+      "vector_source": "source/svgs/tools/edit-text-length.svg"
     },
     {
       "category": "tools",
@@ -3419,7 +3539,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-numbers-clear.png",
-      "vector_source": "source/svgs/edit-numbers-clear.svg"
+      "vector_source": "source/svgs/tools/edit-numbers-clear.svg"
     },
     {
       "category": "tools",
@@ -3429,7 +3549,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-dedup.png",
-      "vector_source": "source/svgs/edit-text-dedup.svg"
+      "vector_source": "source/svgs/tools/edit-text-dedup.svg"
     },
     {
       "category": "tools",
@@ -3439,7 +3559,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-bomb.png",
-      "vector_source": "source/svgs/sys-bomb.svg"
+      "vector_source": "source/svgs/tools/sys-bomb.svg"
     },
     {
       "category": "tools",
@@ -3449,7 +3569,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/date-calendar-smile.png",
-      "vector_source": "source/svgs/date-calendar-smile.svg"
+      "vector_source": "source/svgs/tools/date-calendar-smile.svg"
     },
     {
       "category": "tools",
@@ -3459,7 +3579,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-extract.png",
-      "vector_source": "source/svgs/file-extract.svg"
+      "vector_source": "source/svgs/tools/file-extract.svg"
     },
     {
       "category": "tools",
@@ -3469,7 +3589,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-websocket.png",
-      "vector_source": "source/svgs/net-websocket.svg"
+      "vector_source": "source/svgs/tools/net-websocket.svg"
     },
     {
       "category": "tools",
@@ -3479,7 +3599,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-strokes.png",
-      "vector_source": "source/svgs/edit-strokes.svg"
+      "vector_source": "source/svgs/tools/edit-strokes.svg"
     },
     {
       "category": "tools",
@@ -3489,7 +3609,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-handwriting.png",
-      "vector_source": "source/svgs/edit-handwriting.svg"
+      "vector_source": "source/svgs/tools/edit-handwriting.svg"
     },
     {
       "category": "tools",
@@ -3499,7 +3619,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-shield-location.png",
-      "vector_source": "source/svgs/lock-shield-location.svg"
+      "vector_source": "source/svgs/tools/lock-shield-location.svg"
     },
     {
       "category": "tools",
@@ -3509,7 +3629,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-shield-code.png",
-      "vector_source": "source/svgs/lock-shield-code.svg"
+      "vector_source": "source/svgs/tools/lock-shield-code.svg"
     },
     {
       "category": "tools",
@@ -3519,7 +3639,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-node-link.png",
-      "vector_source": "source/svgs/net-node-link.svg"
+      "vector_source": "source/svgs/tools/net-node-link.svg"
     },
     {
       "category": "tools",
@@ -3529,7 +3649,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-text-crop.png",
-      "vector_source": "source/svgs/edit-text-crop.svg"
+      "vector_source": "source/svgs/tools/edit-text-crop.svg"
     },
     {
       "category": "tools",
@@ -3539,7 +3659,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-lock-frame.png",
-      "vector_source": "source/svgs/lock-lock-frame.svg"
+      "vector_source": "source/svgs/tools/lock-lock-frame.svg"
     },
     {
       "category": "tools",
@@ -3549,7 +3669,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-password-frame.png",
-      "vector_source": "source/svgs/lock-password-frame.svg"
+      "vector_source": "source/svgs/tools/lock-password-frame.svg"
     },
     {
       "category": "tools",
@@ -3559,7 +3679,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/lock-key-frame.png",
-      "vector_source": "source/svgs/lock-key-frame.svg"
+      "vector_source": "source/svgs/tools/lock-key-frame.svg"
     },
     {
       "category": "tools",
@@ -3569,7 +3689,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-random.png",
-      "vector_source": "source/svgs/edit-random.svg"
+      "vector_source": "source/svgs/tools/edit-random.svg"
     },
     {
       "category": "tools",
@@ -3579,7 +3699,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-chat-switch.png",
-      "vector_source": "source/svgs/user-chat-switch.svg"
+      "vector_source": "source/svgs/tools/user-chat-switch.svg"
     },
     {
       "category": "tools",
@@ -3589,7 +3709,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/info-lightbulb-on.png",
-      "vector_source": "source/svgs/info-lightbulb-on.svg"
+      "vector_source": "source/svgs/tools/info-lightbulb-on.svg"
     },
     {
       "category": "tools",
@@ -3599,7 +3719,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-location-search.png",
-      "vector_source": "source/svgs/view-location-search.svg"
+      "vector_source": "source/svgs/tools/view-location-search.svg"
     },
     {
       "category": "tools",
@@ -3609,7 +3729,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-location-settings.png",
-      "vector_source": "source/svgs/view-location-settings.svg"
+      "vector_source": "source/svgs/tools/view-location-settings.svg"
     },
     {
       "category": "tools",
@@ -3619,7 +3739,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-globe-network.png",
-      "vector_source": "source/svgs/net-globe-network.svg"
+      "vector_source": "source/svgs/tools/net-globe-network.svg"
     },
     {
       "category": "tools",
@@ -3629,7 +3749,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-locations.png",
-      "vector_source": "source/svgs/view-locations.svg"
+      "vector_source": "source/svgs/tools/view-locations.svg"
     },
     {
       "category": "tools",
@@ -3639,7 +3759,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-send-code.png",
-      "vector_source": "source/svgs/user-send-code.svg"
+      "vector_source": "source/svgs/tools/user-send-code.svg"
     },
     {
       "category": "tools",
@@ -3649,7 +3769,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-send-percent.png",
-      "vector_source": "source/svgs/user-send-percent.svg"
+      "vector_source": "source/svgs/tools/user-send-percent.svg"
     },
     {
       "category": "tools",
@@ -3659,7 +3779,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/user-send-download.png",
-      "vector_source": "source/svgs/user-send-download.svg"
+      "vector_source": "source/svgs/tools/user-send-download.svg"
     },
     {
       "category": "tools",
@@ -3669,7 +3789,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-map-code.png",
-      "vector_source": "source/svgs/view-map-code.svg"
+      "vector_source": "source/svgs/tools/view-map-code.svg"
     },
     {
       "category": "tools",
@@ -3679,7 +3799,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-globe-www.png",
-      "vector_source": "source/svgs/net-globe-www.svg"
+      "vector_source": "source/svgs/tools/net-globe-www.svg"
     },
     {
       "category": "tools",
@@ -3689,7 +3809,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-server-bolt.png",
-      "vector_source": "source/svgs/net-server-bolt.svg"
+      "vector_source": "source/svgs/tools/net-server-bolt.svg"
     },
     {
       "category": "tools",
@@ -3699,7 +3819,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/net-link-spark.png",
-      "vector_source": "source/svgs/net-link-spark.svg"
+      "vector_source": "source/svgs/tools/net-link-spark.svg"
     },
     {
       "category": "tools",
@@ -3709,7 +3829,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-tags.png",
-      "vector_source": "source/svgs/file-tags.svg"
+      "vector_source": "source/svgs/tools/file-tags.svg"
     },
     {
       "category": "tools",
@@ -3719,7 +3839,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-plus-square.png",
-      "vector_source": "source/svgs/edit-plus-square.svg"
+      "vector_source": "source/svgs/tools/edit-plus-square.svg"
     },
     {
       "category": "tools",
@@ -3729,7 +3849,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-minus-square.png",
-      "vector_source": "source/svgs/edit-minus-square.svg"
+      "vector_source": "source/svgs/tools/edit-minus-square.svg"
     },
     {
       "category": "tools",
@@ -3739,7 +3859,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-plus-circle.png",
-      "vector_source": "source/svgs/edit-plus-circle.svg"
+      "vector_source": "source/svgs/tools/edit-plus-circle.svg"
     },
     {
       "category": "tools",
@@ -3749,7 +3869,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-minus-circle.png",
-      "vector_source": "source/svgs/edit-minus-circle.svg"
+      "vector_source": "source/svgs/tools/edit-minus-circle.svg"
     },
     {
       "category": "tools",
@@ -3759,7 +3879,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/edit-change.png",
-      "vector_source": "source/svgs/edit-change.svg"
+      "vector_source": "source/svgs/tools/edit-change.svg"
     },
     {
       "category": "tools",
@@ -3769,7 +3889,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-list-bullet.png",
-      "vector_source": "source/svgs/view-list-bullet.svg"
+      "vector_source": "source/svgs/tools/view-list-bullet.svg"
     },
     {
       "category": "tools",
@@ -3779,7 +3899,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-list-circle.png",
-      "vector_source": "source/svgs/view-list-circle.svg"
+      "vector_source": "source/svgs/tools/view-list-circle.svg"
     },
     {
       "category": "tools",
@@ -3789,7 +3909,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-list-circle-two.png",
-      "vector_source": "source/svgs/view-list-circle-two.svg"
+      "vector_source": "source/svgs/tools/view-list-circle-two.svg"
     },
     {
       "category": "tools",
@@ -3799,7 +3919,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-list-square-two.png",
-      "vector_source": "source/svgs/view-list-square-two.svg"
+      "vector_source": "source/svgs/tools/view-list-square-two.svg"
     },
     {
       "category": "tools",
@@ -3809,7 +3929,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-list-square.png",
-      "vector_source": "source/svgs/view-list-square.svg"
+      "vector_source": "source/svgs/tools/view-list-square.svg"
     },
     {
       "category": "tools",
@@ -3819,7 +3939,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-zoom-in.png",
-      "vector_source": "source/svgs/view-zoom-in.svg"
+      "vector_source": "source/svgs/tools/view-zoom-in.svg"
     },
     {
       "category": "tools",
@@ -3829,7 +3949,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-zoom-out.png",
-      "vector_source": "source/svgs/view-zoom-out.svg"
+      "vector_source": "source/svgs/tools/view-zoom-out.svg"
     },
     {
       "category": "tools",
@@ -3839,7 +3959,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-search.png",
-      "vector_source": "source/svgs/file-search.svg"
+      "vector_source": "source/svgs/tools/file-search.svg"
     },
     {
       "category": "tools",
@@ -3849,7 +3969,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/file-download.png",
-      "vector_source": "source/svgs/file-download.svg"
+      "vector_source": "source/svgs/tools/file-download.svg"
     },
     {
       "category": "tools",
@@ -3859,7 +3979,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-wave-circle.png",
-      "vector_source": "source/svgs/play-wave-circle.svg"
+      "vector_source": "source/svgs/tools/play-wave-circle.svg"
     },
     {
       "category": "tools",
@@ -3869,7 +3989,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-arrow-up-circle.png",
-      "vector_source": "source/svgs/view-arrow-up-circle.svg"
+      "vector_source": "source/svgs/tools/view-arrow-up-circle.svg"
     },
     {
       "category": "tools",
@@ -3879,7 +3999,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-arrow-down-circle.png",
-      "vector_source": "source/svgs/view-arrow-down-circle.svg"
+      "vector_source": "source/svgs/tools/view-arrow-down-circle.svg"
     },
     {
       "category": "tools",
@@ -3889,7 +4009,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-stop-circle.png",
-      "vector_source": "source/svgs/play-stop-circle.svg"
+      "vector_source": "source/svgs/tools/play-stop-circle.svg"
     },
     {
       "category": "tools",
@@ -3899,7 +4019,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-start-circle.png",
-      "vector_source": "source/svgs/play-start-circle.svg"
+      "vector_source": "source/svgs/tools/play-start-circle.svg"
     },
     {
       "category": "tools",
@@ -3909,7 +4029,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/play-pause-circle.png",
-      "vector_source": "source/svgs/play-pause-circle.svg"
+      "vector_source": "source/svgs/tools/play-pause-circle.svg"
     },
     {
       "category": "tools",
@@ -3919,7 +4039,7 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/task-retry-circle.png",
-      "vector_source": "source/svgs/task-retry-circle.svg"
+      "vector_source": "source/svgs/tools/task-retry-circle.svg"
     },
     {
       "category": "tools",
@@ -3928,7 +4048,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/file-folder-settings.png",
-      "vector_source": "source/svgs/file-folder-settings.svg",
+      "vector_source": "source/svgs/tools/file-folder-settings.svg",
       "group": "file"
     },
     {
@@ -3938,7 +4058,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-resize-square.png",
-      "vector_source": "source/svgs/view-resize-square.svg",
+      "vector_source": "source/svgs/tools/view-resize-square.svg",
       "group": "view"
     },
     {
@@ -3948,7 +4068,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/play-camera-photo.png",
-      "vector_source": "source/svgs/play-camera-photo.svg",
+      "vector_source": "source/svgs/tools/play-camera-photo.svg",
       "group": "play"
     },
     {
@@ -3958,7 +4078,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/user-support.png",
-      "vector_source": "source/svgs/user-support.svg",
+      "vector_source": "source/svgs/tools/user-support.svg",
       "group": "user"
     },
     {
@@ -3968,7 +4088,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/user-add.png",
-      "vector_source": "source/svgs/user-add.svg",
+      "vector_source": "source/svgs/tools/user-add.svg",
       "group": "user"
     },
     {
@@ -3978,7 +4098,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-more-circle.png",
-      "vector_source": "source/svgs/view-more-circle.svg",
+      "vector_source": "source/svgs/tools/view-more-circle.svg",
       "group": "view"
     },
     {
@@ -3988,7 +4108,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-close-circle.png",
-      "vector_source": "source/svgs/info-close-circle.svg",
+      "vector_source": "source/svgs/tools/info-close-circle.svg",
       "group": "info"
     },
     {
@@ -3998,7 +4118,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/info-check-circle.png",
-      "vector_source": "source/svgs/info-check-circle.svg",
+      "vector_source": "source/svgs/tools/info-check-circle.svg",
       "group": "info"
     },
     {
@@ -4008,7 +4128,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/user-male.png",
-      "vector_source": "source/svgs/user-male.svg",
+      "vector_source": "source/svgs/tools/user-male.svg",
       "group": "user"
     },
     {
@@ -4018,7 +4138,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/user-female.png",
-      "vector_source": "source/svgs/user-female.svg",
+      "vector_source": "source/svgs/tools/user-female.svg",
       "group": "user"
     },
     {
@@ -4028,7 +4148,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/user-support-speaking.png",
-      "vector_source": "source/svgs/user-support-speaking.svg",
+      "vector_source": "source/svgs/tools/user-support-speaking.svg",
       "group": "user"
     },
     {
@@ -4038,7 +4158,7 @@
       "origin": "new-tool-icon",
       "added": true,
       "source": "source/tools/view-resize.png",
-      "vector_source": "source/svgs/view-resize.svg",
+      "vector_source": "source/svgs/tools/view-resize.svg",
       "group": "view"
     }
   ],
@@ -4046,7 +4166,7 @@
     "stroke": 1.34375,
     "continuous": false,
     "palette": "unique pastel color per file type; M3U8 blue and TS purple retained",
-    "label_rule": "Segoe UI Semibold, 8.5px font, default 1px character gaps at 24px, reduce gaps only to fit. Labels and circles share center x=12; baseline y=17.5. Long file types use short display labels. Fixed square canvas; no individual letter is compressed. Plus sign matches cap height. Frame gaps add 2px padding.",
+    "label_rule": "Segoe UI Semibold, 8.5px font, default 1px character gaps at 24px, reduce gaps only to fit. Labels and circles share center x=12; baseline y=17.5. Long file types use short display labels. Fixed square canvas; no individual letter is compressed. Special new reuses file-new.svg. Frame gaps add 2px padding. Complete pure vector SVGs drive all PNG sizes.",
     "text_metrics": {
       "3gp": {
         "font_size": 8.5,
@@ -4061,7 +4181,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4084,7 +4204,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4107,7 +4227,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4130,7 +4250,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4153,7 +4273,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4176,7 +4296,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4202,7 +4322,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4227,7 +4347,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4252,7 +4372,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4277,7 +4397,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4300,7 +4420,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4325,7 +4445,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4348,7 +4468,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4371,7 +4491,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4394,7 +4514,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4417,7 +4537,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4440,7 +4560,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4463,7 +4583,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4486,7 +4606,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4509,7 +4629,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4532,7 +4652,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4555,7 +4675,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4578,7 +4698,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4601,7 +4721,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4624,7 +4744,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4647,7 +4767,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4670,7 +4790,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4693,7 +4813,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4716,7 +4836,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4739,7 +4859,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4762,7 +4882,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4785,7 +4905,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4808,7 +4928,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4831,7 +4951,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4854,7 +4974,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4877,7 +4997,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4900,7 +5020,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4923,7 +5043,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4946,7 +5066,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4969,7 +5089,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -4992,7 +5112,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5015,7 +5135,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5038,7 +5158,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5061,7 +5181,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5084,7 +5204,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5107,7 +5227,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5130,7 +5250,7 @@
         "frame_gap_padding": 2,
         "label_center": 12.0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5153,7 +5273,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5176,7 +5296,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5199,7 +5319,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5222,7 +5342,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5245,7 +5365,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5268,7 +5388,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5291,7 +5411,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5314,7 +5434,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5337,7 +5457,7 @@
         "frame_gap_padding": 2,
         "label_center": 12.0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5360,7 +5480,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5383,7 +5503,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5406,7 +5526,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5429,7 +5549,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5452,7 +5572,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5475,7 +5595,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5498,7 +5618,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5521,7 +5641,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5544,7 +5664,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5567,7 +5687,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5590,7 +5710,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5613,7 +5733,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5636,7 +5756,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5659,7 +5779,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5682,7 +5802,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5705,7 +5825,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5728,7 +5848,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5751,7 +5871,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5774,7 +5894,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5797,7 +5917,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5820,7 +5940,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5843,7 +5963,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5868,7 +5988,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5891,7 +6011,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5914,7 +6034,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5939,7 +6059,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5962,7 +6082,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -5985,7 +6105,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6008,7 +6128,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6031,7 +6151,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6054,7 +6174,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6079,7 +6199,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6104,7 +6224,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6127,7 +6247,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6150,7 +6270,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6175,7 +6295,7 @@
         "frame_gap_padding": 0,
         "label_center": 12.0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6198,7 +6318,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6223,7 +6343,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6246,7 +6366,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6269,7 +6389,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6294,7 +6414,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6319,7 +6439,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6345,7 +6465,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6368,7 +6488,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6391,7 +6511,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6414,7 +6534,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6437,7 +6557,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6460,7 +6580,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6483,7 +6603,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6506,7 +6626,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6529,7 +6649,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6552,7 +6672,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6575,7 +6695,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6598,7 +6718,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6621,7 +6741,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6644,7 +6764,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6669,7 +6789,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 2,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6694,7 +6814,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6717,7 +6837,7 @@
         "label_center": 12.0,
         "frame_gap_padding": 0,
         "canvas_padding": 0,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6739,7 +6859,7 @@
         "font_size": 8.5,
         "cap_height": 5.9375,
         "native_pixel_text": false,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "font_family": "Segoe UI",
         "font_style": "Semibold",
         "pixel_aligned_label": false,
@@ -6789,7 +6909,7 @@
         "font_style": "Semibold",
         "font_axes": null,
         "native_pixel_text": false,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "pixel_aligned_label": false,
         "text_colour": "#3B3B3B",
         "canvas_padding": 0,
@@ -6812,7 +6932,7 @@
         "font_style": "Semibold",
         "font_axes": null,
         "native_pixel_text": false,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "pixel_aligned_label": false,
         "text_colour": "#3B3B3B",
         "canvas_padding": 0,
@@ -6835,7 +6955,7 @@
         "font_style": "Semibold",
         "font_axes": null,
         "native_pixel_text": false,
-        "rendering": "vector-label-and-circle",
+        "rendering": "pure-vector-svg",
         "pixel_aligned_label": false,
         "text_colour": "#3B3B3B",
         "canvas_padding": 0,
@@ -6853,7 +6973,7 @@
       "base_canvas": 24
     },
     "style_defaults": {
-      "frame_template": "scripts/icon_templates/file-square.png",
+      "frame_template": "source/svgs/tools/file-file.svg",
       "text_offset_y": 1.5,
       "character_gap": 1.0,
       "character_gap_by_length": {

@@ -62,7 +62,7 @@ def build(stem, kind, count, checked=False):
             'd': f'M{LEFT+1.525} 12 {LEFT+2.175} 12.65 {LEFT+3.375} 11.4',
         })
     ET.indent(svg, space='  ')
-    (ROOT / 'source/svgs' / (stem+'.svg')).write_text(
+    (ROOT / 'source/svgs/tools' / (stem+'.svg')).write_text(
         ET.tostring(svg, encoding='unicode')+'\n', encoding='utf-8')
 
 

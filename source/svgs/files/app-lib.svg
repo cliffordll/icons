@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <circle data-role="format-circle" cx="12.0" cy="13.5" r="7.5" fill="#F0B2B3" />
+  <g data-role="frame">
+    <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+      <path id="document" data-role="document" d="M5.3 2.8H14.5L19.3 7.6V20.6Q19.3 21.2 18.7 21.2H5.3Q4.7 21.2 4.7 20.6V3.4Q4.7 2.8 5.3 2.8ZM14.5 2.8V7.6H19.3" />
+    </g>
+  </g>
+  <g fill="#3B3B3B" data-role="label">
+    <path d="M971 0H177V1434H415V201H971Z" transform="translate(5.952880859 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M421 0H176V1434H421Z" transform="translate(10.332031250 17.514160156) scale(0.004150391 -0.004150391)" />
+    <path d="M177 0V1434H632Q840 1434 961.5 1343.0Q1083 1252 1083 1106Q1083 984 1014.0 894.0Q945 804 823 766V762Q971 745 1059.5 652.5Q1148 560 1148 412Q1148 228 1003.0 114.0Q858 0 637 0ZM414 1243V835H568Q692 835 762.5 893.5Q833 952 833 1059Q833 1243 587 1243ZM414 644V190H617Q750 190 822.5 251.5Q895 313 895 421Q895 644 586 644Z" transform="translate(12.390380859 17.514160156) scale(0.004150391 -0.004150391)" />
+  </g>
+</svg>

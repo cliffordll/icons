@@ -5,7 +5,8 @@
 ## 目录
 
 - `source/tools/`、`source/files/`：高分辨率透明 PNG。
-- `source/svgs/`：全部工具图标的纯矢量 SVG，和 PNG 分开存放；120个文件类型图标暂由共享模板生成。
+- `source/svgs/tools/`：工具图标的纯矢量 SVG。
+- `source/svgs/files/`：120个文件类型图标的纯矢量 SVG，标签已转为路径。
 - `24/`、`30/`、`36/`、`48/`：各尺寸的工具及文件类型 PNG。
 - `manifest.json`：图标名称、用途和统一绘制参数。
 - `gallery.html`：浏览器直接打开的本地图标总览。
@@ -42,14 +43,17 @@ python scripts/render_tool_icons.py --all
 python scripts/render_tool_icons.py --names bell save glossary
 python scripts/render_file_icons.py --all
 python scripts/render_file_icons.py --names pdf mp4 m3u8
+python scripts/render_file_icons.py --render-only --all
 python scripts/update_gallery.py
 ```
 
-建议 Python 3.10 或更高版本。文件图标默认使用 Windows 的 Segoe UI Semibold，其他环境通过 `--font` 指定字体文件。生成依赖不属于消费项目的运行时依赖。
+建议 Python 3.10 或更高版本。重建文件SVG时默认使用 Windows 的 Segoe UI Semibold，其他环境通过 `--font` 指定字体文件。SVG内保存字形路径，查看不依赖字体；仅从现有SVG重新导出PNG可用 `--render-only --all`（或 `--render-only --names pdf`），无需字体文件。生成依赖不属于消费项目的运行时依赖。
 
-工具图标 `file-new` 使用 `source/svgs/file-new.svg` 作为矢量源。修改或重建新建文件图标时运行 `python scripts/render_file_icons.py --names new`，同步生成工具与文件组的 PNG。
+工具图标 `file-new` 使用 `source/svgs/tools/file-new.svg` 作为矢量源。修改或重建新建文件图标时运行 `python scripts/render_file_icons.py --names new`，同步生成工具与文件组的 PNG。
 
-文档基底 `source/svgs/file-file.svg` 是 `file-new`、`file-search` 和 `file-download` 的共享主体。先运行 `python scripts/build_file_icons.py` 由基底生成 `file-new.svg`，再运行角标与 PNG 渲染脚本；文件类型图标通过 `render_file_icons.py` 复用同一文档框体规范。
+文档基底 `source/svgs/tools/file-file.svg` 是 `file-new`、`file-search` 和 `file-download` 的共享主体。先运行 `python scripts/build_file_icons.py` 由基底生成 `file-new.svg`，再运行角标与 PNG 渲染脚本；文件类型图标通过 `render_file_icons.py` 复用同一文档框体规范。
+
+文件类型通过 `render_file_icons.py` 继承清单中的底色、标签及排版参数，生成完整SVG，再逐档直接渲染PNG。标签两侧的缺口切在矢量边框上，不使用位图遮罩或嵌入图片。`other-new.svg`复用工具`file-new.svg`，保留无色圆、无格式标签的特殊造型。重建SVG会更新`vector_source`与排版记录，随后运行`update_gallery.py`同步离线图集；只导出PNG不会修改清单。
 
 搜索、放大、缩小共用 `scripts/icon_templates/magnifier.svg`；调整模板后先运行 `python scripts/build_magnifier_icons.py`，再重建7个搜索角标、渲染对应PNG。角标与独立图标的模板关系及最新参数见 DESIGN.md 的“放大镜家族统一”。
 

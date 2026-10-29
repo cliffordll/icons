@@ -48,7 +48,7 @@
 | --- | --- | --- |
 | 搜索、设置、代码等右下角附加标记 | `scripts/build_badge_icons.py`、[BADGE-AUDIT.md](BADGE-AUDIT.md) | 完整背景主体先居中；角标包围盒中心固定 `(17.5,16.75)`、最大尺寸 10.5px；重新计算 0.6px 断口。齿轮共用已确认模板 |
 | 两行/三行方块、空心圆、数字、任务列表 | `scripts/build_list_icons.py`；下文“列表族统一规范（最新）” | 当前六图可见宽 18.5px，边界 x=2.75..21.25；横线中心线右端 x=20.575；点线净距 1.35px；复用行坐标及标记几何 |
-| 实心圆点列表 | `source/svgs/view-list-bullet.svg` | 独立保留当前 17×16px 布局，不纳入上述六图生成器 |
+| 实心圆点列表 | `source/svgs/tools/view-list-bullet.svg` | 独立保留当前 17×16px 布局，不纳入上述六图生成器 |
 | 完整方框、四角边框 | 当前 `edit-plus-square`、`lock-lock-frame`、`view-fullscreen`、`edit-text-crop` 等 SVG；下文方框规范 | 可比完整方框可见范围 18px、圆角 0.6px；复用外框/框角，按内容类型保留内部留白 |
 | 文件夹、人物、锁与解锁、同类设备、灯泡及其变体 | 当前登记的同组 SVG；下文对应分组说明 | 复用共同主体、内部几何和有效笔触；只增减语义构件，不分别重画主体 |
 | 上传下载托盘、任务状态 | 下文“控制符号家族共享维护（最新）”、`scripts/control_geometry.py` | 共用托盘，操作符号以 `(12,8.5)` 为中心；上传/下载使用对应镜像关系 |
@@ -61,12 +61,14 @@
 
 | 项目 | 现行规则 |
 | --- | --- |
-| 基础造型 | 共用 `scripts/icon_templates/file-square.png` 折角文档边框，轮廓深灰 `#444444` |
+| 基础造型 | 共用 `source/svgs/tools/file-file.svg` 折角文档边框，轮廓深灰 `#444444`；旧PNG模板仅保留兼容路径，不再作为生成源 |
 | 格式标签 | Segoe UI Semibold、`#3B3B3B`；默认字号 8.5px、基线 y=17.5 |
 | 字距 | 默认 1px；四字符标签 0.75px；指定字母对按 `style_defaults.pair_spacing` 处理 |
 | 圆形色块 | 直径 15px，水平中心 x=12；基础 y=4.5，加当前 `circle_offset_y=1.5` 后实际顶部 y=6；底色由各条目的 `circle_color` 指定 |
 | 长标签及边框缺口 | 由生成器统一排版、等比适配；实际标签碰到任意一侧边框时两侧同时开口，文字上下缺口余量为 2px；不单独压窄字形 |
 | 维护方式 | 新条目继承 `file_frame.style_defaults`；仅填写格式名、分类、路径、显示标签和浅色底色等自身数据，避免复制整套默认参数 |
+
+全部120个文件类型都有完整纯矢量SVG并登记`vector_source`。使用`render_file_icons.py`生成SVG及五档PNG，字体轮廓转为路径，不使用`text`、嵌入图片、外链字体或白色遮罩；只从现有SVG重新导出PNG时用`--render-only`，不需要字体。最新迁移规则与验收见文末“文件类型SVG补齐”。
 
 `other-new` 为复用新建文档加号的既有特殊项，不为它添加格式名或彩色色块。格式名缩写沿用生成器的共同映射，例如 SQLITE 显示为 SQL。
 
@@ -238,7 +240,7 @@
 ### 新增交付流程
 
 1. 在 `manifest.json` 和 `gallery.html` 检查已有语义，优先复用资源；明确 `tools` / `files`、分类前缀与同组参考。
-2. 新工具建立纯矢量 `source/svgs/分类-名称.svg`；已有共享生成器的组先维护生成器。文件类型通过统一文件生成器维护，不单独手绘标签。
+2. 新工具建立纯矢量 `source/svgs/tools/分类-名称.svg`；已有共享生成器的组先维护生成器。文件类型通过统一文件生成器维护，不单独手绘标签。
 3. 在 `manifest.json` 登记条目，`source`、`vector_source`（新工具必须有）、`group` 和用途等字段与同组结构一致。工具渲染器的 `--names` 在名称唯一时可用条目中的 `name`，同名操作必须使用完整文件名（如 `task-download`、`file-download`）；角标生成器的 `--names` 始终使用完整文件名前缀。
 4. 用对应脚本生成 384px source 和四档 PNG，再更新图集。按下面的分支执行，普通新增无需运行无关生成器：
 
@@ -267,19 +269,19 @@ git diff --check
 
 以下保留细节与历史；标有“最新”或明确“覆盖前文”的分组段落取代相应旧值。消费项目映射、旧路径及历史备份说明不作为本仓库新增文件的路径模板。
 
-`tools/sys-extension.png` 使用拼图轮廓表示浏览器扩展，矢量源为 `source/svgs/sys-extension.svg`。
+`tools/sys-extension.png` 使用拼图轮廓表示浏览器扩展，矢量源为 `source/svgs/tools/sys-extension.svg`。
 `extension` 的原有非等比缩放已落实到路径坐标，保留主体轮廓的位置和比例，描边独立使用 1.35px，避免横线与竖线被缩放成不同粗细。
-`tools/net-browser.png` 使用带顶栏的浏览器窗口和地球轮廓表示浏览器，矢量源为 `source/svgs/net-browser.svg`。采用 `#444444`、1.35px 描边、0.6px 矩形圆角，中心为 `(12,12)`，可视范围为 `x=2..22`、`y=3..21`。此图标作为独立素材新增；现有运行时 `browser` 映射仍用于扩展入口并指向 `extension.png`。
-`tools/play-player-setting.png` 使用显示器和圆润齿轮的设置造型，源文件为 `source/svgs/play-player-setting.svg`、`player-setting.png`，当前用于选择播放器入口。
-`tools/play-player.png` 是独立的播放器图标，使用显示器和空心播放三角，与 `player-setting` 的播放器设置造型区分。矢量源为 `source/svgs/play-player.svg`；复用 `player-setting` 的屏幕位置和大小：`x=3`、`y=3.375`、宽 16.95px、高 12.25px、圆角 0.6px，底座共用 `M8.5 20.25h6`，支架位于 x=11.5。采用 `#444444`、1.35px 描边，播放三角围绕屏幕中心 `(11.475,9.5)` 放置；不为单图标重新缩放或居中显示器，以保持与设置版本的主体一致。仅新增素材，不改变现有播放器设置入口。
-`tools/play-video.png` 使用摄像机轮廓与机身内的播放三角表示可播放视频，与显示器造型的 `play-player` 和音符造型的 `play-music` 区分；沿用 24px 设计坐标、`#444444`、1.35px 圆头线条和 0.6px 矩形圆角，矢量源为 `source/svgs/play-video.svg`。
+`tools/net-browser.png` 使用带顶栏的浏览器窗口和地球轮廓表示浏览器，矢量源为 `source/svgs/tools/net-browser.svg`。采用 `#444444`、1.35px 描边、0.6px 矩形圆角，中心为 `(12,12)`，可视范围为 `x=2..22`、`y=3..21`。此图标作为独立素材新增；现有运行时 `browser` 映射仍用于扩展入口并指向 `extension.png`。
+`tools/play-player-setting.png` 使用显示器和圆润齿轮的设置造型，源文件为 `source/svgs/tools/play-player-setting.svg`、`player-setting.png`，当前用于选择播放器入口。
+`tools/play-player.png` 是独立的播放器图标，使用显示器和空心播放三角，与 `player-setting` 的播放器设置造型区分。矢量源为 `source/svgs/tools/play-player.svg`；复用 `player-setting` 的屏幕位置和大小：`x=3`、`y=3.375`、宽 16.95px、高 12.25px、圆角 0.6px，底座共用 `M8.5 20.25h6`，支架位于 x=11.5。采用 `#444444`、1.35px 描边，播放三角围绕屏幕中心 `(11.475,9.5)` 放置；不为单图标重新缩放或居中显示器，以保持与设置版本的主体一致。仅新增素材，不改变现有播放器设置入口。
+`tools/play-video.png` 使用摄像机轮廓与机身内的播放三角表示可播放视频，与显示器造型的 `play-player` 和音符造型的 `play-music` 区分；沿用 24px 设计坐标、`#444444`、1.35px 圆头线条和 0.6px 矩形圆角，矢量源为 `source/svgs/tools/play-video.svg`。
 `player-setting` 以已确认的原始 PNG 为参照，用闭合三次贝塞尔路径重建圆润齿轮的内外轮廓及中心孔，保持原有齿形、大小和与主体的相对位置；不使用规则多边形齿轮或波浪轮廓替换。源 SVG 为纯矢量，不含嵌入图像；显示器支架使用与参照图一致的圆头。source、24、30、36、48px PNG 全部由该 SVG 通过 wx SVG 渲染器生成。
 `player`、`player-setting` 在保持共同屏幕、底座及内部相对位置的基础上，整图统一下移 0.1875px，使 384px 源图可见边界的垂直中心从 y=11.8125 对齐到 y=12；两图当前纵向边界均为源图 y=46..338，即 24px 画布的 y=2.875..21.125。该平移不改变线宽或比例。
 `tools/task-retry.png`、`tools/sys-refresh.png`、`tools/info-history.png` 共用下文的圆环箭头规范，分别以同名 SVG 为绘制源。
-`tools/sys-debug.png` 使用单色昆虫轮廓表示调试，矢量源为 `source/svgs/sys-debug.svg`；按通用工具图标基准居中，已检查并从该 SVG 重新生成各尺寸 PNG。
+`tools/sys-debug.png` 使用单色昆虫轮廓表示调试，矢量源为 `source/svgs/tools/sys-debug.svg`；按通用工具图标基准居中，已检查并从该 SVG 重新生成各尺寸 PNG。
 `tools/file-folder.png` 采用打开文件夹的后部页签轮廓，并将前方面板改为矩形；`folder-plus.png`、`folder-move.png` 和 `folder-favorite.png` 共用该底图，分别叠加加号、水平向右箭头和实心正五角星，符号中心统一为 24px 画布下 `(12, 13.98125)`。`folder-open.png` 使用独立 SVG 按同一线条和圆角规范重绘。`tools/edit-plus.png`、`minus.png`、`bell.png` 和 `bell-knob.png` 使用通用工具图标的 `#444444`、1.35px 线条规范；`bell.png` 保留原样，`bell-knob.png` 是独立的顶部加钮版本。新增 `lightbulb`、`clock`、`tools`、`knowledge`、`database`、`market`、`observation`、`dataflow`、`mcp`、`glossary` 图标，使用一致的深灰线条风格。`move-left.png`、`move-right.png`、`robot.png` 和 `favorite.png` 使用相同工具图标线条规范，并以 SVG 为绘制源。
 `tools/task-task-download.png`、`task-start.png`、`task-resume.png`、`task-pause.png`、`task-stop.png` 和 `download-all.png` 属于同一组下载操作图标；`task-upload.png` 和 `upload-all.png` 属于对应的上传操作图标。具体尺寸规范见下文，SVG 源登记在 `manifest.json` 的 `vector_source`。
-`download`、`upload` 的云形使用相同的 `cloud-outline` 矢量路径，按原下载图标的圆润云轮廓重建，不单独移动上传版云形。箭头使用相同尺寸、1.35px 圆头描边，围绕 y=16.5625 上下镜像，水平中心 x=12；上传箭头头部上移 1.2px，下载箭头相应向下移动 1.2px，以拉开箭头与云朵开口的距离。可视范围约为下载 y=3.375..21.825、上传 y=3.375..20.625。以 `source/svgs/task-download.svg`、`upload.svg` 生成 source、24、30、36、48px PNG，；本仓库只生成 `tools` 中的通用资源。
+`download`、`upload` 的云形使用相同的 `cloud-outline` 矢量路径，按原下载图标的圆润云轮廓重建，不单独移动上传版云形。箭头使用相同尺寸、1.35px 圆头描边，围绕 y=16.5625 上下镜像，水平中心 x=12；上传箭头头部上移 1.2px，下载箭头相应向下移动 1.2px，以拉开箭头与云朵开口的距离。可视范围约为下载 y=3.375..21.825、上传 y=3.375..20.625。以 `source/svgs/tools/task-download.svg`、`upload.svg` 生成 source、24、30、36、48px PNG，；本仓库只生成 `tools` 中的通用资源。
 `market` 使用带分瓣遮阳篷和门洞的店铺轮廓表示市场；`observation` 按趋势图参考，使用左下坐标轴和带右上箭头的上升折线表示观测／趋势监测，不使用眼睛、仪表盘或浏览器窗口外框。采用 `#444444`、1.35px 圆头描边，源 SVG 和各档 PNG 均通过统一工具图标脚本维护；`observation` 可视边界约 x=2.65..21.35、y=2.65..21.35，中心 `(12,12)`。
 本目录是程序唯一使用的图标库。原图、旧工具栏资源和设计稿已归档到 `../backups/icons-before-consolidation.zip`。
 
@@ -306,11 +308,11 @@ git diff --check
 - `mcp` 保留立方体和内部标记，横向路径围绕 x=12 加宽 5%，高度及居中保持不变；只调整路径横坐标，不对描边做非等比缩放，有效线宽仍约 1.35px。
 - 工具图标中可比的圆角矩形边框统一采用 24 像素画布下 `0.6px` 的几何圆角半径；`edit`、`extension`、`save`、`external` 的矩形外框按此规范绘制。圆形、弧线、三角形，以及拼图凸凹、斜切边和箭头等语义造型保留自身曲线。
 - `about`、`help`、`warning` 的感叹号／问号采用统一的 `#444444`、1.35px 圆头笔画，下方圆点统一为圆心 `(12,17.6)`、半径 0.675px 的实心圆。`about`、`help` 共用圆形外框，`warning` 保留原有三角形外框路径；三者分别以同名 SVG 为源生成全部 PNG 档位。
-- `delete` 使用 `source/svgs/edit-delete.svg` 为源，采用 `#444444`、1.35px 圆头笔画，桶身下角使用 0.6px 几何圆角。盖沿收窄至 x=3.8..20.2，桶身位于 x=5.5..18.5，均围绕 x=12 居中；顶部提手长 6.8px，两条内部竖线位于 x=9.75、14.25，长度 7.8px，以较紧凑的横向比例和较长的内线平衡圆头造型。整体可视范围约为 `x=3.125..20.875`、`y=2.525..21.475`。
+- `delete` 使用 `source/svgs/tools/edit-delete.svg` 为源，采用 `#444444`、1.35px 圆头笔画，桶身下角使用 0.6px 几何圆角。盖沿收窄至 x=3.8..20.2，桶身位于 x=5.5..18.5，均围绕 x=12 居中；顶部提手长 6.8px，两条内部竖线位于 x=9.75、14.25，长度 7.8px，以较紧凑的横向比例和较长的内线平衡圆头造型。整体可视范围约为 `x=3.125..20.875`、`y=2.525..21.475`。
 - `edit-square` 是 `edit` 的并列样式，采用右上开口边框和空心斜笔轮廓；独立于原 `edit` 图标，不替换原文件。
-- `tools/list` 保留首行分段、下方两条完整横线的列表造型，以 `source/svgs/view-list.svg` 为绘制源。使用 `#444444`、1.35px 描边和圆头端点，三行围绕 `(12,12)` 等距排列；可视范围为 `x=3.5..20.5`、`y=4..20`。横向宽度由 20px 收窄至 17px，避免三条长横线显得过宽；保持原有行高和线宽。
+- `tools/list` 保留首行分段、下方两条完整横线的列表造型，以 `source/svgs/tools/view-list.svg` 为绘制源。使用 `#444444`、1.35px 描边和圆头端点，三行围绕 `(12,12)` 等距排列；可视范围为 `x=3.5..20.5`、`y=4..20`。横向宽度由 20px 收窄至 17px，避免三条长横线显得过宽；保持原有行高和线宽。
 - `tools/lightbulb` 参考 `bell`：顶部使用相同的 6px 半径圆弧，顶部中心线为 y=3，底部短横线中心线为 y=21。保留灯泡的收颈轮廓和多层灯座：主体底边位于 y=16，另外两条短横线位于 y=18.5、y=21，末层收窄。描边保持 `#444444`、1.35px，中心为 `(12,12)`。可视范围约为 `x=5.325..18.675`、`y=2.325..21.675`；宽度随灯泡造型收窄，高度与 bell 对齐。
-- `tools` 扳手采用左上头部、右下手柄的方向；头部圆弧半径为 4.7px，手柄宽约 3.9px。手柄两侧直线的横纵分量由 9.1px 缩短至 6.8px（约缩短 25%），头部、柄宽和圆润尾端保持原样；整图平移居中，不缩放描边。描边保持 1.35px；384px 源图在 alpha≥128 时的可见边界为 `(50,50)..(334,334)`（右下不含），对应 24px 画布约 `x=3.125..20.875`、`y=3.125..20.875`，中心为 `(12,12)`。此处采用较紧凑边界，以保持缩短后的头柄比例。SVG 源为 `source/svgs/sys-tools.svg`，同步生成 source、24、30、36、48px PNG。
+- `tools` 扳手采用左上头部、右下手柄的方向；头部圆弧半径为 4.7px，手柄宽约 3.9px。手柄两侧直线的横纵分量由 9.1px 缩短至 6.8px（约缩短 25%），头部、柄宽和圆润尾端保持原样；整图平移居中，不缩放描边。描边保持 1.35px；384px 源图在 alpha≥128 时的可见边界为 `(50,50)..(334,334)`（右下不含），对应 24px 画布约 `x=3.125..20.875`、`y=3.125..20.875`，中心为 `(12,12)`。此处采用较紧凑边界，以保持缩短后的头柄比例。SVG 源为 `source/svgs/tools/sys-tools.svg`，同步生成 source、24、30、36、48px PNG。
 - `load` 使用围绕 `(12,12)` 等距分布的 12 条圆头短线，径向范围 7.2–9.3px，描边 1.35px，可视边界约为 `x=2.025..21.975`、`y=2.025..21.975`，保持完整环形及四周留白。
 - `bell-knob` 沿用 `bell` 的 6px 半径圆润铃顶、18px 底边宽度及 `M10 21h4` 底部短线；顶部使用与 `lock`、`unlock` 圆孔统一的圆形小钮，与铃顶贴合。可视边界约为 `x=2.325..21.675`、`y=1.85..21.675`，水平中心 x=12，线宽保持 1.35px。基础 `bell` 保持原样。
 - `bell-knob`、`lock`、`unlock` 的小圆统一采用 24px 画布下半径 1px、描边 1.35px、颜色 `#444444` 的正圆，独立于主体缩放变换；铃钮圆心为 `(12,3.525)`，锁芯圆心为 `(12,14.484)`。锁芯保留原有下方竖线，小圆本身不随锁身的非等比变换变为椭圆。
@@ -341,7 +343,7 @@ git diff --check
 ### 已调试的打开与密钥图标
 
 - `tools/file-folder-open.png` 保留打开文件夹造型，以左侧路径 x=2.425 为锚点，仅向右加宽横向几何 3%；该横向调整不改变左侧。随后随整个文件夹组统一上移 0.21875px，保持原有高度、描边、圆角和组内相对位置。当前 384px 源图在 alpha≥128 时的可见边界为 `x=38..356`、`y=53..331`，对应 24px 画布约 `x=2.375..22.25`、`y=3.3125..20.6875`，垂直中心 y=12。横向扩展直接作用于路径坐标，不拉伸描边。
-- `tools/lock-key.png` 是唯一保留的密钥图标，使用 `source/svgs/lock-key.svg` 为矢量源。保持圆形钥匙头、右上 45° 轴杆和两道齿位；线条为 `#444444`，原始 `1.08px` 描边经 `1.25` 倍变换后约为 `1.35px`。384px 源图可见边界约为 `x=47..333`、`y=52..330`，即 24px 画布约 `x=2.94..20.81`、`y=3.25..20.63`，视觉中心约为 `(11.9, 11.9)`。
+- `tools/lock-key.png` 是唯一保留的密钥图标，使用 `source/svgs/tools/lock-key.svg` 为矢量源。保持圆形钥匙头、右上 45° 轴杆和两道齿位；线条为 `#444444`，原始 `1.08px` 描边经 `1.25` 倍变换后约为 `1.35px`。384px 源图可见边界约为 `x=47..333`、`y=52..330`，即 24px 画布约 `x=2.94..20.81`、`y=3.25..20.63`，视觉中心约为 `(11.9, 11.9)`。
 - `key-classic` 和 `key-horizontal` 已移除，不恢复这两个图标，也不保留运行时映射或清单条目；需要密钥图标时统一使用 `key`。
 - `folder-open`、`key` 和上述下载状态图标均在 `manifest.json` 中登记。对它们做视觉调整时，先更新源素材和边界记录，再检查 24、30、36、48 px 显示效果。
 
@@ -428,7 +430,7 @@ TS 统一保留紫色色块版本，文件名为 `files/video-ts.png`。
 加载入口为 `src/views/main_frame.py`，窗口、导航和工具栏共用相同的资源目录。
 
 - `file-file.svg` 是通用折角文档主体的唯一矢量基底。`file-new.svg` 由 `scripts/build_file_icons.py` 复用其路径并增加加号；`file-search`、`file-download` 从同一 SVG 读取主体。`render_file_icons.render_frame` 直接渲染此基底，再叠加文件类型圆形与格式文字；文件系列只按语义增加内容，不重画文档框体。
-- `tools/file-new.png` 有独立矢量源 `source/svgs/file-new.svg`，并在 manifest 登记 `vector_source`；文档框体复用 `file-file.svg`，加号与 `file-folder-plus` 共用 5px 中心线臂长、1.35px 线宽和圆头效果，中心位置按文档主体适配。`files/other-new.png` 与工具图标共用同一 SVG 输出。使用 `python scripts/build_file_icons.py` 更新变体 SVG，再运行 `render_file_icons.py --names new` 同步两组 source 与四档 PNG。
+- `tools/file-new.png` 有独立矢量源 `source/svgs/tools/file-new.svg`，并在 manifest 登记 `vector_source`；文档框体复用 `file-file.svg`，加号与 `file-folder-plus` 共用 5px 中心线臂长、1.35px 线宽和圆头效果，中心位置按文档主体适配。`files/other-new.png` 与工具图标共用同一 SVG 输出。使用 `python scripts/build_file_icons.py` 更新变体 SVG，再运行 `render_file_icons.py --names new` 同步两组 source 与四档 PNG。
 - `tools/edit-edit.png` 的铅笔与边框主体在此前约 4.6% 的收紧基础上，再按下文开口边框组规范整体收紧 4%；`tools/info-check.png` 和 `tools/info-close.png` 分别由同名 SVG 生成，统一使用 `#444444`、1.35px 描边、圆头端点及圆角连接，并保留重绘前的图案比例。384px 源图在 alpha≥128 时，`check` 可见边界为 `(50,86)..(334,298)`，`close` 为 `(73,73)..(311,311)`；与旧图边界差异最多为 1 个源像素，即 24px 画布下 0.0625px。`tools/view-more.png` 使用三个等距圆点。`tools/file-save.png` 主体相对调整前缩小 3%；`tools/edit-delete.png` 按上述紧凑比例及统一线宽规范维护。所有改动同步生成 source、24、30、36、48px 版本。
 - `task-download`、`task-start`、`task-resume`、`task-pause`、`task-upload` 以及 `download-all`、`upload-all` 的上方箭头／符号相对原稿统一放大 6%，围绕各自中心保持居中，描边仍为 `1.35px`。全部图标的托盘路径相同并统一下移 `0.2px`；`task-resume` 刷新环和箭头再额外放大 6%，线宽保持不变；`task-stop` 保持已确认的方框尺寸。
 
@@ -441,7 +443,7 @@ TS 统一保留紫色色块版本，文件名为 `files/video-ts.png`。
 - 菜单复用 list 的横向范围 x=4.175..19.825 及三行中心线 y=4.675、12、19.325；三行均为完整横线。
 - 历史记录采用回转箭头和时钟指针，外环与 retry、refresh 共用圆环箭头规范，指针复用 clock 的相对几何；具体参数见下文。图片及复制成功的主要矩形范围采用 x/y=3..21；登录／退出门框高度由 18px 收窄至 15px（y=4.5..19.5），宽度由 7.5px 收窄至 6px，分别位于 x=14..20、x=4..10，箭头尺寸和 0.6px 圆角保持不变；复制成功采用两张错位纸张与内部勾号，清空采用橡皮擦与基线，附件采用连续回形针轮廓。
 - 下拉／收起因语义为浅折线，轮廓高度较小：含描边约 x=3.325..20.675、y=7.325..16.675，仍围绕 (12,12) 对称。菜单沿用 list 的紧凑范围；登录／退出保留箭头位置，收窄后门框使整体边界中心分别位于 x=11.5、x=12.5，两者作为一对保持对称。其余图标围绕共同画布中心构图；history 使用下文圆环箭头组的构造，不按包含箭头的包围盒单独重新居中。不通过拉伸或缩放改变线宽。
-- 所有 SVG 位于 `source/svgs/`，由统一脚本生成 source、24、30、36、48px PNG；文件名前缀与 manifest 的 group 保持一致。
+- 所有 SVG 按工具/文件类型位于 `source/svgs/tools/` 或 `source/svgs/files/`，由统一脚本生成 source、24、30、36、48px PNG；文件名前缀与 manifest 的 group 保持一致。
 
 ## 圆环箭头统一规范
 
@@ -450,7 +452,7 @@ TS 统一保留紫色色块版本，文件名为 `files/video-ts.png`。
 - 三图外圈箭头使用 384×384 矢量坐标、135px 圆弧半径、22px 描边（折合 24px 画布为 8.4375px 半径、1.375px 线宽），颜色 #444444。此组保留原 retry 的尺寸及笔触，是通用 1.35px 线宽的明确例外。
 - 圆弧使用圆头；箭头采用平头、直角连接。按用户最新反馈，仅箭头头部在原59×60单位基础上放大10%，横纵两边为64.9、66单位（24px坐标约4.056×4.125px）；紧凑版本沿用同一构造和既有整体缩放，但按最新反馈单独补偿头部大小，见下文最新维护规则。箭头拐点 (339,169) 不动，圆弧末端 (324.949,168.057) 终止于箭头横边内部；通过描边接合，避免接在拐点形成分叉。圆弧半径、位置、开口及有效线宽不随头部放大。
 - retry 保持原 SVG；history 使用 retry 的水平镜像外环，refresh 使用同一上半圆弧与箭头并旋转 180° 得到下半部分。三图均保留相同外环尺寸、紧凑开口及箭头接合结构。`info-history` 内部时针和分针与 `info-clock` 完全相同：24px 坐标 `M12 6.4V12l5.5 3.5`，仅内部指针使用 1.35px 描边，形成共享的时钟构件。
-- 全部以 source/svgs 中的独立 SVG 为源生成 source、24、30、36、48px PNG。undo／redo 保留原回弯轮廓和通用圆头笔触；task-resume 继续按任务托盘组规范维护。
+- 全部以 source/svgs/tools 中的独立 SVG 为源生成 source、24、30、36、48px PNG。undo／redo 保留原回弯轮廓和通用圆头笔触；task-resume 继续按任务托盘组规范维护。
 
 ## 四向折线箭头
 
@@ -573,7 +575,7 @@ TS 统一保留紫色色块版本，文件名为 `files/video-ts.png`。
 
 ### 布局、设备与开发操作补充
 
-新增 12 个图标，SVG 均位于 `source/svgs/`，同步渲染源 PNG 及四档尺寸。
+新增 12 个图标，SVG 均位于 `source/svgs/tools/`，同步渲染源 PNG 及四档尺寸。
 
 - `view-sidebar-left`、`view-sidebar-stack`、`view-panel-bottom`、`view-split` 共用 x=3..21、y=4.5..19.5 的窗口框体与 0.6px 圆角；左侧栏分隔 x=8.5，上下分隔 y=12，底部面板分隔 y=15，左右等分 x=12。分隔线与外框相接，不额外叠加边框。
 - `sys-disk` 使用梯形盘体与前面板；`sys-keyboard` 使用 x=2.5..21.5、y=6..18 的横向轮廓、两排简化键位与空格键；`sys-mouse` 使用 x=6..18、y=2.75..21.25 的自然胶囊轮廓。三者保持 1.35px 描边，窄鼠标保留自然比例。
@@ -787,3 +789,25 @@ SVG登记vector_source，沿用原文件名，由统一wx渲染器直接生成38
 ### 无框斜向双箭头（2026-10-29）
 
 新增 `view-resize`，对应用户截图的无外框左下/右上双箭头；与现有 `view-resize-square` 分别用于无框和带框场景，既有图标保留。以24px坐标绘制，两箭头互为围绕(12,12)的180°旋转；箭尖为(3.75,20.25)/(20.25,3.75)，复用全屏组16.5px中心线跨度和5.5px角线尺度，箭杆按用户反馈采用中间间距，分别结束于(10.2,13.8)/(13.8,10.2)，中央断开，含圆头的可见净距约3.74px（此前5.72px偏远、2.04px偏近）；箭头头部与外侧位置不变。统一#444444、1.35px有效描边、圆头圆角连接和透明背景；截图黑色按钮底由应用绘制。SVG登记清单，同步384px source、24/30/36/48px PNG与图集；对照带框版及四角全屏图标检查放大图和原生尺寸。
+
+
+### 文件类型SVG补齐（2026-10-29，最新）
+
+为全部120个文件类型补齐`source/svgs/files/<分组>-<格式>.svg`，名称与现有PNG一致，不新增或重命名图标。`render_file_icons.py`先生成完整SVG，再从这一份SVG分别渲染384px source和24/30/36/48px PNG；清单登记`vector_source`，图集可直接预览SVG。`--render-only --all`或`--render-only --names ...`只渲染已登记SVG，无需字体且不修改清单。
+
+- 边框读取工具`file-file.svg`，颜色#444444、线宽1.35px及折角几何保持原样。`style_defaults.frame_template`改为该SVG；旧`file-square.png`参数仅兼容映射到共享SVG，自定义模板须提供纯矢量SVG，不能嵌入位图。
+- 色圆、文字、字号、字距、指定字母对、标签缩写、垂直偏移及长标签适配继续使用现有清单参数。文字使用原Segoe UI Semibold字体轮廓，并转为SVG路径；不依赖查看环境中的字体。原有基于高分辨率字形测量的排版保留。
+- 标签碰到边框时仍在两侧同步开口，设计坐标开口范围为`baseline-cap_height-2`至`baseline+2`。直接切分共享文档路径的直边，断口平头，圆角与折角保持原样；不能用白色遮罩覆盖色圆。此前PNG断口按每档像素取整，新版使用相同设计坐标连续渲染，因此少量边缘抗锯齿像素会变化，版式参数不变。
+- `other-new.svg`直接复用`file-new.svg`的矢量几何，保留当前加号、无色圆和无格式标签造型；工具新建与文件新建PNG继续同步。
+
+验收：对照TXT、PDF、MP4、JSON、SQLITE（显示SQL）、7Z、other-new样本及120个成员全图；核对放大图和四档原生尺寸。迁移前后119个格式标签的左右边界、字距、字号、基线、开口判定和字母对参数全部一致。测试覆盖全部391个图标的纯矢量来源、120个文件的颜色与字形路径、双侧矢量断口、特殊新建一致性、600张PNG与SVG直接渲染一致，以及无字体重新导出PNG。
+
+
+### SVG目录分组（2026-10-29，最新）
+
+SVG按资源类别保存：271个工具位于`source/svgs/tools/`，120个文件类型位于`source/svgs/files/`；`source/svgs/`根目录不再平铺SVG。文件名保持原分组前缀，清单中的`vector_source`与目录一致。共享文档基底仍是工具目录中的`file-file.svg`，文件生成器通过该路径引用；工具新建为`tools/file-new.svg`，文件新建为`files/other-new.svg`。各生成器、测试、文档及离线图集同步更新路径。此次仅调整目录，391个SVG内容及全部PNG保持不变。
+
+
+### 文件边框左上接缝修正（2026-10-29）
+
+带标签缺口的文档轮廓在切分后必须合并跨越原闭合起点的首尾两段，使左上圆角与顶边连续描边；只在两侧标签断口保留平头端点。否则两个相接端点的独立抗锯齿可能形成细小缺口。已修正共享生成器并同步重建120个文件SVG及PNG；测试检查每个开口边框只有上下两个连续子路径，端点仅位于两侧标签断口，不允许在左上圆角新增接缝。

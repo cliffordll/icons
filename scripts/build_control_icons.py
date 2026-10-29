@@ -21,7 +21,7 @@ def svg(markup):
 
 def save(stem, root):
     ET.indent(root, space='  ')
-    (ROOT / 'source/svgs' / (stem+'.svg')).write_text(
+    (ROOT / 'source/svgs/tools' / (stem+'.svg')).write_text(
         ET.tostring(root, encoding='unicode')+'\n', encoding='utf-8')
 
 
@@ -47,7 +47,7 @@ def build():
     # Preserve the approved cloud silhouette, with narrower 45-degree arrowheads
     # to fit its opening. Only the arrow primitive changes.
     for stem, direction, cy in [('task-download', 'down', 17.1625), ('task-upload', 'up', 15.9625)]:
-        root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+        root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
         old = root.find('.//*[@id="action-arrow"]')
         replacement = geometry.elements(geometry.arrow(direction, cy=cy, length=7.975, head=2.05, identity='action-arrow'))[0]
         replacement.attrib.update(fill='none', stroke='#444444', **{'stroke-width': '1.35', 'stroke-linecap': 'round', 'stroke-linejoin': 'round'})
@@ -58,13 +58,13 @@ def build():
                 parent.insert(index, replacement)
                 break
         save(stem, root)
-    player = ET.parse(ROOT / 'source/svgs/play-player.svg').getroot()
+    player = ET.parse(ROOT / 'source/svgs/tools/play-player.svg').getroot()
     group = player.find(NS+'g')
     group.remove(list(group)[-1])
     group.extend(geometry.elements(geometry.play(cx=12, cy=9.6875, height=6)))
     save('play-player', player)
     # The insect occludes the lower-left part of the same play triangle.
-    debug = ET.parse(ROOT / 'source/svgs/sys-run-debug.svg').getroot()
+    debug = ET.parse(ROOT / 'source/svgs/tools/sys-run-debug.svg').getroot()
     height = 14*geometry.PLAY_HEIGHT/geometry.PLAY_WIDTH
     top = 11.5-height/2
     lower_end = 11.5+height/4

@@ -12,7 +12,7 @@ NS = '{http://www.w3.org/2000/svg}'
 
 
 def root(stem):
-    return ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+    return ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
 
 
 def points(node):

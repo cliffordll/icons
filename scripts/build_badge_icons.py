@@ -26,14 +26,14 @@ BADGE_OFFSET_Y = -0.75
 
 
 def paths(stem):
-    return [e.attrib['d'] for e in ET.parse(ROOT / 'source/svgs' / (stem + '.svg')).iter()
+    return [e.attrib['d'] for e in ET.parse(ROOT / 'source/svgs/tools' / (stem + '.svg')).iter()
             if e.tag.endswith('}path')]
 
 
 def full_geometry(stem):
     """Reuse all source primitives and transforms, including circles and ellipses."""
     pen = SVGPathPen(None)
-    SVGPath(str(ROOT / 'source/svgs' / (stem+'.svg'))).draw(pen)
+    SVGPath(str(ROOT / 'source/svgs/tools' / (stem+'.svg'))).draw(pen)
     return pen.getCommands()
 
 
@@ -57,7 +57,7 @@ def folder_geometry():
         for child in element:
             visit(child, combined)
 
-    visit(ET.parse(ROOT / 'source/svgs/file-folder.svg').getroot(), Transform())
+    visit(ET.parse(ROOT / 'source/svgs/tools/file-folder.svg').getroot(), Transform())
     return output.getCommands()
 
 
@@ -343,7 +343,7 @@ def omit_bottom_corner_island(d, cuts, complete_outline):
 def specs():
     monitor = transform(rectangle(3, 3.375, 16.95, 12.25)
                         + 'M11.5 15.625V20.25M8.5 20.25h6', dy=0.1875)
-    pin_hole = ET.parse(ROOT / 'source/svgs/view-location.svg').find('.//{http://www.w3.org/2000/svg}circle')
+    pin_hole = ET.parse(ROOT / 'source/svgs/tools/view-location.svg').find('.//{http://www.w3.org/2000/svg}circle')
     pin = (transform(paths('view-location')[0], dy=0.25)
            + circle(float(pin_hole.attrib['cx']), float(pin_hole.attrib['cy'])+0.25,
                     float(pin_hole.attrib['r'])))
@@ -355,7 +355,7 @@ def specs():
                                'q.6 0 .6-.6V5.1q0-.6-.6-.6H16'
                                + rectangle(8, 2.5, 8, 4), dx=-1)
     clipboard = clipboard_body + transform('M8 10h4M8 14h2', dx=-1)
-    document = (ET.parse(ROOT / 'source/svgs/file-file.svg')
+    document = (ET.parse(ROOT / 'source/svgs/tools/file-file.svg')
                 .find('.//{http://www.w3.org/2000/svg}path[@id="document"]')
                 .attrib['d'])
     globe = full_geometry('net-globe')
@@ -467,4 +467,4 @@ if __name__ == '__main__':
     parser.add_argument('--names', nargs='+', help='Prefixed SVG stems; omit to build all badges')
     args = parser.parse_args()
     for stem, svg in build(args.names).items():
-        (ROOT / 'source/svgs' / (stem+'.svg')).write_text(svg, encoding='utf-8')
+        (ROOT / 'source/svgs/tools' / (stem+'.svg')).write_text(svg, encoding='utf-8')
