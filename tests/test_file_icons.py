@@ -1,12 +1,41 @@
 import json
 from pathlib import Path
 import unittest
+import xml.etree.ElementTree as ET
 
 from PIL import Image
 from scripts.render_file_icons import character_gap_units, MASTER_SCALE
 
 
 class FileIconTests(unittest.TestCase):
+    def test_every_tool_has_a_registered_pure_vector_source(self):
+        root = Path(__file__).resolve().parents[1]
+        manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+        for entry in manifest['icons']:
+            if entry['category'] != 'tools':
+                continue
+            with self.subTest(icon=entry['source']):
+                self.assertTrue(entry.get('vector_source'))
+                source = root / entry['vector_source']
+                self.assertTrue(source.is_file())
+                svg = ET.parse(source).getroot()
+                self.assertIn(svg.attrib.get('viewBox'), ('0 0 24 24', '0 0 384 384'))
+                self.assertFalse(any(node.tag.rsplit('}', 1)[-1] in ('image', 'foreignObject')
+                                     for node in svg.iter()))
+
+    def test_document_tool_variants_share_the_file_file_svg_base(self):
+        root = Path(__file__).resolve().parents[1]
+        ns = '{http://www.w3.org/2000/svg}'
+        base = ET.parse(root / 'source/svgs/file-file.svg').getroot()
+        new = ET.parse(root / 'source/svgs/file-new.svg').getroot()
+        self.assertEqual(base.find('.//'+ns+'path[@id="document"]').attrib['d'],
+                         new.find('.//'+ns+'path[@id="document"]').attrib['d'])
+        manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+        vector_sources = {entry['name']: entry.get('vector_source')
+                          for entry in manifest['icons'] if entry['category'] == 'tools'}
+        self.assertEqual(vector_sources['file'], 'source/svgs/file-file.svg')
+        self.assertEqual(vector_sources['new'], 'source/svgs/file-new.svg')
+
     def test_file_icons_inherit_shared_style_defaults(self):
         manifest_path = Path(__file__).resolve().parents[1] / 'manifest.json'
         manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
@@ -87,8 +116,10 @@ class FileIconTests(unittest.TestCase):
         manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
         gallery = (root / 'gallery.html').read_text(encoding='utf-8')
         embedded = json.loads(gallery.split('const icons=', 1)[1].split(';function render()', 1)[0])
-        key = lambda entry: (entry['category'], entry['name'])
+        key = lambda entry: entry['source']
         self.assertEqual(sorted(embedded, key=key), sorted(manifest['icons'], key=key))
+        self.assertEqual(len({entry['source'] for entry in manifest['icons']}),
+                         len(manifest['icons']))
         for category in ('tools', 'files'):
             entries = [e for e in manifest['icons'] if e['category'] == category]
             expected = {Path(e['source']).name for e in entries}

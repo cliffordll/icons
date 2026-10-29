@@ -21,6 +21,8 @@ GAP_PADDING = 2
 TEXT_COLOUR = '#3B3B3B'
 TEMPLATES = Path(__file__).resolve().parent / 'icon_templates'
 MASTER_SCALE = 16
+PLUS_ARM_LENGTH = 5.0
+PLUS_STROKE = 1.35
 SHORT_LABELS = {'MPEG-1': 'MPG1', 'MPEG1': 'MPG1',
                 'MPEG-2': 'MPG2', 'MPEG2': 'MPG2',
                 'MPEG-4': 'MPG4', 'MPEG4': 'MPG4', 'SQLITE': 'SQL'}
@@ -92,12 +94,12 @@ def render_vector_label(size, label, masks, font_path, font_axes, font_size,
         top = (round(baseline * MASTER_SCALE) - cap_height
                + (cap_height - mask.height) // 2) / MASTER_SCALE
         if label == '+':
-            # Preserve the approved optical width and rounded caps of the new-file symbol.
-            stroke = round(19 / 16 * MASTER_SCALE)
-            x = (mask.width - stroke) // 2
-            y = (mask.height - stroke) // 2
+            stroke = PLUS_STROKE * MASTER_SCALE
+            extent = (PLUS_ARM_LENGTH + PLUS_STROKE) * MASTER_SCALE
+            x = (extent - stroke) / 2
+            y = (extent - stroke) / 2
             for left, upper, width, height in (
-                    (x, 0, stroke, mask.height), (0, y, mask.width, stroke)):
+                    (x, 0, stroke, extent), (0, y, extent, stroke)):
                 ElementTree.SubElement(group, f'{{{SVG_NS}}}rect', {
                     'x': str((cursor + left) / MASTER_SCALE),
                     'y': str(top + upper / MASTER_SCALE),
@@ -144,25 +146,9 @@ def character_gap_units(label, base_gap_units, pair_spacing):
 
 
 def render_frame(size):
-    """文件与新建图标共用 1.35px 粗线、圆角和折角，按目标尺寸绘制。"""
-    unit = max(MASTER_SCALE, size / 24 * 4)
-    frame = Image.new('RGBA', (round(24 * unit), round(24 * unit)))
-    draw = ImageDraw.Draw(frame)
-
-    def coords(values):
-        return tuple(round(value * unit) for value in values)
-
-    draw.rounded_rectangle(coords((4.075, 2.125, 19.925, 21.875)),
-                           radius=round(1.1 * unit), fill='#444444')
-    draw.rounded_rectangle(coords((5.425, 3.475, 18.575, 20.525)),
-                           radius=round(0.35 * unit), fill=(0, 0, 0, 0))
-    draw.polygon([coords(p) for p in ((14.55, 2.125), (24, 2.125), (24, 7.5), (19.925, 7.5))],
-                 fill=(0, 0, 0, 0))
-    draw.line([coords(p) for p in ((14.1, 2.6), (19.45, 7.95))],
-              fill='#444444', width=round(1.35 * unit))
-    draw.line([coords(p) for p in ((13.675, 2.8), (13.675, 7.675), (19.25, 7.675))],
-              fill='#444444', width=round(1.35 * unit), joint='curve')
-    return frame.resize((size, size), Image.Resampling.LANCZOS)
+    """Rasterize the shared file-file vector base at the requested size."""
+    base = ElementTree.parse(ROOT / 'source/svgs/file-file.svg').getroot()
+    return rasterize_svg(base, size)
 
 
 def render(original, label, colour, font_path, text_colour=TEXT_COLOUR, frame_template=None,
@@ -182,16 +168,16 @@ def render(original, label, colour, font_path, text_colour=TEXT_COLOUR, frame_te
         masks = [glyph(c, font) for c in label]
         if label == '+':
             mask = masks[0]
-            # 加号交叉处视觉偏重，线宽用 19/16px；保留外接尺寸和中心位置。
-            width = round(mask.width * cap_height / mask.height)
-            mask = Image.new('L', (width, cap_height))
-            stroke = round(19 / 16 * MASTER_SCALE)
-            x = (width - stroke) // 2
-            y = (cap_height - stroke) // 2
+            # Match file-folder-plus: 5px centerline arms and 1.35px rounded strokes.
+            extent = round((PLUS_ARM_LENGTH + PLUS_STROKE) * MASTER_SCALE)
+            mask = Image.new('L', (extent, extent))
+            stroke = round(PLUS_STROKE * MASTER_SCALE)
+            x = (extent - stroke) // 2
+            y = (extent - stroke) // 2
             mask_draw = ImageDraw.Draw(mask)
-            mask_draw.rounded_rectangle((x, 0, x + stroke - 1, cap_height - 1),
+            mask_draw.rounded_rectangle((x, 0, x + stroke - 1, extent - 1),
                                         radius=stroke / 2, fill=255)
-            mask_draw.rounded_rectangle((0, y, width - 1, y + stroke - 1),
+            mask_draw.rounded_rectangle((0, y, extent - 1, y + stroke - 1),
                                         radius=stroke / 2, fill=255)
             masks = [mask]
         spacing_units = round(requested_spacing * MASTER_SCALE)
@@ -315,17 +301,23 @@ def main():
         circle_bounds = (circle['x'], circle['y'] + circle_offset_y,
                          circle['x'] + circle['diameter'],
                          circle['y'] + circle_offset_y + circle['diameter'])
+        new_vector = (ElementTree.parse(ROOT / 'source/svgs/file-new.svg').getroot()
+                      if name == 'new' else None)
         for directory in ('source', *(str(s) for s in manifest['sizes'])):
             path = ROOT / directory / 'files' / Path(entry['source']).name
             path.parent.mkdir(parents=True, exist_ok=True)
-            with Image.new('RGBA', (384, 384) if directory == 'source' else (int(directory), int(directory))) as original:
-                result, metrics = render(original, entry['display_label'],
-                                         entry['circle_color'], args.font,
-                                         entry.get('text_colour', defaults['text_colour']), frame_template,
-                                         entry.get('text_offset_y', defaults['text_offset_y']), args.font_axes,
-                                         character_gap,
-                                         entry.get('font_size', defaults['font_size']), circle_bounds,
-                                         defaults.get('pair_spacing', {}))
+            size = 384 if directory == 'source' else int(directory)
+            if name == 'new':
+                result = rasterize_svg(new_vector, size)
+            else:
+                with Image.new('RGBA', (size, size)) as original:
+                    result, metrics = render(original, entry['display_label'],
+                                             entry['circle_color'], args.font,
+                                             entry.get('text_colour', defaults['text_colour']), frame_template,
+                                             entry.get('text_offset_y', defaults['text_offset_y']), args.font_axes,
+                                             character_gap,
+                                             entry.get('font_size', defaults['font_size']), circle_bounds,
+                                             defaults.get('pair_spacing', {}))
             save_png(result, path)
             if name == 'new':
                 tool_entry = next((i for i in manifest['icons']
@@ -334,10 +326,11 @@ def main():
                     Path(tool_entry['source']).name if tool_entry else 'file-new.png')
                 tool_path.parent.mkdir(parents=True, exist_ok=True)
                 save_png(result, tool_path)
-            if directory == '24':
+            if directory == '24' and name != 'new':
                 base_metrics = metrics
-        manifest['file_frame']['text_metrics'].setdefault(name, {}).update(base_metrics)
-        print(name, base_metrics)
+        if name != 'new':
+            manifest['file_frame']['text_metrics'].setdefault(name, {}).update(base_metrics)
+            print(name, base_metrics)
     if any(entry['name'] == 'new' for entry in entries) and not any(
             entry['category'] == 'tools' and entry['name'] == 'new' for entry in manifest['icons']):
         manifest['icons'].append(dict(category='tools', name='new', label='新建文件',

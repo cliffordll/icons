@@ -56,6 +56,46 @@ def distance(p, line):
 
 
 class BadgeIconTests(unittest.TestCase):
+    def test_search_zoom_and_search_badge_share_magnifier_template(self):
+        from fontTools.svgLib.path import SVGPath
+        template = ET.parse(ROOT / 'scripts/icon_templates/magnifier.svg').getroot()
+        body = template.find(NS+'g')
+        for stem in ['view-search', 'view-zoom-in', 'view-zoom-out']:
+            group = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot().find(NS+'g')
+            self.assertEqual([e.attrib for e in list(group)[:2]], [e.attrib for e in body])
+            self.assertEqual(group.attrib['stroke-width'], '1.35')
+        bounds = BoundsPen(None)
+        SVGPath.fromstring(ET.tostring(template)).draw(bounds)
+        x0, y0, x1, y1 = bounds.bounds
+        scale = (10.5-1.35)/max(x1-x0, y1-y0)
+        expected = RecordingPen()
+        parse_path(body[1].attrib['d'], expected)
+        _, badge = read('net-cloud-search')
+        actual = RecordingPen()
+        parse_path(badge[1].attrib['d'], actual)
+        for (_, ep), (_, ap) in zip(expected.value, actual.value):
+            for (ex, ey), (ax, ay) in zip(ep, ap):
+                self.assertAlmostEqual(ax, 17.5+(ex-(x0+x1)/2)*scale, places=6)
+                self.assertAlmostEqual(ay, 16.75+(ey-(y0+y1)/2)*scale, places=6)
+        lens = BoundsPen(None)
+        parse_path(badge[0].attrib['d'], lens)
+        self.assertAlmostEqual((lens.bounds[2]-lens.bounds[0])/2,
+                               float(body[0].attrib['r'])*scale, places=6)
+
+    def test_folder_settings_preserves_folder_subject_bounds_and_gear(self):
+        from PIL import Image
+        back, badge = read('file-folder-settings')
+        pen = BoundsPen(None)
+        parse_path(back.attrib['data-complete-outline'], pen)
+        with Image.open(ROOT / 'source/tools/file-folder.png') as image:
+            bounds = image.getchannel('A').point(lambda value: 255 if value >= 128 else 0).getbbox()
+        expected = [value/16 for value in bounds]
+        actual = [pen.bounds[0]-.675, pen.bounds[1]-.675, pen.bounds[2]+.675, pen.bounds[3]+.675]
+        for a, b in zip(actual, expected):
+            self.assertAlmostEqual(a, b, delta=.04)
+        self.assertEqual([p.attrib['d'] for p in badge],
+                         [p.attrib['d'] for p in read('play-player-setting')[1]])
+
     def test_review_bottom_stops_at_badge_without_a_detached_corner(self):
         back, _ = read('file-review')
         lines = [line for path in back for line in flatten(path.attrib['d'])]
@@ -67,12 +107,23 @@ class BadgeIconTests(unittest.TestCase):
         self.assertTrue(all(max(a[0], b[0]) <= bottom_cut[0]+1e-5 for a, b in bottom))
         self.assertLess(min(distance((10, 21.25), line) for line in lines), 0.00001)
 
+    def test_document_search_bottom_stops_without_a_detached_corner(self):
+        back, _ = read('file-search')
+        lines = [line for path in back for line in flatten(path.attrib['d'])]
+        cuts = [tuple(map(float, p.split(','))) for p in back.attrib['data-cutpoints'].split()]
+        self.assertEqual(len(cuts), 2)
+        bottom_cut = next(p for p in cuts if abs(p[1]-21.2) < 1e-5)
+        bottom = [line for line in lines if min(line[0][1], line[1][1]) >= 21.2-1e-5]
+        self.assertTrue(bottom)
+        self.assertTrue(all(max(a[0], b[0]) <= bottom_cut[0]+1e-5 for a, b in bottom))
+
     def test_subject_centering_keeps_badges_at_canvas_anchor(self):
         stems = ['net-cloud-search', 'net-globe-search', 'lock-shield-search',
                  'file-print-preview', 'file-review', 'view-location-search',
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
-                 'user-send-download', 'user-send-percent', 'edit-paste']
+                 'user-send-download', 'user-send-percent', 'edit-paste',
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
         for stem in stems:
             with self.subTest(stem=stem):
                 root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
@@ -141,10 +192,10 @@ class BadgeIconTests(unittest.TestCase):
         pen = BoundsPen(None)
         for path in back:
             parse_path(path.attrib['d'], pen)
-        for actual, expected in zip(pen.bounds, (2.675, 2.675, 21.325, 21.325)):
+        for actual, expected in zip(pen.bounds, (2.6875, 2.6875, 21.3125, 21.3125)):
             self.assertAlmostEqual(actual, expected, delta=0.002)
         lines = [line for path in back for line in flatten(path.attrib['d'])]
-        for p in [(3, 12), (7.9, 12), (12, 2.675), (12, 21.325)]:
+        for p in [(3, 12), (7.9, 12), (12, 2.6875), (12, 21.3125)]:
             self.assertLess(min(distance(p, line) for line in lines), 0.002)
 
     def test_all_corner_badges_use_the_raised_position(self):
@@ -152,7 +203,8 @@ class BadgeIconTests(unittest.TestCase):
                  'file-print-preview', 'file-review', 'view-location-search',
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
-                 'user-send-download', 'user-send-percent', 'edit-paste']
+                 'user-send-download', 'user-send-percent', 'edit-paste',
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
         for stem in stems:
             with self.subTest(stem=stem):
                 _, badge = read(stem)
@@ -167,7 +219,8 @@ class BadgeIconTests(unittest.TestCase):
                  'file-print-preview', 'file-review', 'view-location-search',
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
-                 'user-send-download', 'user-send-percent', 'edit-paste']
+                 'user-send-download', 'user-send-percent', 'edit-paste',
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
         for stem in stems:
             with self.subTest(stem=stem):
                 _, badge = read(stem)
@@ -177,15 +230,21 @@ class BadgeIconTests(unittest.TestCase):
                 x0, y0, x1, y1 = pen.bounds
                 stroke = float(badge.attrib.get('stroke-width', '1.35'))
                 width, height = x1-x0+stroke, y1-y0+stroke
-                self.assertAlmostEqual(max(width, height), 10.5, delta=0.007)
-                self.assertGreaterEqual(min(width, height), 9.42)
+                is_download = stem in ('user-send-download', 'file-download')
+                expected = 9.585 if is_download else 10.5
+                self.assertAlmostEqual(max(width, height), expected, delta=0.007)
+                min_expected = 8.982 if is_download else 9.42
+                self.assertGreaterEqual(min(width, height), min_expected-0.007)
+                if is_download:
+                    self.assertAlmostEqual(min(width, height), min_expected, delta=0.007)
 
     def test_all_floating_badge_cutpoints_have_uniform_visible_gaps(self):
         stems = ['net-cloud-search', 'net-globe-search', 'lock-shield-search',
                  'file-print-preview', 'file-review', 'view-location-search',
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
-                 'user-send-download', 'user-send-percent', 'edit-paste']
+                 'user-send-download', 'user-send-percent', 'edit-paste',
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
         for stem in stems:
             with self.subTest(stem=stem):
                 back, badge = read(stem)
@@ -200,7 +259,8 @@ class BadgeIconTests(unittest.TestCase):
 
     def test_all_search_badges_use_identical_geometry(self):
         stems = ['net-cloud-search', 'net-globe-search', 'lock-shield-search',
-                 'file-print-preview', 'file-review', 'view-location-search']
+                 'file-print-preview', 'file-review', 'view-location-search',
+                 'file-search']
         expected = None
         for stem in stems:
             _, badge = read(stem)
@@ -215,6 +275,17 @@ class BadgeIconTests(unittest.TestCase):
                          [p.attrib['d'] for p in read('user-send-code')[1]])
         self.assertEqual([p.attrib['d'] for p in read('sys-remote')[1]],
                          [p.attrib['d'] for p in read('user-send-code')[1]])
+
+    def test_document_pair_shares_body_and_existing_download_badge(self):
+        search, _ = read('file-search')
+        download, badge = read('file-download')
+        file_base = ET.parse(ROOT / 'source/svgs/file-file.svg').getroot()
+        document_path = file_base.find('.//'+NS+'path[@id="document"]').attrib['d']
+        self.assertEqual(search.attrib['data-complete-outline'],
+                         download.attrib['data-complete-outline'])
+        self.assertEqual(search.attrib['data-complete-outline'], document_path)
+        self.assertEqual([p.attrib['d'] for p in badge],
+                         [p.attrib['d'] for p in read('user-send-download')[1]])
 
     def test_code_badge_interior_does_not_reveal_background_fragments(self):
         for stem in ['sys-remote', 'view-map-code', 'user-send-code']:

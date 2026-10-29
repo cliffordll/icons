@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
-  <g transform="translate(384 0) scale(-1 1)"><path d="M325.686 210.288A135 135 0 1 1 324.949 168.057" fill="none" stroke="#444444" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path d="M339 109V169H280" fill="none" stroke="#444444" stroke-width="22" stroke-linecap="butt" stroke-linejoin="miter"/></g><path d="M192 102.4V192l88 56" fill="none" stroke="#444444" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(0 0) scale(0.0625)" stroke-width="22">
+      <g transform="translate(384 0) scale(-1 1)">
+        <path d="M325.686 210.288A135 135 0 1 1 324.949 168.057" />
+        <path d="M339 103V169H274.1" stroke-linecap="butt" stroke-linejoin="miter" />
+      </g>
+      <path d="M192 102.4V192l88 56" stroke-width="21.6" />
+    </g>
+  </g>
 </svg>

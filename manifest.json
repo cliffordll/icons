@@ -1376,7 +1376,8 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/view-expand.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-expand.svg"
     },
     {
       "category": "tools",
@@ -1385,6 +1386,7 @@
       "origin": "original:tools/file.png",
       "added": false,
       "source": "source/tools/file-file.png",
+      "vector_source": "source/svgs/file-file.svg",
       "group": "file"
     },
     {
@@ -1414,7 +1416,8 @@
       "origin": "original:tools/more.png",
       "added": false,
       "source": "source/tools/view-more.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-more.svg"
     },
     {
       "category": "tools",
@@ -1423,6 +1426,7 @@
       "origin": "original:tools/new.png",
       "added": false,
       "source": "source/tools/file-new.png",
+      "vector_source": "source/svgs/file-new.svg",
       "group": "file"
     },
     {
@@ -1452,7 +1456,8 @@
       "origin": "approved-toolbar",
       "added": false,
       "source": "source/tools/view-collapse.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-collapse.svg"
     },
     {
       "category": "tools",
@@ -1461,7 +1466,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/play-start.png",
-      "group": "play"
+      "group": "play",
+      "vector_source": "source/svgs/play-start.svg"
     },
     {
       "category": "tools",
@@ -1470,7 +1476,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/play-pause.png",
-      "group": "play"
+      "group": "play",
+      "vector_source": "source/svgs/play-pause.svg"
     },
     {
       "category": "tools",
@@ -1479,7 +1486,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/play-stop.png",
-      "group": "play"
+      "group": "play",
+      "vector_source": "source/svgs/play-stop.svg"
     },
     {
       "category": "tools",
@@ -1498,7 +1506,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/view-search.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-search.svg"
     },
     {
       "category": "tools",
@@ -1517,7 +1526,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/edit-copy.png",
-      "group": "edit"
+      "group": "edit",
+      "vector_source": "source/svgs/edit-copy.svg"
     },
     {
       "category": "tools",
@@ -1596,7 +1606,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/view-sort.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-sort.svg"
     },
     {
       "category": "tools",
@@ -1605,7 +1616,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/view-filter.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-filter.svg"
     },
     {
       "category": "tools",
@@ -1634,7 +1646,8 @@
       "origin": "additional-tools",
       "added": true,
       "source": "source/tools/edit-merge.png",
-      "group": "edit"
+      "group": "edit",
+      "vector_source": "source/svgs/edit-merge.svg"
     },
     {
       "category": "tools",
@@ -1673,7 +1686,8 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/view-home.png",
-      "group": "view"
+      "group": "view",
+      "vector_source": "source/svgs/view-home.svg"
     },
     {
       "category": "tools",
@@ -1692,7 +1706,8 @@
       "origin": "shared-tool-icon",
       "added": true,
       "source": "source/tools/sys-settings.png",
-      "group": "sys"
+      "group": "sys",
+      "vector_source": "source/svgs/sys-settings.svg"
     },
     {
       "category": "tools",
@@ -2818,6 +2833,16 @@
     },
     {
       "category": "tools",
+      "name": "video",
+      "label": "视频",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-video.png",
+      "vector_source": "source/svgs/play-video.svg"
+    },
+    {
+      "category": "tools",
       "name": "shuffle",
       "label": "随机打乱",
       "group": "edit",
@@ -3785,6 +3810,236 @@
       "added": true,
       "source": "source/tools/view-list-square.png",
       "vector_source": "source/svgs/view-list-square.svg"
+    },
+    {
+      "category": "tools",
+      "name": "zoom-in",
+      "label": "放大",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-zoom-in.png",
+      "vector_source": "source/svgs/view-zoom-in.svg"
+    },
+    {
+      "category": "tools",
+      "name": "zoom-out",
+      "label": "缩小",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-zoom-out.png",
+      "vector_source": "source/svgs/view-zoom-out.svg"
+    },
+    {
+      "category": "tools",
+      "name": "search",
+      "label": "文件查找",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-search.png",
+      "vector_source": "source/svgs/file-search.svg"
+    },
+    {
+      "category": "tools",
+      "name": "download",
+      "label": "文件下载／投放",
+      "group": "file",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/file-download.png",
+      "vector_source": "source/svgs/file-download.svg"
+    },
+    {
+      "category": "tools",
+      "name": "wave-circle",
+      "label": "圆框语音波形",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-wave-circle.png",
+      "vector_source": "source/svgs/play-wave-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "arrow-up-circle",
+      "label": "圆框上箭头",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-arrow-up-circle.png",
+      "vector_source": "source/svgs/view-arrow-up-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "arrow-down-circle",
+      "label": "圆框下箭头",
+      "group": "view",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/view-arrow-down-circle.png",
+      "vector_source": "source/svgs/view-arrow-down-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "stop-circle",
+      "label": "圆框停止",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-stop-circle.png",
+      "vector_source": "source/svgs/play-stop-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "start-circle",
+      "label": "圆框播放",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-start-circle.png",
+      "vector_source": "source/svgs/play-start-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "pause-circle",
+      "label": "圆框暂停",
+      "group": "play",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/play-pause-circle.png",
+      "vector_source": "source/svgs/play-pause-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "retry-circle",
+      "label": "圆框重试",
+      "group": "task",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/task-retry-circle.png",
+      "vector_source": "source/svgs/task-retry-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "folder-settings",
+      "label": "管理分组／文件夹设置",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/file-folder-settings.png",
+      "vector_source": "source/svgs/file-folder-settings.svg",
+      "group": "file"
+    },
+    {
+      "category": "tools",
+      "name": "resize-square",
+      "label": "方框斜向双箭头／伸缩放大",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/view-resize-square.png",
+      "vector_source": "source/svgs/view-resize-square.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "camera-photo",
+      "label": "照相机／拍照",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/play-camera-photo.png",
+      "vector_source": "source/svgs/play-camera-photo.svg",
+      "group": "play"
+    },
+    {
+      "category": "tools",
+      "name": "support",
+      "label": "客服／带话筒耳机",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/user-support.png",
+      "vector_source": "source/svgs/user-support.svg",
+      "group": "user"
+    },
+    {
+      "category": "tools",
+      "name": "add",
+      "label": "添加好友／添加用户",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/user-add.png",
+      "vector_source": "source/svgs/user-add.svg",
+      "group": "user"
+    },
+    {
+      "category": "tools",
+      "name": "more-circle",
+      "label": "圆圈更多",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/view-more-circle.png",
+      "vector_source": "source/svgs/view-more-circle.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "close-circle",
+      "label": "圆圈关闭",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/info-close-circle.png",
+      "vector_source": "source/svgs/info-close-circle.svg",
+      "group": "info"
+    },
+    {
+      "category": "tools",
+      "name": "check-circle",
+      "label": "圆圈对号／完成",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/info-check-circle.png",
+      "vector_source": "source/svgs/info-check-circle.svg",
+      "group": "info"
+    },
+    {
+      "category": "tools",
+      "name": "male",
+      "label": "男性／男",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/user-male.png",
+      "vector_source": "source/svgs/user-male.svg",
+      "group": "user"
+    },
+    {
+      "category": "tools",
+      "name": "female",
+      "label": "女性／女",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/user-female.png",
+      "vector_source": "source/svgs/user-female.svg",
+      "group": "user"
+    },
+    {
+      "category": "tools",
+      "name": "support-speaking",
+      "label": "客服说话／客服语音中",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/user-support-speaking.png",
+      "vector_source": "source/svgs/user-support-speaking.svg",
+      "group": "user"
+    },
+    {
+      "category": "tools",
+      "name": "resize",
+      "label": "斜向双箭头／展开放大",
+      "origin": "new-tool-icon",
+      "added": true,
+      "source": "source/tools/view-resize.png",
+      "vector_source": "source/svgs/view-resize.svg",
+      "group": "view"
     }
   ],
   "file_frame": {
@@ -6496,8 +6751,8 @@
         "pair_spacing": {}
       },
       "new": {
-        "label_left": 8.9375,
-        "label_right": 15.0625,
+        "label_left": 8.8125,
+        "label_right": 15.1875,
         "frame_gaps": false,
         "character_gap": 1.0,
         "condensed": false,

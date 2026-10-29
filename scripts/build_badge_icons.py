@@ -6,6 +6,7 @@ Geometry is in 24px units; no opaque masks or scaled strokes are used.
 
 import argparse
 import math
+import re
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -14,6 +15,7 @@ from fontTools.pens.recordingPen import RecordingPen
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
+from fontTools.misc.transform import Transform
 from fontTools.svgLib.path import SVGPath, parse_path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +35,30 @@ def full_geometry(stem):
     pen = SVGPathPen(None)
     SVGPath(str(ROOT / 'source/svgs' / (stem+'.svg'))).draw(pen)
     return pen.getCommands()
+
+
+def folder_geometry():
+    """Apply the folder's nested SVG transforms before clipping its outline."""
+    output = SVGPathPen(None)
+
+    def visit(element, parent):
+        local = Transform()
+        for operation, values in re.findall(r'(translate|scale|matrix)\(([^)]+)\)', element.get('transform', '')):
+            args = [float(v) for v in re.split(r'[ ,]+', values.strip())]
+            if operation == 'translate':
+                local = local.translate(args[0], args[1] if len(args) > 1 else 0)
+            elif operation == 'scale':
+                local = local.scale(args[0], args[1] if len(args) > 1 else args[0])
+            else:
+                local = local.transform(Transform(*args))
+        combined = parent.transform(local)
+        if element.tag.endswith('}path'):
+            parse_path(element.attrib['d'], TransformPen(output, combined))
+        for child in element:
+            visit(child, combined)
+
+    visit(ET.parse(ROOT / 'source/svgs/file-folder.svg').getroot(), Transform())
+    return output.getCommands()
 
 
 def transform(d, dx=0, dy=0):
@@ -113,20 +139,28 @@ def inside(p, polygon):
 
 
 GEAR = ET.parse(ROOT / 'scripts/icon_templates/gear-badge.svg').getroot()[0].attrib['d']
-SEARCH_SCALE = (BADGE_SIZE-STROKE)/8.3
-SEARCH_CENTER = 17.5-0.85*SEARCH_SCALE
-SEARCH_RADIUS = 3.3*SEARCH_SCALE
-SEARCH = [circle(SEARCH_CENTER, SEARCH_CENTER, SEARCH_RADIUS),
-          resize_path('M18.85 18.85l2.65 2.65', SEARCH_SCALE, SEARCH_SCALE,
-                      17.35, 17.35, 17.5, 17.5)]
+_magnifier = ET.parse(ROOT / 'scripts/icon_templates/magnifier.svg').getroot()
+_lens = _magnifier.find('.//{http://www.w3.org/2000/svg}circle')
+_handle = _magnifier.find('.//{http://www.w3.org/2000/svg}path').attrib['d']
+_magnifier_bounds = BoundsPen(None)
+SVGPath.fromstring(ET.tostring(_magnifier)).draw(_magnifier_bounds)
+_mx0, _my0, _mx1, _my1 = _magnifier_bounds.bounds
+_mcx, _mcy = (_mx0+_mx1)/2, (_my0+_my1)/2
+SEARCH_SCALE = (BADGE_SIZE-STROKE)/max(_mx1-_mx0, _my1-_my0)
+SEARCH_X = 17.5+(float(_lens.attrib['cx'])-_mcx)*SEARCH_SCALE
+SEARCH_Y = 17.5+(float(_lens.attrib['cy'])-_mcy)*SEARCH_SCALE
+SEARCH_RADIUS = float(_lens.attrib['r'])*SEARCH_SCALE
+SEARCH = [circle(SEARCH_X, SEARCH_Y, SEARCH_RADIUS),
+          resize_path(_handle, SEARCH_SCALE, SEARCH_SCALE, _mcx, _mcy, 17.5, 17.5)]
 GLYPH_SCALE = (BADGE_SIZE-STROKE)/(9-STROKE)
 CODE = [resize_path('M16.525 14.125 13.675 17.5l2.85 3.375M18.475 14.125l2.85 3.375-2.85 3.375',
                     GLYPH_SCALE, GLYPH_SCALE, 17.5, 17.5)]
 CODE_SILHOUETTE = [resize_path('M13.675 17.5 16.525 14.125 18.475 14.125'
                                ' 21.325 17.5 18.475 20.875 16.525 20.875Z',
                                GLYPH_SCALE, GLYPH_SCALE, 17.5, 17.5)]
+DOWNLOAD_SCALE = GLYPH_SCALE * 0.9
 DOWNLOAD = [resize_path('M17.5 13.675v7.65m-3.825-3.825 3.825 3.825 3.825-3.825',
-                        GLYPH_SCALE, GLYPH_SCALE, 17.5, 17.5)]
+                        3.816/3.825, DOWNLOAD_SCALE, 17.5, 17.5)]
 PERCENT_RADIUS = 1.2*BADGE_SIZE/10
 PERCENT_X = (BADGE_SIZE-STROKE-2*PERCENT_RADIUS)/2
 PERCENT_CIRCLES = [(17.5+sx*PERCENT_X, 17.5+sy*2*GLYPH_SCALE, PERCENT_RADIUS)
@@ -181,11 +215,13 @@ class Badge:
 
 def glyph(profile, dx=0, dy=0):
     if profile == 'search':
-        return Badge(profile, SEARCH, circles=[(SEARCH_CENTER, SEARCH_CENTER, SEARCH_RADIUS)])
+        return Badge(profile, SEARCH, circles=[(SEARCH_X, SEARCH_Y, SEARCH_RADIUS)])
     if profile == 'code':
         return Badge(profile, CODE, solids=CODE_SILHOUETTE)
     if profile == 'download':
         return Badge(profile, DOWNLOAD)
+    if profile == 'plus':
+        return Badge(profile, ['M12.925 17.5h9.15M17.5 12.925v9.15'])
     if profile == 'percent':
         return Badge(profile, PERCENT, circles=PERCENT_CIRCLES)
     if profile == 'bolt':
@@ -273,10 +309,10 @@ def prune_short_islands(d, cuts, minimum):
     return ''.join(output), cuts
 
 
-def omit_clipboard_bottom_island(d, cuts, complete_outline):
-    """Match paste: stop the bottom edge at the badge, without a corner remnant.
+def omit_bottom_corner_island(d, cuts, complete_outline):
+    """Stop selected clipboard or document bottom edges at the badge.
 
-    This is the approved file-review exception, not a global length threshold.
+    Applied only to file-review and file-search, not as a global length rule.
     Only a detached run wholly inside the bottom 0.6px corner band is removed.
     """
     bounds = BoundsPen(None)
@@ -319,6 +355,9 @@ def specs():
                                'q.6 0 .6-.6V5.1q0-.6-.6-.6H16'
                                + rectangle(8, 2.5, 8, 4), dx=-1)
     clipboard = clipboard_body + transform('M8 10h4M8 14h2', dx=-1)
+    document = (ET.parse(ROOT / 'source/svgs/file-file.svg')
+                .find('.//{http://www.w3.org/2000/svg}path[@id="document"]')
+                .attrib['d'])
     globe = full_geometry('net-globe')
     server = rectangle(3.675, 3.675, 16.65, 7) + rectangle(3.675, 13.325, 16.65, 7)
     result = {
@@ -330,10 +369,14 @@ def specs():
         'file-print-preview': (transform(printer, -0.25, -0.5), glyph('search'),
                                f'<path fill="#444444" stroke="none" d="{circle(17.35,10.3,.675)}"/>'),
         'file-review': (clipboard, glyph('search'), ''),
+        'file-search': (document, glyph('search'), ''),
+        'file-download': (document, glyph('download'), ''),
         'edit-paste': (clipboard_body, glyph('paper'), ''),
         'view-location-search': (pin, glyph('search'), ''),
         'view-location-settings': (pin, glyph('gear'), ''),
         'play-player-setting': (monitor, glyph('gear'), ''),
+        'file-folder-settings': (folder_geometry(), glyph('gear'), ''),
+        'user-add': (full_geometry('user-user'), glyph('plus'), ''),
         'sys-remote': (monitor, glyph('code'), ''),
         'view-map-code': (paths('view-map')[0], glyph('code'), ''),
         'net-server-bolt': (server + 'M11 7.175h6M11 16.825h6', glyph('bolt'),
@@ -397,8 +440,8 @@ def build(names=None):
             background, cuts = clip(background, badge)
             if stem == 'net-server-bolt':
                 background, cuts = prune_short_islands(background, cuts, minimum=1.6)
-            elif stem == 'file-review':
-                background, cuts = omit_clipboard_bottom_island(background, cuts, complete_background)
+            elif stem in ('file-review', 'file-search'):
+                background, cuts = omit_bottom_corner_island(background, cuts, complete_background)
         for p in cuts:
             clearance = badge.distance(p)-STROKE/2-badge.half_width
             if abs(clearance-GAP) > 0.00001:

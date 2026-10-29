@@ -33,14 +33,27 @@ def main():
     selection.add_argument('--all', action='store_true', help='Render every registered SVG tool icon')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'manifest.json').read_text(encoding='utf-8'))
-    tools = {entry['name']: entry for entry in manifest['icons']
-             if entry['category'] == 'tools' and entry.get('vector_source')}
+    entries = [entry for entry in manifest['icons']
+               if entry['category'] == 'tools' and entry.get('vector_source')]
+    by_stem = {Path(entry['source']).stem: entry for entry in entries}
+    by_name = {}
+    for entry in entries:
+        by_name.setdefault(entry['name'], []).append(entry)
     if args.names:
-        unknown = set(args.names) - tools.keys()
-        if unknown:
-            parser.error(f'Tool icons without a registered SVG: {sorted(unknown)}')
-        tools = {name: tools[name] for name in dict.fromkeys(args.names)}
-    entries = list(tools.values())
+        selected = {}
+        for name in args.names:
+            if name in by_stem:
+                entry = by_stem[name]
+            else:
+                matches = by_name.get(name, [])
+                if not matches:
+                    parser.error(f'Tool icon without a registered SVG: {name}')
+                if len(matches) > 1:
+                    stems = [Path(item['source']).stem for item in matches]
+                    parser.error(f'Ambiguous tool icon {name}; use one of {stems}')
+                entry = matches[0]
+            selected[Path(entry['source']).stem] = entry
+        entries = list(selected.values())
     for entry in entries:
         for key in ('vector_source', 'source'):
             path = (ROOT / entry[key]).resolve()
@@ -75,7 +88,7 @@ def main():
                 save_image(image, path)
                 changed += 1
             checked += 1
-    print(f'Rendered {len(tools)} SVG tool icons; '
+    print(f'Rendered {len(entries)} SVG tool icons; '
           f'{changed} PNGs updated, {checked} PNGs checked.')
 
 

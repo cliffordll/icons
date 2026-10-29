@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-  <g transform="translate(0.000000000 0.000000000)" data-role="centered-composite" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-    <g data-role="background" data-cutpoints="11.2105072,15.8210143 18.0752837,10.3117908"><path d="M21 3 3 10.2 10.2 13.8 21 3M10.2000000 13.8000000L11.2105072 15.8210143M21.0000000 3.0000000L18.0752837 10.3117908"/></g>
-    <g data-role="badge" data-profile="download"><path d="M17.5 12.175V21.325000000000003M12.925 16.750000000000004 17.5 21.325000000000003 22.075 16.750000000000004"/></g>
+  <g data-role="centered-composite" data-layout="subject-centered-fixed-badge" fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <g data-role="background" data-center-shift="0.000000000,0.000000000" data-complete-outline="M21.0 3.0 3.0 10.2 10.2 13.799999999999999 13.8 21.0 21.0 3.0ZM10.2 13.8 21.0 3.0" data-cutpoints="11.7380862,16.8761724 17.9095986,10.7260035"><path d="M21.0 3.0 3.0 10.2 10.2 13.8 21.0 3.0M10.2000000 13.8000000L11.7380862 16.8761724M21.0000000 3.0000000L17.9095986 10.7260035"/></g>
+    <g data-role="badge" data-profile="download"><path d="M17.5 12.632500000000002V20.867500000000003M13.684000000000001 16.750000000000004 17.5 20.867500000000003 21.316 16.750000000000004"/></g>
   </g>
 </svg>

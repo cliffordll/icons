@@ -42,6 +42,78 @@ def visible_bounds(path):
 
 
 class ToolAlignmentTests(unittest.TestCase):
+    def test_circle_controls_share_one_frame_and_canvas_bounds(self):
+        stems = ['play-wave-circle', 'view-arrow-up-circle', 'view-arrow-down-circle',
+                 'play-stop-circle',
+                 'play-start-circle', 'play-pause-circle', 'task-retry-circle']
+        reference = ET.parse(ROOT / 'source/svgs/edit-plus-circle.svg').getroot()
+        expected_frame = reference.find('.//'+NS+'circle').attrib
+        for stem in stems:
+            with self.subTest(stem=stem):
+                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                frame = root.find('.//'+NS+'circle[@data-role="frame"]')
+                self.assertIsNotNone(frame)
+                self.assertEqual({k: v for k, v in frame.attrib.items() if k != 'data-role'},
+                                 expected_frame)
+                for size in (384, 24, 30, 36, 48):
+                    base = (ROOT / 'source/tools/edit-plus-circle.png' if size == 384 else
+                            ROOT / str(size) / 'tools/edit-plus-circle.png')
+                    actual = (ROOT / 'source/tools' / (stem+'.png') if size == 384 else
+                              ROOT / str(size) / 'tools' / (stem+'.png'))
+                    self.assertEqual(visible_bounds(actual), visible_bounds(base))
+
+    def test_full_circle_family_shares_outer_frame(self):
+        reference = ET.parse(ROOT / 'source/svgs/edit-plus-circle.svg').getroot()
+        expected = reference.find('.//'+NS+'circle').attrib
+        stems = ['edit-minus-circle', 'info-about', 'info-help', 'info-clock',
+                 'net-globe', 'play-voice', 'play-wave-circle', 'play-start-circle',
+                 'play-stop-circle', 'play-pause-circle', 'task-retry-circle',
+                 'user-smile', 'view-arrow-up-circle', 'view-arrow-down-circle',
+                 'view-compass']
+        for stem in stems:
+            with self.subTest(stem=stem):
+                root = ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                circles = [node for node in root.iter(NS+'circle')
+                           if float(node.attrib.get('r', 0)) >= 9]
+                self.assertEqual(len(circles), 1)
+                self.assertEqual({key: value for key, value in circles[0].attrib.items()
+                                  if key != 'data-role'}, expected)
+                for size in (384, 24, 30, 36, 48):
+                    folder = ROOT / ('source' if size == 384 else str(size)) / 'tools'
+                    self.assertEqual(visible_bounds(folder / (stem+'.png')),
+                                     visible_bounds(folder / 'edit-plus-circle.png'))
+
+    def test_history_hands_match_clock_geometry_and_stroke(self):
+        clock = ET.parse(ROOT / 'source/svgs/info-clock.svg').getroot()
+        history = ET.parse(ROOT / 'source/svgs/info-history.svg').getroot()
+        clock_hand = clock.findall('.//'+NS+'path')[-1]
+        history_hand = history.findall('.//'+NS+'path')[-1]
+        clock_pen, history_pen = RecordingPen(), RecordingPen()
+        parse_path(clock_hand.attrib['d'], clock_pen)
+        parse_path(history_hand.attrib['d'], history_pen)
+        normalized = [(command, tuple((point[0]/16, point[1]/16) for point in values))
+                      for command, values in history_pen.value]
+        self.assertEqual(normalized, clock_pen.value)
+        self.assertEqual(float(clock.find('.//'+NS+'g').attrib['stroke-width']), 1.35)
+        self.assertEqual(float(history_hand.attrib['stroke-width'])/16, 1.35)
+
+    def test_zoom_pair_shares_lens_and_handle_at_search_scale(self):
+        roots = [ET.parse(ROOT / 'source/svgs' / (stem+'.svg')).getroot()
+                 for stem in ['view-zoom-in', 'view-zoom-out']]
+        self.assertEqual(roots[0].find('.//'+NS+'circle').attrib,
+                         roots[1].find('.//'+NS+'circle').attrib)
+        handles = []
+        for root in roots:
+            pen = RecordingPen()
+            parse_path(root.find('.//'+NS+'path').attrib['d'], pen)
+            handles.append(pen.value[:2])
+        self.assertEqual(handles[0], handles[1])
+        self.assertEqual(visible_bounds(ROOT / 'source/tools/view-zoom-in.png'),
+                         visible_bounds(ROOT / 'source/tools/view-zoom-out.png'))
+        reference = visible_bounds(ROOT / 'source/tools/view-search.png')
+        actual = visible_bounds(ROOT / 'source/tools/view-zoom-in.png')
+        self.assertEqual(actual, reference)
+
     def test_folder_family_keeps_shared_vertical_alignment_and_closed_body(self):
         names = ['file-folder', 'file-folder-plus', 'file-folder-move',
                  'file-folder-favorite', 'file-folder-open']
