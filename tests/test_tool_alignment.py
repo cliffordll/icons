@@ -14,6 +14,7 @@ from fontTools.svgLib.path import SVGPath, parse_path
 ROOT = Path(__file__).resolve().parents[1]
 NS = '{http://www.w3.org/2000/svg}'
 CENTERED = [
+    'edit-plus-circle', 'edit-minus-circle',
     'view-move-left', 'view-move-right', 'view-move-up', 'view-move-down',
     'sys-debug',
     'file-folder', 'file-folder-plus', 'file-folder-move', 'file-folder-favorite',

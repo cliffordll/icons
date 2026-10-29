@@ -3708,6 +3708,26 @@
     },
     {
       "category": "tools",
+      "name": "plus-circle",
+      "label": "圆圈加号",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-plus-circle.png",
+      "vector_source": "source/svgs/edit-plus-circle.svg"
+    },
+    {
+      "category": "tools",
+      "name": "minus-circle",
+      "label": "圆圈减号",
+      "group": "edit",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/edit-minus-circle.png",
+      "vector_source": "source/svgs/edit-minus-circle.svg"
+    },
+    {
+      "category": "tools",
       "name": "change",
       "label": "变更（方框加减号）",
       "group": "edit",
