@@ -97,7 +97,7 @@ class PreviewHandler(SimpleHTTPRequestHandler):
         if not path.is_relative_to(self.server.root) or not path.is_file():
             return False
         relative = path.relative_to(self.server.root)
-        return (relative.as_posix() == 'gallery.html'
+        return (relative.as_posix() in {'gallery.html', 'favicon.ico'}
                 or relative.parts[0] in {'source', '24', '30', '36', '48'}
                 and path.suffix.lower() in {'.png', '.svg'}
                 or relative.parts[0] == 'preview' and path.suffix.lower() in {'.css', '.js'})

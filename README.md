@@ -2,6 +2,16 @@
 
 可复用的工具和文件类型图标库。消费项目专有的 `app` 图标、Logo、原稿及历史文件由各自项目维护，不放入本仓库。
 
+## 正式 Logo
+
+2026-10-30 确认采用 V15：黄色边框立方体，蓝色顶部为朝下笔尖、红色左侧为网格、绿色右侧为设置齿轮。
+
+- [可编辑 SVG](source/logos/logo.svg) 为正式矢量源；[透明 PNG](source/logos/logo.png) 为对应的 1254×1254 原尺寸成品。
+- 黑白版：[SVG](source/logos/logo-bw.svg) / [PNG](source/logos/logo-bw.png)，黑色框架、白色面、黑色图标，透明背景，1254×1254；几何与正式彩色版一致。
+- 外部对比参考：[AllOmnitools 图标](source/logos/references/allomnitools-icon-512.png)，来源 [allomnitools.com](https://allomnitools.com/)，仅用于视觉比较。
+- `source/logos/history/cube-v15.*` 保留为已确认版本记录，V7、V8 备选也统一归档在 `source/logos/history/`；后续修改以 `logo.svg` 为入口，并同步导出 `logo.png`。
+- 此目录维护图标库自身的品牌 Logo，不属于工具或文件类型图标，不纳入通用图标 manifest；gallery 左上角和浏览器标签页使用正式 Logo。Windows 使用 `preview.lnk` 启动本地预览，其快捷方式图标来自根目录 `favicon.ico`。
+
 ## 目录
 
 - `source/tools/`、`source/files/`：高分辨率透明 PNG。

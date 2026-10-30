@@ -11,9 +11,8 @@ button:hover{border-color:#9fb4d8}
 a{color:var(--accent)}
 
 .sidebar-header{padding:0 10px 17px;margin-bottom:22px;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:9px}
-.brand-mark{display:grid;grid-template-columns:repeat(2,7px);gap:3px;padding:9px;background:#eef3ff;border-radius:9px}
-.brand-mark i{width:7px;height:7px;border:1.3px solid #386ad0;border-radius:1.5px}
+.brand{display:flex;align-items:center;gap:7px}
+.brand-logo{display:block;width:36px;height:36px;flex:0 0 36px;object-fit:contain}
 h1{font-size:15px;letter-spacing:.1px;margin:0 0 3px;white-space:nowrap}
 .subtitle{font-size:10px;color:#8a95a4}
 .live{font-size:10px;color:#8995a5;display:flex;align-items:baseline;gap:6px;line-height:1.6;margin-top:13px}
@@ -96,7 +95,7 @@ main{padding:28px 40px}
 aside{padding:20px 8px}
 main{padding:20px 15px}
 .sidebar-header{padding-right:0;padding-left:4px}
-.brand-mark{display:none}
+.brand-logo{width:30px;height:30px;flex-basis:30px}
 .comparison-grid{grid-template-columns:repeat(auto-fit,minmax(max(225px,calc(var(--compare-size,88px) + 28px)),1fr))}
 .search{max-width:none}
 }
