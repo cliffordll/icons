@@ -216,6 +216,12 @@ class Badge:
 def glyph(profile, dx=0, dy=0):
     if profile == 'search':
         return Badge(profile, SEARCH, circles=[(SEARCH_X, SEARCH_Y, SEARCH_RADIUS)])
+    if profile == 'off':
+        radius = (BADGE_SIZE-STROKE)/2
+        diagonal = radius / math.sqrt(2)
+        return Badge(profile, [circle(17.5, 17.5, radius),
+                              f'M{17.5-diagonal} {17.5+diagonal}L{17.5+diagonal} {17.5-diagonal}'],
+                     circles=[(17.5, 17.5, radius)])
     if profile == 'code':
         return Badge(profile, CODE, solids=CODE_SILHOUETTE)
     if profile == 'download':
@@ -365,6 +371,7 @@ def specs():
                                       'a4 4 0 0 1-.6-7.95A6.2 6.2 0 0 1 18 8.5'
                                       'c2.3.5 3.4 2.6 3 5', dy=-0.75), glyph('search'), ''),
         'net-globe-search': (globe, glyph('search'), ''),
+        'net-globe-off': (globe, glyph('off'), ''),
         'lock-shield-search': (transform(paths('lock-shield')[0], -0.9375, -0.25), glyph('search'), ''),
         'file-print-preview': (transform(printer, -0.25, -0.5), glyph('search'),
                                f'<path fill="#444444" stroke="none" d="{circle(17.35,10.3,.675)}"/>'),

@@ -2013,6 +2013,16 @@
     },
     {
       "category": "tools",
+      "name": "library",
+      "label": "资料库",
+      "origin": "reference-tool-icon",
+      "added": true,
+      "source": "source/tools/sys-library.png",
+      "vector_source": "source/svgs/tools/sys-library.svg",
+      "group": "sys"
+    },
+    {
+      "category": "tools",
       "name": "database",
       "label": "数据库",
       "origin": "new-tool-icon",
@@ -2319,6 +2329,26 @@
       "added": true,
       "source": "source/tools/view-grid.png",
       "vector_source": "source/svgs/tools/view-grid.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "layers",
+      "label": "图层",
+      "origin": "reference-tool-icon",
+      "added": true,
+      "source": "source/tools/view-layers.png",
+      "vector_source": "source/svgs/tools/view-layers.svg",
+      "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "layers-single",
+      "label": "单层图层",
+      "origin": "reference-tool-icon",
+      "added": true,
+      "source": "source/tools/view-layers-single.png",
+      "vector_source": "source/svgs/tools/view-layers-single.svg",
       "group": "view"
     },
     {
@@ -4160,6 +4190,26 @@
       "source": "source/tools/view-resize.png",
       "vector_source": "source/svgs/tools/view-resize.svg",
       "group": "view"
+    },
+    {
+      "category": "tools",
+      "name": "airplane-mode",
+      "label": "飞行模式",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-airplane-mode.png",
+      "vector_source": "source/svgs/tools/net-airplane-mode.svg"
+    },
+    {
+      "category": "tools",
+      "name": "globe-off",
+      "label": "禁用网络",
+      "group": "net",
+      "origin": "shared-tool-icon",
+      "added": true,
+      "source": "source/tools/net-globe-off.png",
+      "vector_source": "source/svgs/tools/net-globe-off.svg"
     }
   ],
   "file_frame": {

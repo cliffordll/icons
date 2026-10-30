@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+  <g fill="none" stroke="#444444" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" transform="translate(1.266 0.3165)">
+    <!-- The first two books share their divider. -->
+    <rect x="3.35" y="4.5" width="8" height="15" rx="0.6"/>
+    <path d="M7.35 4.5V19.5"/>
+    <!-- Tilted rectangle clipped at the middle book's right edge.
+         The segment x=11.35, y=5.1..7.548 is shared and drawn by the middle book. -->
+    <path d="M11.35 5.1V4.498L14.343 3.862Q14.93 3.737 15.055 4.324L17.993 18.15Q18.118 18.737 17.531 18.862L14.505 19.505Q13.918 19.63 13.793 19.043L11.35 7.548"/>
+  </g>
+</svg>

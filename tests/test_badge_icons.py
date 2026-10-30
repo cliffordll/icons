@@ -123,7 +123,7 @@ class BadgeIconTests(unittest.TestCase):
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
                  'user-send-download', 'user-send-percent', 'edit-paste',
-                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add', 'net-globe-off']
         for stem in stems:
             with self.subTest(stem=stem):
                 root = ET.parse(ROOT / 'source/svgs/tools' / (stem+'.svg')).getroot()
@@ -152,6 +152,13 @@ class BadgeIconTests(unittest.TestCase):
                 x0, y0, x1, y1 = foreground.bounds
                 self.assertAlmostEqual((x0+x1)/2+dx, 17.5, delta=0.001)
                 self.assertAlmostEqual((y0+y1)/2+dy, 16.75, delta=0.001)
+
+    def test_globe_off_reuses_globe_subject(self):
+        off, badge = read('net-globe-off')
+        search, _ = read('net-globe-search')
+        self.assertEqual(off.attrib['data-complete-outline'], search.attrib['data-complete-outline'])
+        self.assertEqual(badge.attrib['data-profile'], 'off')
+        self.assertEqual(len(badge), 2)
 
     def test_plain_player_shares_centered_monitor_bounds(self):
         from fontTools.svgLib.path import SVGPath
@@ -204,7 +211,7 @@ class BadgeIconTests(unittest.TestCase):
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
                  'user-send-download', 'user-send-percent', 'edit-paste',
-                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add', 'net-globe-off']
         for stem in stems:
             with self.subTest(stem=stem):
                 _, badge = read(stem)
@@ -220,7 +227,7 @@ class BadgeIconTests(unittest.TestCase):
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
                  'user-send-download', 'user-send-percent', 'edit-paste',
-                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add', 'net-globe-off']
         for stem in stems:
             with self.subTest(stem=stem):
                 _, badge = read(stem)
@@ -244,7 +251,7 @@ class BadgeIconTests(unittest.TestCase):
                  'view-location-settings', 'play-player-setting', 'sys-remote',
                  'view-map-code', 'net-server-bolt', 'user-send-code',
                  'user-send-download', 'user-send-percent', 'edit-paste',
-                 'file-search', 'file-download', 'file-folder-settings', 'user-add']
+                 'file-search', 'file-download', 'file-folder-settings', 'user-add', 'net-globe-off']
         for stem in stems:
             with self.subTest(stem=stem):
                 back, badge = read(stem)
